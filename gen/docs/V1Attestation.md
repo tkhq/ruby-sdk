@@ -1,4 +1,4 @@
-# SwaggerClient::V1Attestation
+# TurnkeyClient::V1Attestation
 
 ## Properties
 Name | Type | Description | Notes

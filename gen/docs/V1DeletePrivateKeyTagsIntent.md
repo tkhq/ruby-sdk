@@ -1,4 +1,4 @@
-# SwaggerClient::V1DeletePrivateKeyTagsIntent
+# TurnkeyClient::V1DeletePrivateKeyTagsIntent
 
 ## Properties
 Name | Type | Description | Notes

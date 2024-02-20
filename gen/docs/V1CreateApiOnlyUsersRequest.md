@@ -1,4 +1,4 @@
-# SwaggerClient::V1CreateApiOnlyUsersRequest
+# TurnkeyClient::V1CreateApiOnlyUsersRequest
 
 ## Properties
 Name | Type | Description | Notes

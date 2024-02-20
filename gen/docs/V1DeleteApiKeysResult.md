@@ -1,4 +1,4 @@
-# SwaggerClient::V1DeleteApiKeysResult
+# TurnkeyClient::V1DeleteApiKeysResult
 
 ## Properties
 Name | Type | Description | Notes

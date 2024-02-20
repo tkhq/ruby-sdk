@@ -1,4 +1,4 @@
-# SwaggerClient::V1GetUserResponse
+# TurnkeyClient::V1GetUserResponse
 
 ## Properties
 Name | Type | Description | Notes

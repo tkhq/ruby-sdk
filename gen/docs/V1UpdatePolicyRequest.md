@@ -1,4 +1,4 @@
-# SwaggerClient::V1UpdatePolicyRequest
+# TurnkeyClient::V1UpdatePolicyRequest
 
 ## Properties
 Name | Type | Description | Notes

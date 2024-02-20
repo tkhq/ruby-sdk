@@ -1,22 +1,22 @@
-# SwaggerClient::PublicApiServiceApi
+# TurnkeyClient::PublicApiServiceApi
 
 All URIs are relative to *https://api.turnkey.com/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**public_api_service_noop_codegen_anchor**](PublicApiServiceApi.md#public_api_service_noop_codegen_anchor) | **POST** /tkhq/api/v1/noop-codegen-anchor | 
+[**n_oop_codegen_anchor**](PublicApiServiceApi.md#n_oop_codegen_anchor) | **POST** /tkhq/api/v1/noop-codegen-anchor | 
 
-# **public_api_service_noop_codegen_anchor**
-> V1NOOPCodegenAnchorResponse public_api_service_noop_codegen_anchor
+# **n_oop_codegen_anchor**
+> V1NOOPCodegenAnchorResponse n_oop_codegen_anchor
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'turnkey_sdk'
 # setup authorization
-SwaggerClient.configure do |config|
+TurnkeyClient.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-Stamp'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -28,13 +28,13 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['X-Stamp-WebAuthn'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::PublicApiServiceApi.new
+api_instance = TurnkeyClient::PublicApiServiceApi.new
 
 begin
-  result = api_instance.public_api_service_noop_codegen_anchor
+  result = api_instance.n_oop_codegen_anchor
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling PublicApiServiceApi->public_api_service_noop_codegen_anchor: #{e}"
+rescue TurnkeyClient::ApiError => e
+  puts "Exception when calling PublicApiServiceApi->n_oop_codegen_anchor: #{e}"
 end
 ```
 

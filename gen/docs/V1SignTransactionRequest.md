@@ -1,4 +1,4 @@
-# SwaggerClient::V1SignTransactionRequest
+# TurnkeyClient::V1SignTransactionRequest
 
 ## Properties
 Name | Type | Description | Notes

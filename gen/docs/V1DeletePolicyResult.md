@@ -1,4 +1,4 @@
-# SwaggerClient::V1DeletePolicyResult
+# TurnkeyClient::V1DeletePolicyResult
 
 ## Properties
 Name | Type | Description | Notes

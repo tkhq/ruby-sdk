@@ -1,4 +1,4 @@
-# SwaggerClient::V1DeleteOrganizationResult
+# TurnkeyClient::V1DeleteOrganizationResult
 
 ## Properties
 Name | Type | Description | Notes

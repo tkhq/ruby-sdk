@@ -1,4 +1,4 @@
-# SwaggerClient::V1SignTransactionIntent
+# TurnkeyClient::V1SignTransactionIntent
 
 ## Properties
 Name | Type | Description | Notes

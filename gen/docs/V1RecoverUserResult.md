@@ -1,4 +1,4 @@
-# SwaggerClient::V1RecoverUserResult
+# TurnkeyClient::V1RecoverUserResult
 
 ## Properties
 Name | Type | Description | Notes

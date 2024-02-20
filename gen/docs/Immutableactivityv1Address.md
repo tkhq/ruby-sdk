@@ -1,4 +1,4 @@
-# SwaggerClient::Immutableactivityv1Address
+# TurnkeyClient::Immutableactivityv1Address
 
 ## Properties
 Name | Type | Description | Notes

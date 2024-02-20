@@ -1,4 +1,4 @@
-# SwaggerClient::V1ExportWalletAccountResult
+# TurnkeyClient::V1ExportWalletAccountResult
 
 ## Properties
 Name | Type | Description | Notes

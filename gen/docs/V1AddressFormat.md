@@ -1,4 +1,4 @@
-# SwaggerClient::V1AddressFormat
+# TurnkeyClient::V1AddressFormat
 
 ## Properties
 Name | Type | Description | Notes

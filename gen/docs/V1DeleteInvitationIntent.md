@@ -1,4 +1,4 @@
-# SwaggerClient::V1DeleteInvitationIntent
+# TurnkeyClient::V1DeleteInvitationIntent
 
 ## Properties
 Name | Type | Description | Notes

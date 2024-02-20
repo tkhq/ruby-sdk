@@ -1,4 +1,4 @@
-# SwaggerClient::V1InvitationStatus
+# TurnkeyClient::V1InvitationStatus
 
 ## Properties
 Name | Type | Description | Notes

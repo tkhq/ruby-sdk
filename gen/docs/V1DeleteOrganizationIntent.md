@@ -1,4 +1,4 @@
-# SwaggerClient::V1DeleteOrganizationIntent
+# TurnkeyClient::V1DeleteOrganizationIntent
 
 ## Properties
 Name | Type | Description | Notes

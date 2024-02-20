@@ -1,4 +1,4 @@
-# SwaggerClient::V1DisablePrivateKeyIntent
+# TurnkeyClient::V1DisablePrivateKeyIntent
 
 ## Properties
 Name | Type | Description | Notes

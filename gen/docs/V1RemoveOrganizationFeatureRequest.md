@@ -1,4 +1,4 @@
-# SwaggerClient::V1RemoveOrganizationFeatureRequest
+# TurnkeyClient::V1RemoveOrganizationFeatureRequest
 
 ## Properties
 Name | Type | Description | Notes

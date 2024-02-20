@@ -1,4 +1,4 @@
-# SwaggerClient::V1DisablePrivateKeyResult
+# TurnkeyClient::V1DisablePrivateKeyResult
 
 ## Properties
 Name | Type | Description | Notes

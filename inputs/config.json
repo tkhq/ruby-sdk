@@ -1,0 +1,9 @@
+{
+  "gemName": "turnkey_sdk",
+  "gemLicense": "Apache 2.0",
+  "gemHomepage": "https://turnkey.com",
+  "gemDescription": "SDK to interact with the Turnkey API",
+  "gemAuthor": "Turnkey Engineering",
+  "moduleName": "TurnkeyClient",
+  "gemVersion": "0.0.1"
+}

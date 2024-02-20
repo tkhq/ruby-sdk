@@ -1,4 +1,4 @@
-# SwaggerClient::Externaldatav1Timestamp
+# TurnkeyClient::Externaldatav1Timestamp
 
 ## Properties
 Name | Type | Description | Notes

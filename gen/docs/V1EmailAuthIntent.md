@@ -1,4 +1,4 @@
-# SwaggerClient::V1EmailAuthIntent
+# TurnkeyClient::V1EmailAuthIntent
 
 ## Properties
 Name | Type | Description | Notes

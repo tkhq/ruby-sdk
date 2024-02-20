@@ -1,4 +1,4 @@
-# SwaggerClient::Externaldatav1Address
+# TurnkeyClient::Externaldatav1Address
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::V1EmailCustomization
+# TurnkeyClient::V1EmailCustomization
 
 ## Properties
 Name | Type | Description | Notes

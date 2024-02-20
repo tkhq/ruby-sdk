@@ -1,4 +1,4 @@
-# SwaggerClient::V1CreateAuthenticatorsRequest
+# TurnkeyClient::V1CreateAuthenticatorsRequest
 
 ## Properties
 Name | Type | Description | Notes

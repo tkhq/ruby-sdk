@@ -1,14 +1,14 @@
-# SwaggerClient::ConsensusApi
+# TurnkeyClient::ConsensusApi
 
 All URIs are relative to *https://api.turnkey.com/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**public_api_service_approve_activity**](ConsensusApi.md#public_api_service_approve_activity) | **POST** /public/v1/submit/approve_activity | Approve Activity
-[**public_api_service_reject_activity**](ConsensusApi.md#public_api_service_reject_activity) | **POST** /public/v1/submit/reject_activity | Reject Activity
+[**approve_activity**](ConsensusApi.md#approve_activity) | **POST** /public/v1/submit/approve_activity | Approve Activity
+[**reject_activity**](ConsensusApi.md#reject_activity) | **POST** /public/v1/submit/reject_activity | Reject Activity
 
-# **public_api_service_approve_activity**
-> V1ActivityResponse public_api_service_approve_activity(body)
+# **approve_activity**
+> V1ActivityResponse approve_activity(body)
 
 Approve Activity
 
@@ -17,9 +17,9 @@ Approve an Activity
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'turnkey_sdk'
 # setup authorization
-SwaggerClient.configure do |config|
+TurnkeyClient.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-Stamp'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -31,16 +31,16 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['X-Stamp-WebAuthn'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::ConsensusApi.new
-body = SwaggerClient::V1ApproveActivityRequest.new # V1ApproveActivityRequest | 
+api_instance = TurnkeyClient::ConsensusApi.new
+body = TurnkeyClient::V1ApproveActivityRequest.new # V1ApproveActivityRequest | 
 
 
 begin
   #Approve Activity
-  result = api_instance.public_api_service_approve_activity(body)
+  result = api_instance.approve_activity(body)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling ConsensusApi->public_api_service_approve_activity: #{e}"
+rescue TurnkeyClient::ApiError => e
+  puts "Exception when calling ConsensusApi->approve_activity: #{e}"
 end
 ```
 
@@ -65,8 +65,8 @@ Name | Type | Description  | Notes
 
 
 
-# **public_api_service_reject_activity**
-> V1ActivityResponse public_api_service_reject_activity(body)
+# **reject_activity**
+> V1ActivityResponse reject_activity(body)
 
 Reject Activity
 
@@ -75,9 +75,9 @@ Reject an Activity
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'turnkey_sdk'
 # setup authorization
-SwaggerClient.configure do |config|
+TurnkeyClient.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-Stamp'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -89,16 +89,16 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['X-Stamp-WebAuthn'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::ConsensusApi.new
-body = SwaggerClient::V1RejectActivityRequest.new # V1RejectActivityRequest | 
+api_instance = TurnkeyClient::ConsensusApi.new
+body = TurnkeyClient::V1RejectActivityRequest.new # V1RejectActivityRequest | 
 
 
 begin
   #Reject Activity
-  result = api_instance.public_api_service_reject_activity(body)
+  result = api_instance.reject_activity(body)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling ConsensusApi->public_api_service_reject_activity: #{e}"
+rescue TurnkeyClient::ApiError => e
+  puts "Exception when calling ConsensusApi->reject_activity: #{e}"
 end
 ```
 

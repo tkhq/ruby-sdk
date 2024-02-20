@@ -1,4 +1,4 @@
-# SwaggerClient::V1DeleteInvitationRequest
+# TurnkeyClient::V1DeleteInvitationRequest
 
 ## Properties
 Name | Type | Description | Notes

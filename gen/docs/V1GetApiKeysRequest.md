@@ -1,4 +1,4 @@
-# SwaggerClient::V1GetApiKeysRequest
+# TurnkeyClient::V1GetApiKeysRequest
 
 ## Properties
 Name | Type | Description | Notes

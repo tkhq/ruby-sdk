@@ -1,13 +1,13 @@
-# SwaggerClient::SessionsApi
+# TurnkeyClient::SessionsApi
 
 All URIs are relative to *https://api.turnkey.com/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**public_api_service_get_whoami**](SessionsApi.md#public_api_service_get_whoami) | **POST** /public/v1/query/whoami | Who am I?
+[**get_whoami**](SessionsApi.md#get_whoami) | **POST** /public/v1/query/whoami | Who am I?
 
-# **public_api_service_get_whoami**
-> V1GetWhoamiResponse public_api_service_get_whoami(body)
+# **get_whoami**
+> V1GetWhoamiResponse get_whoami(body)
 
 Who am I?
 
@@ -16,9 +16,9 @@ Get basic information about your current API or WebAuthN user and their organiza
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'turnkey_sdk'
 # setup authorization
-SwaggerClient.configure do |config|
+TurnkeyClient.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-Stamp'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -30,16 +30,16 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['X-Stamp-WebAuthn'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::SessionsApi.new
-body = SwaggerClient::V1GetWhoamiRequest.new # V1GetWhoamiRequest | 
+api_instance = TurnkeyClient::SessionsApi.new
+body = TurnkeyClient::V1GetWhoamiRequest.new # V1GetWhoamiRequest | 
 
 
 begin
   #Who am I?
-  result = api_instance.public_api_service_get_whoami(body)
+  result = api_instance.get_whoami(body)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling SessionsApi->public_api_service_get_whoami: #{e}"
+rescue TurnkeyClient::ApiError => e
+  puts "Exception when calling SessionsApi->get_whoami: #{e}"
 end
 ```
 

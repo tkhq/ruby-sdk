@@ -1,4 +1,4 @@
-# SwaggerClient::V1AcceptInvitationIntent
+# TurnkeyClient::V1AcceptInvitationIntent
 
 ## Properties
 Name | Type | Description | Notes

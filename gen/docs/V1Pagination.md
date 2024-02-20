@@ -1,4 +1,4 @@
-# SwaggerClient::V1Pagination
+# TurnkeyClient::V1Pagination
 
 ## Properties
 Name | Type | Description | Notes

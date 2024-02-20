@@ -1,4 +1,4 @@
-# SwaggerClient::V1DeletePolicyIntent
+# TurnkeyClient::V1DeletePolicyIntent
 
 ## Properties
 Name | Type | Description | Notes

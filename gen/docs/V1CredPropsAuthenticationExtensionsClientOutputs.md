@@ -1,4 +1,4 @@
-# SwaggerClient::V1CredPropsAuthenticationExtensionsClientOutputs
+# TurnkeyClient::V1CredPropsAuthenticationExtensionsClientOutputs
 
 ## Properties
 Name | Type | Description | Notes

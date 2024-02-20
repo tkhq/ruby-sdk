@@ -1,4 +1,4 @@
-# SwaggerClient::V1ListUserTagsResponse
+# TurnkeyClient::V1ListUserTagsResponse
 
 ## Properties
 Name | Type | Description | Notes

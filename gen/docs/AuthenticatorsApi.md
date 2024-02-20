@@ -1,16 +1,16 @@
-# SwaggerClient::AuthenticatorsApi
+# TurnkeyClient::AuthenticatorsApi
 
 All URIs are relative to *https://api.turnkey.com/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**public_api_service_create_authenticators**](AuthenticatorsApi.md#public_api_service_create_authenticators) | **POST** /public/v1/submit/create_authenticators | Create Authenticators
-[**public_api_service_delete_authenticators**](AuthenticatorsApi.md#public_api_service_delete_authenticators) | **POST** /public/v1/submit/delete_authenticators | Delete Authenticators
-[**public_api_service_get_authenticator**](AuthenticatorsApi.md#public_api_service_get_authenticator) | **POST** /public/v1/query/get_authenticator | Get Authenticator
-[**public_api_service_get_authenticators**](AuthenticatorsApi.md#public_api_service_get_authenticators) | **POST** /public/v1/query/get_authenticators | Get Authenticators
+[**create_authenticators**](AuthenticatorsApi.md#create_authenticators) | **POST** /public/v1/submit/create_authenticators | Create Authenticators
+[**delete_authenticators**](AuthenticatorsApi.md#delete_authenticators) | **POST** /public/v1/submit/delete_authenticators | Delete Authenticators
+[**get_authenticator**](AuthenticatorsApi.md#get_authenticator) | **POST** /public/v1/query/get_authenticator | Get Authenticator
+[**get_authenticators**](AuthenticatorsApi.md#get_authenticators) | **POST** /public/v1/query/get_authenticators | Get Authenticators
 
-# **public_api_service_create_authenticators**
-> V1ActivityResponse public_api_service_create_authenticators(body)
+# **create_authenticators**
+> V1ActivityResponse create_authenticators(body)
 
 Create Authenticators
 
@@ -19,9 +19,9 @@ Create Authenticators to authenticate requests to Turnkey
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'turnkey_sdk'
 # setup authorization
-SwaggerClient.configure do |config|
+TurnkeyClient.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-Stamp'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -33,16 +33,16 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['X-Stamp-WebAuthn'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::AuthenticatorsApi.new
-body = SwaggerClient::V1CreateAuthenticatorsRequest.new # V1CreateAuthenticatorsRequest | 
+api_instance = TurnkeyClient::AuthenticatorsApi.new
+body = TurnkeyClient::V1CreateAuthenticatorsRequest.new # V1CreateAuthenticatorsRequest | 
 
 
 begin
   #Create Authenticators
-  result = api_instance.public_api_service_create_authenticators(body)
+  result = api_instance.create_authenticators(body)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AuthenticatorsApi->public_api_service_create_authenticators: #{e}"
+rescue TurnkeyClient::ApiError => e
+  puts "Exception when calling AuthenticatorsApi->create_authenticators: #{e}"
 end
 ```
 
@@ -67,8 +67,8 @@ Name | Type | Description  | Notes
 
 
 
-# **public_api_service_delete_authenticators**
-> V1ActivityResponse public_api_service_delete_authenticators(body)
+# **delete_authenticators**
+> V1ActivityResponse delete_authenticators(body)
 
 Delete Authenticators
 
@@ -77,9 +77,9 @@ Remove authenticators from a User
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'turnkey_sdk'
 # setup authorization
-SwaggerClient.configure do |config|
+TurnkeyClient.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-Stamp'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -91,16 +91,16 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['X-Stamp-WebAuthn'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::AuthenticatorsApi.new
-body = SwaggerClient::V1DeleteAuthenticatorsRequest.new # V1DeleteAuthenticatorsRequest | 
+api_instance = TurnkeyClient::AuthenticatorsApi.new
+body = TurnkeyClient::V1DeleteAuthenticatorsRequest.new # V1DeleteAuthenticatorsRequest | 
 
 
 begin
   #Delete Authenticators
-  result = api_instance.public_api_service_delete_authenticators(body)
+  result = api_instance.delete_authenticators(body)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AuthenticatorsApi->public_api_service_delete_authenticators: #{e}"
+rescue TurnkeyClient::ApiError => e
+  puts "Exception when calling AuthenticatorsApi->delete_authenticators: #{e}"
 end
 ```
 
@@ -125,8 +125,8 @@ Name | Type | Description  | Notes
 
 
 
-# **public_api_service_get_authenticator**
-> V1GetAuthenticatorResponse public_api_service_get_authenticator(body)
+# **get_authenticator**
+> V1GetAuthenticatorResponse get_authenticator(body)
 
 Get Authenticator
 
@@ -135,9 +135,9 @@ Get details about an authenticator
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'turnkey_sdk'
 # setup authorization
-SwaggerClient.configure do |config|
+TurnkeyClient.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-Stamp'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -149,16 +149,16 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['X-Stamp-WebAuthn'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::AuthenticatorsApi.new
-body = SwaggerClient::V1GetAuthenticatorRequest.new # V1GetAuthenticatorRequest | 
+api_instance = TurnkeyClient::AuthenticatorsApi.new
+body = TurnkeyClient::V1GetAuthenticatorRequest.new # V1GetAuthenticatorRequest | 
 
 
 begin
   #Get Authenticator
-  result = api_instance.public_api_service_get_authenticator(body)
+  result = api_instance.get_authenticator(body)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AuthenticatorsApi->public_api_service_get_authenticator: #{e}"
+rescue TurnkeyClient::ApiError => e
+  puts "Exception when calling AuthenticatorsApi->get_authenticator: #{e}"
 end
 ```
 
@@ -183,8 +183,8 @@ Name | Type | Description  | Notes
 
 
 
-# **public_api_service_get_authenticators**
-> V1GetAuthenticatorsResponse public_api_service_get_authenticators(body)
+# **get_authenticators**
+> V1GetAuthenticatorsResponse get_authenticators(body)
 
 Get Authenticators
 
@@ -193,9 +193,9 @@ Get details about authenticators for a user
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'turnkey_sdk'
 # setup authorization
-SwaggerClient.configure do |config|
+TurnkeyClient.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-Stamp'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -207,16 +207,16 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['X-Stamp-WebAuthn'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::AuthenticatorsApi.new
-body = SwaggerClient::V1GetAuthenticatorsRequest.new # V1GetAuthenticatorsRequest | 
+api_instance = TurnkeyClient::AuthenticatorsApi.new
+body = TurnkeyClient::V1GetAuthenticatorsRequest.new # V1GetAuthenticatorsRequest | 
 
 
 begin
   #Get Authenticators
-  result = api_instance.public_api_service_get_authenticators(body)
+  result = api_instance.get_authenticators(body)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AuthenticatorsApi->public_api_service_get_authenticators: #{e}"
+rescue TurnkeyClient::ApiError => e
+  puts "Exception when calling AuthenticatorsApi->get_authenticators: #{e}"
 end
 ```
 

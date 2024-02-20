@@ -1,4 +1,4 @@
-# SwaggerClient::V1DeletePrivateKeyTagsResult
+# TurnkeyClient::V1DeletePrivateKeyTagsResult
 
 ## Properties
 Name | Type | Description | Notes

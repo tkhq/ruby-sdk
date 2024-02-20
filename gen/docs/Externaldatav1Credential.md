@@ -1,4 +1,4 @@
-# SwaggerClient::Externaldatav1Credential
+# TurnkeyClient::Externaldatav1Credential
 
 ## Properties
 Name | Type | Description | Notes

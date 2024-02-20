@@ -1,4 +1,4 @@
-# SwaggerClient::V1EmailAuthResult
+# TurnkeyClient::V1EmailAuthResult
 
 ## Properties
 Name | Type | Description | Notes

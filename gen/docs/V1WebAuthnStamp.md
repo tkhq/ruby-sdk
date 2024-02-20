@@ -1,4 +1,4 @@
-# SwaggerClient::V1WebAuthnStamp
+# TurnkeyClient::V1WebAuthnStamp
 
 ## Properties
 Name | Type | Description | Notes

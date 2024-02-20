@@ -1,4 +1,4 @@
-# SwaggerClient::V1UpdateRootQuorumResult
+# TurnkeyClient::V1UpdateRootQuorumResult
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::RpcStatus
+# TurnkeyClient::RpcStatus
 
 ## Properties
 Name | Type | Description | Notes

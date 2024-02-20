@@ -1,14 +1,14 @@
-# SwaggerClient::UserRecoveryApi
+# TurnkeyClient::UserRecoveryApi
 
 All URIs are relative to *https://api.turnkey.com/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**public_api_service_init_user_email_recovery**](UserRecoveryApi.md#public_api_service_init_user_email_recovery) | **POST** /public/v1/submit/init_user_email_recovery | Init Email Recovery
-[**public_api_service_recover_user**](UserRecoveryApi.md#public_api_service_recover_user) | **POST** /public/v1/submit/recover_user | Recover a user
+[**init_user_email_recovery**](UserRecoveryApi.md#init_user_email_recovery) | **POST** /public/v1/submit/init_user_email_recovery | Init Email Recovery
+[**recover_user**](UserRecoveryApi.md#recover_user) | **POST** /public/v1/submit/recover_user | Recover a user
 
-# **public_api_service_init_user_email_recovery**
-> V1ActivityResponse public_api_service_init_user_email_recovery(body)
+# **init_user_email_recovery**
+> V1ActivityResponse init_user_email_recovery(body)
 
 Init Email Recovery
 
@@ -17,9 +17,9 @@ Initializes a new email recovery
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'turnkey_sdk'
 # setup authorization
-SwaggerClient.configure do |config|
+TurnkeyClient.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-Stamp'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -31,16 +31,16 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['X-Stamp-WebAuthn'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::UserRecoveryApi.new
-body = SwaggerClient::V1InitUserEmailRecoveryRequest.new # V1InitUserEmailRecoveryRequest | 
+api_instance = TurnkeyClient::UserRecoveryApi.new
+body = TurnkeyClient::V1InitUserEmailRecoveryRequest.new # V1InitUserEmailRecoveryRequest | 
 
 
 begin
   #Init Email Recovery
-  result = api_instance.public_api_service_init_user_email_recovery(body)
+  result = api_instance.init_user_email_recovery(body)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling UserRecoveryApi->public_api_service_init_user_email_recovery: #{e}"
+rescue TurnkeyClient::ApiError => e
+  puts "Exception when calling UserRecoveryApi->init_user_email_recovery: #{e}"
 end
 ```
 
@@ -65,8 +65,8 @@ Name | Type | Description  | Notes
 
 
 
-# **public_api_service_recover_user**
-> V1ActivityResponse public_api_service_recover_user(body)
+# **recover_user**
+> V1ActivityResponse recover_user(body)
 
 Recover a user
 
@@ -75,9 +75,9 @@ Completes the process of recovering a user by adding an authenticator
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'turnkey_sdk'
 # setup authorization
-SwaggerClient.configure do |config|
+TurnkeyClient.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-Stamp'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -89,16 +89,16 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['X-Stamp-WebAuthn'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::UserRecoveryApi.new
-body = SwaggerClient::V1RecoverUserRequest.new # V1RecoverUserRequest | 
+api_instance = TurnkeyClient::UserRecoveryApi.new
+body = TurnkeyClient::V1RecoverUserRequest.new # V1RecoverUserRequest | 
 
 
 begin
   #Recover a user
-  result = api_instance.public_api_service_recover_user(body)
+  result = api_instance.recover_user(body)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling UserRecoveryApi->public_api_service_recover_user: #{e}"
+rescue TurnkeyClient::ApiError => e
+  puts "Exception when calling UserRecoveryApi->recover_user: #{e}"
 end
 ```
 

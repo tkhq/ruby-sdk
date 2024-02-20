@@ -1,4 +1,4 @@
-# SwaggerClient::V1DeleteUserTagsResult
+# TurnkeyClient::V1DeleteUserTagsResult
 
 ## Properties
 Name | Type | Description | Notes

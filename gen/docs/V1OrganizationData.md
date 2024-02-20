@@ -1,4 +1,4 @@
-# SwaggerClient::V1OrganizationData
+# TurnkeyClient::V1OrganizationData
 
 ## Properties
 Name | Type | Description | Notes

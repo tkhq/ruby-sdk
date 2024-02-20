@@ -1,4 +1,4 @@
-# SwaggerClient::V1InitUserEmailRecoveryRequest
+# TurnkeyClient::V1InitUserEmailRecoveryRequest
 
 ## Properties
 Name | Type | Description | Notes

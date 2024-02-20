@@ -1,4 +1,4 @@
-# SwaggerClient::V1RejectActivityRequest
+# TurnkeyClient::V1RejectActivityRequest
 
 ## Properties
 Name | Type | Description | Notes

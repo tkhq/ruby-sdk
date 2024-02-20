@@ -1,17 +1,17 @@
-# SwaggerClient::PoliciesApi
+# TurnkeyClient::PoliciesApi
 
 All URIs are relative to *https://api.turnkey.com/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**public_api_service_create_policy**](PoliciesApi.md#public_api_service_create_policy) | **POST** /public/v1/submit/create_policy | Create Policy
-[**public_api_service_delete_policy**](PoliciesApi.md#public_api_service_delete_policy) | **POST** /public/v1/submit/delete_policy | Delete Policy
-[**public_api_service_get_policies**](PoliciesApi.md#public_api_service_get_policies) | **POST** /public/v1/query/list_policies | List Policies
-[**public_api_service_get_policy**](PoliciesApi.md#public_api_service_get_policy) | **POST** /public/v1/query/get_policy | Get Policy
-[**public_api_service_update_policy**](PoliciesApi.md#public_api_service_update_policy) | **POST** /public/v1/submit/update_policy | Update Policy
+[**create_policy**](PoliciesApi.md#create_policy) | **POST** /public/v1/submit/create_policy | Create Policy
+[**delete_policy**](PoliciesApi.md#delete_policy) | **POST** /public/v1/submit/delete_policy | Delete Policy
+[**get_policies**](PoliciesApi.md#get_policies) | **POST** /public/v1/query/list_policies | List Policies
+[**get_policy**](PoliciesApi.md#get_policy) | **POST** /public/v1/query/get_policy | Get Policy
+[**update_policy**](PoliciesApi.md#update_policy) | **POST** /public/v1/submit/update_policy | Update Policy
 
-# **public_api_service_create_policy**
-> V1ActivityResponse public_api_service_create_policy(body)
+# **create_policy**
+> V1ActivityResponse create_policy(body)
 
 Create Policy
 
@@ -20,9 +20,9 @@ Create a new Policy
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'turnkey_sdk'
 # setup authorization
-SwaggerClient.configure do |config|
+TurnkeyClient.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-Stamp'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -34,16 +34,16 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['X-Stamp-WebAuthn'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::PoliciesApi.new
-body = SwaggerClient::V1CreatePolicyRequest.new # V1CreatePolicyRequest | 
+api_instance = TurnkeyClient::PoliciesApi.new
+body = TurnkeyClient::V1CreatePolicyRequest.new # V1CreatePolicyRequest | 
 
 
 begin
   #Create Policy
-  result = api_instance.public_api_service_create_policy(body)
+  result = api_instance.create_policy(body)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling PoliciesApi->public_api_service_create_policy: #{e}"
+rescue TurnkeyClient::ApiError => e
+  puts "Exception when calling PoliciesApi->create_policy: #{e}"
 end
 ```
 
@@ -68,8 +68,8 @@ Name | Type | Description  | Notes
 
 
 
-# **public_api_service_delete_policy**
-> V1ActivityResponse public_api_service_delete_policy(body)
+# **delete_policy**
+> V1ActivityResponse delete_policy(body)
 
 Delete Policy
 
@@ -78,9 +78,9 @@ Delete an existing Policy
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'turnkey_sdk'
 # setup authorization
-SwaggerClient.configure do |config|
+TurnkeyClient.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-Stamp'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -92,16 +92,16 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['X-Stamp-WebAuthn'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::PoliciesApi.new
-body = SwaggerClient::V1DeletePolicyRequest.new # V1DeletePolicyRequest | 
+api_instance = TurnkeyClient::PoliciesApi.new
+body = TurnkeyClient::V1DeletePolicyRequest.new # V1DeletePolicyRequest | 
 
 
 begin
   #Delete Policy
-  result = api_instance.public_api_service_delete_policy(body)
+  result = api_instance.delete_policy(body)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling PoliciesApi->public_api_service_delete_policy: #{e}"
+rescue TurnkeyClient::ApiError => e
+  puts "Exception when calling PoliciesApi->delete_policy: #{e}"
 end
 ```
 
@@ -126,8 +126,8 @@ Name | Type | Description  | Notes
 
 
 
-# **public_api_service_get_policies**
-> V1GetPoliciesResponse public_api_service_get_policies(body)
+# **get_policies**
+> V1GetPoliciesResponse get_policies(body)
 
 List Policies
 
@@ -136,9 +136,9 @@ List all Policies within an Organization
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'turnkey_sdk'
 # setup authorization
-SwaggerClient.configure do |config|
+TurnkeyClient.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-Stamp'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -150,16 +150,16 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['X-Stamp-WebAuthn'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::PoliciesApi.new
-body = SwaggerClient::V1GetPoliciesRequest.new # V1GetPoliciesRequest | 
+api_instance = TurnkeyClient::PoliciesApi.new
+body = TurnkeyClient::V1GetPoliciesRequest.new # V1GetPoliciesRequest | 
 
 
 begin
   #List Policies
-  result = api_instance.public_api_service_get_policies(body)
+  result = api_instance.get_policies(body)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling PoliciesApi->public_api_service_get_policies: #{e}"
+rescue TurnkeyClient::ApiError => e
+  puts "Exception when calling PoliciesApi->get_policies: #{e}"
 end
 ```
 
@@ -184,8 +184,8 @@ Name | Type | Description  | Notes
 
 
 
-# **public_api_service_get_policy**
-> V1GetPolicyResponse public_api_service_get_policy(body)
+# **get_policy**
+> V1GetPolicyResponse get_policy(body)
 
 Get Policy
 
@@ -194,9 +194,9 @@ Get details about a Policy
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'turnkey_sdk'
 # setup authorization
-SwaggerClient.configure do |config|
+TurnkeyClient.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-Stamp'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -208,16 +208,16 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['X-Stamp-WebAuthn'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::PoliciesApi.new
-body = SwaggerClient::V1GetPolicyRequest.new # V1GetPolicyRequest | 
+api_instance = TurnkeyClient::PoliciesApi.new
+body = TurnkeyClient::V1GetPolicyRequest.new # V1GetPolicyRequest | 
 
 
 begin
   #Get Policy
-  result = api_instance.public_api_service_get_policy(body)
+  result = api_instance.get_policy(body)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling PoliciesApi->public_api_service_get_policy: #{e}"
+rescue TurnkeyClient::ApiError => e
+  puts "Exception when calling PoliciesApi->get_policy: #{e}"
 end
 ```
 
@@ -242,8 +242,8 @@ Name | Type | Description  | Notes
 
 
 
-# **public_api_service_update_policy**
-> V1ActivityResponse public_api_service_update_policy(body)
+# **update_policy**
+> V1ActivityResponse update_policy(body)
 
 Update Policy
 
@@ -252,9 +252,9 @@ Update an existing Policy
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'turnkey_sdk'
 # setup authorization
-SwaggerClient.configure do |config|
+TurnkeyClient.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-Stamp'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -266,16 +266,16 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['X-Stamp-WebAuthn'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::PoliciesApi.new
-body = SwaggerClient::V1UpdatePolicyRequest.new # V1UpdatePolicyRequest | 
+api_instance = TurnkeyClient::PoliciesApi.new
+body = TurnkeyClient::V1UpdatePolicyRequest.new # V1UpdatePolicyRequest | 
 
 
 begin
   #Update Policy
-  result = api_instance.public_api_service_update_policy(body)
+  result = api_instance.update_policy(body)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling PoliciesApi->public_api_service_update_policy: #{e}"
+rescue TurnkeyClient::ApiError => e
+  puts "Exception when calling PoliciesApi->update_policy: #{e}"
 end
 ```
 

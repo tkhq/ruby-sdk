@@ -1,4 +1,4 @@
-# SwaggerClient::V1WalletAccount
+# TurnkeyClient::V1WalletAccount
 
 ## Properties
 Name | Type | Description | Notes

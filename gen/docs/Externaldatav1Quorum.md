@@ -1,4 +1,4 @@
-# SwaggerClient::Externaldatav1Quorum
+# TurnkeyClient::Externaldatav1Quorum
 
 ## Properties
 Name | Type | Description | Notes

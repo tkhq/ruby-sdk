@@ -1,4 +1,4 @@
-# SwaggerClient::V1UserParams
+# TurnkeyClient::V1UserParams
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::V1NOOPCodegenAnchorResponse
+# TurnkeyClient::V1NOOPCodegenAnchorResponse
 
 ## Properties
 Name | Type | Description | Notes

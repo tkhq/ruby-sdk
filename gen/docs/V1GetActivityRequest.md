@@ -1,4 +1,4 @@
-# SwaggerClient::V1GetActivityRequest
+# TurnkeyClient::V1GetActivityRequest
 
 ## Properties
 Name | Type | Description | Notes

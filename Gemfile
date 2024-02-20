@@ -1,1 +1,1 @@
-gem "swagger_client", path: "./gen/"
+gem "turnkey_sdk", path: "./gen/"

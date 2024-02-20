@@ -1,4 +1,4 @@
-# SwaggerClient::V1UpdateUserTagRequest
+# TurnkeyClient::V1UpdateUserTagRequest
 
 ## Properties
 Name | Type | Description | Notes

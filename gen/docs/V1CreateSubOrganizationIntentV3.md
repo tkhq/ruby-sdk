@@ -1,4 +1,4 @@
-# SwaggerClient::V1CreateSubOrganizationIntentV3
+# TurnkeyClient::V1CreateSubOrganizationIntentV3
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::V1DeleteApiKeysIntent
+# TurnkeyClient::V1DeleteApiKeysIntent
 
 ## Properties
 Name | Type | Description | Notes

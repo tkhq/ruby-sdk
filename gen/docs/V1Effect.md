@@ -1,4 +1,4 @@
-# SwaggerClient::V1Effect
+# TurnkeyClient::V1Effect
 
 ## Properties
 Name | Type | Description | Notes

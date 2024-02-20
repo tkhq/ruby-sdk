@@ -1,4 +1,4 @@
-# SwaggerClient::V1CreatePrivateKeyTagIntent
+# TurnkeyClient::V1CreatePrivateKeyTagIntent
 
 ## Properties
 Name | Type | Description | Notes

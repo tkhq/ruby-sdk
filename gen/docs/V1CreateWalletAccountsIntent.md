@@ -1,4 +1,4 @@
-# SwaggerClient::V1CreateWalletAccountsIntent
+# TurnkeyClient::V1CreateWalletAccountsIntent
 
 ## Properties
 Name | Type | Description | Notes

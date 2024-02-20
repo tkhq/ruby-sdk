@@ -1,4 +1,4 @@
-# SwaggerClient::V1PublicKeyCredentialWithAttestation
+# TurnkeyClient::V1PublicKeyCredentialWithAttestation
 
 ## Properties
 Name | Type | Description | Notes

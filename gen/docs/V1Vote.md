@@ -1,4 +1,4 @@
-# SwaggerClient::V1Vote
+# TurnkeyClient::V1Vote
 
 ## Properties
 Name | Type | Description | Notes

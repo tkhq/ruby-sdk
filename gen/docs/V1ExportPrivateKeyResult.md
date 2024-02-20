@@ -1,4 +1,4 @@
-# SwaggerClient::V1ExportPrivateKeyResult
+# TurnkeyClient::V1ExportPrivateKeyResult
 
 ## Properties
 Name | Type | Description | Notes

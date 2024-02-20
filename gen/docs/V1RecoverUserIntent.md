@@ -1,4 +1,4 @@
-# SwaggerClient::V1RecoverUserIntent
+# TurnkeyClient::V1RecoverUserIntent
 
 ## Properties
 Name | Type | Description | Notes

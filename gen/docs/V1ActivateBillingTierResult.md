@@ -1,4 +1,4 @@
-# SwaggerClient::V1ActivateBillingTierResult
+# TurnkeyClient::V1ActivateBillingTierResult
 
 ## Properties
 Name | Type | Description | Notes

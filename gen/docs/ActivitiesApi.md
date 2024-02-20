@@ -1,14 +1,14 @@
-# SwaggerClient::ActivitiesApi
+# TurnkeyClient::ActivitiesApi
 
 All URIs are relative to *https://api.turnkey.com/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**public_api_service_get_activities**](ActivitiesApi.md#public_api_service_get_activities) | **POST** /public/v1/query/list_activities | List Activities
-[**public_api_service_get_activity**](ActivitiesApi.md#public_api_service_get_activity) | **POST** /public/v1/query/get_activity | Get Activity
+[**get_activities**](ActivitiesApi.md#get_activities) | **POST** /public/v1/query/list_activities | List Activities
+[**get_activity**](ActivitiesApi.md#get_activity) | **POST** /public/v1/query/get_activity | Get Activity
 
-# **public_api_service_get_activities**
-> V1GetActivitiesResponse public_api_service_get_activities(body)
+# **get_activities**
+> V1GetActivitiesResponse get_activities(body)
 
 List Activities
 
@@ -17,9 +17,9 @@ List all Activities within an Organization
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'turnkey_sdk'
 # setup authorization
-SwaggerClient.configure do |config|
+TurnkeyClient.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-Stamp'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -31,16 +31,16 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['X-Stamp-WebAuthn'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::ActivitiesApi.new
-body = SwaggerClient::V1GetActivitiesRequest.new # V1GetActivitiesRequest | 
+api_instance = TurnkeyClient::ActivitiesApi.new
+body = TurnkeyClient::V1GetActivitiesRequest.new # V1GetActivitiesRequest | 
 
 
 begin
   #List Activities
-  result = api_instance.public_api_service_get_activities(body)
+  result = api_instance.get_activities(body)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling ActivitiesApi->public_api_service_get_activities: #{e}"
+rescue TurnkeyClient::ApiError => e
+  puts "Exception when calling ActivitiesApi->get_activities: #{e}"
 end
 ```
 
@@ -65,8 +65,8 @@ Name | Type | Description  | Notes
 
 
 
-# **public_api_service_get_activity**
-> V1ActivityResponse public_api_service_get_activity(body)
+# **get_activity**
+> V1ActivityResponse get_activity(body)
 
 Get Activity
 
@@ -75,9 +75,9 @@ Get details about an Activity
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'turnkey_sdk'
 # setup authorization
-SwaggerClient.configure do |config|
+TurnkeyClient.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-Stamp'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -89,16 +89,16 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['X-Stamp-WebAuthn'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::ActivitiesApi.new
-body = SwaggerClient::V1GetActivityRequest.new # V1GetActivityRequest | 
+api_instance = TurnkeyClient::ActivitiesApi.new
+body = TurnkeyClient::V1GetActivityRequest.new # V1GetActivityRequest | 
 
 
 begin
   #Get Activity
-  result = api_instance.public_api_service_get_activity(body)
+  result = api_instance.get_activity(body)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling ActivitiesApi->public_api_service_get_activity: #{e}"
+rescue TurnkeyClient::ApiError => e
+  puts "Exception when calling ActivitiesApi->get_activity: #{e}"
 end
 ```
 

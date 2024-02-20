@@ -1,4 +1,4 @@
-# SwaggerClient::V1SignRawPayloadResult
+# TurnkeyClient::V1SignRawPayloadResult
 
 ## Properties
 Name | Type | Description | Notes

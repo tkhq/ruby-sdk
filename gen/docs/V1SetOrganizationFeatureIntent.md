@@ -1,4 +1,4 @@
-# SwaggerClient::V1SetOrganizationFeatureIntent
+# TurnkeyClient::V1SetOrganizationFeatureIntent
 
 ## Properties
 Name | Type | Description | Notes

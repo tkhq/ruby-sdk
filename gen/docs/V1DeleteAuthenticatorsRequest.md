@@ -1,4 +1,4 @@
-# SwaggerClient::V1DeleteAuthenticatorsRequest
+# TurnkeyClient::V1DeleteAuthenticatorsRequest
 
 ## Properties
 Name | Type | Description | Notes

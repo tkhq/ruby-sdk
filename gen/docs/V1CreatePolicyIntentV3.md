@@ -1,4 +1,4 @@
-# SwaggerClient::V1CreatePolicyIntentV3
+# TurnkeyClient::V1CreatePolicyIntentV3
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::V1CredentialType
+# TurnkeyClient::V1CredentialType
 
 ## Properties
 Name | Type | Description | Notes

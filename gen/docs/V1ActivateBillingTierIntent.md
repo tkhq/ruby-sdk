@@ -1,4 +1,4 @@
-# SwaggerClient::V1ActivateBillingTierIntent
+# TurnkeyClient::V1ActivateBillingTierIntent
 
 ## Properties
 Name | Type | Description | Notes

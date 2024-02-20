@@ -1,4 +1,4 @@
-# SwaggerClient::V1SetPaymentMethodResult
+# TurnkeyClient::V1SetPaymentMethodResult
 
 ## Properties
 Name | Type | Description | Notes

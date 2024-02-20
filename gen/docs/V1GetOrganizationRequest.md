@@ -1,4 +1,4 @@
-# SwaggerClient::V1GetOrganizationRequest
+# TurnkeyClient::V1GetOrganizationRequest
 
 ## Properties
 Name | Type | Description | Notes

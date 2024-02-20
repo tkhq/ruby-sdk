@@ -1,4 +1,4 @@
-# SwaggerClient::V1UpdatePrivateKeyTagRequest
+# TurnkeyClient::V1UpdatePrivateKeyTagRequest
 
 ## Properties
 Name | Type | Description | Notes

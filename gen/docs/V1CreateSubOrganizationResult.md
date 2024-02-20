@@ -1,4 +1,4 @@
-# SwaggerClient::V1CreateSubOrganizationResult
+# TurnkeyClient::V1CreateSubOrganizationResult
 
 ## Properties
 Name | Type | Description | Notes

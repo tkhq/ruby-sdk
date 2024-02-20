@@ -1,4 +1,4 @@
-# SwaggerClient::V1UpdateAllowedOriginsIntent
+# TurnkeyClient::V1UpdateAllowedOriginsIntent
 
 ## Properties
 Name | Type | Description | Notes

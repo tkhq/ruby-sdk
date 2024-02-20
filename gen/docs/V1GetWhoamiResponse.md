@@ -1,4 +1,4 @@
-# SwaggerClient::V1GetWhoamiResponse
+# TurnkeyClient::V1GetWhoamiResponse
 
 ## Properties
 Name | Type | Description | Notes

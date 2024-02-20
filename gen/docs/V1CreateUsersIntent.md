@@ -1,4 +1,4 @@
-# SwaggerClient::V1CreateUsersIntent
+# TurnkeyClient::V1CreateUsersIntent
 
 ## Properties
 Name | Type | Description | Notes

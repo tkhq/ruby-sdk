@@ -1,4 +1,4 @@
-# SwaggerClient::V1GetWalletsResponse
+# TurnkeyClient::V1GetWalletsResponse
 
 ## Properties
 Name | Type | Description | Notes

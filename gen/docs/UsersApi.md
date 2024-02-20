@@ -1,17 +1,17 @@
-# SwaggerClient::UsersApi
+# TurnkeyClient::UsersApi
 
 All URIs are relative to *https://api.turnkey.com/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**public_api_service_create_api_only_users**](UsersApi.md#public_api_service_create_api_only_users) | **POST** /public/v1/submit/create_api_only_users | Create API-only Users
-[**public_api_service_create_users**](UsersApi.md#public_api_service_create_users) | **POST** /public/v1/submit/create_users | Create Users
-[**public_api_service_get_user**](UsersApi.md#public_api_service_get_user) | **POST** /public/v1/query/get_user | Get User
-[**public_api_service_get_users**](UsersApi.md#public_api_service_get_users) | **POST** /public/v1/query/list_users | List Users
-[**public_api_service_update_user**](UsersApi.md#public_api_service_update_user) | **POST** /public/v1/submit/update_user | Update User
+[**create_api_only_users**](UsersApi.md#create_api_only_users) | **POST** /public/v1/submit/create_api_only_users | Create API-only Users
+[**create_users**](UsersApi.md#create_users) | **POST** /public/v1/submit/create_users | Create Users
+[**get_user**](UsersApi.md#get_user) | **POST** /public/v1/query/get_user | Get User
+[**get_users**](UsersApi.md#get_users) | **POST** /public/v1/query/list_users | List Users
+[**update_user**](UsersApi.md#update_user) | **POST** /public/v1/submit/update_user | Update User
 
-# **public_api_service_create_api_only_users**
-> V1ActivityResponse public_api_service_create_api_only_users(body)
+# **create_api_only_users**
+> V1ActivityResponse create_api_only_users(body)
 
 Create API-only Users
 
@@ -20,9 +20,9 @@ Create API-only Users in an existing Organization
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'turnkey_sdk'
 # setup authorization
-SwaggerClient.configure do |config|
+TurnkeyClient.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-Stamp'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -34,16 +34,16 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['X-Stamp-WebAuthn'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::UsersApi.new
-body = SwaggerClient::V1CreateApiOnlyUsersRequest.new # V1CreateApiOnlyUsersRequest | 
+api_instance = TurnkeyClient::UsersApi.new
+body = TurnkeyClient::V1CreateApiOnlyUsersRequest.new # V1CreateApiOnlyUsersRequest | 
 
 
 begin
   #Create API-only Users
-  result = api_instance.public_api_service_create_api_only_users(body)
+  result = api_instance.create_api_only_users(body)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling UsersApi->public_api_service_create_api_only_users: #{e}"
+rescue TurnkeyClient::ApiError => e
+  puts "Exception when calling UsersApi->create_api_only_users: #{e}"
 end
 ```
 
@@ -68,8 +68,8 @@ Name | Type | Description  | Notes
 
 
 
-# **public_api_service_create_users**
-> V1ActivityResponse public_api_service_create_users(body)
+# **create_users**
+> V1ActivityResponse create_users(body)
 
 Create Users
 
@@ -78,9 +78,9 @@ Create Users in an existing Organization
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'turnkey_sdk'
 # setup authorization
-SwaggerClient.configure do |config|
+TurnkeyClient.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-Stamp'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -92,16 +92,16 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['X-Stamp-WebAuthn'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::UsersApi.new
-body = SwaggerClient::V1CreateUsersRequest.new # V1CreateUsersRequest | 
+api_instance = TurnkeyClient::UsersApi.new
+body = TurnkeyClient::V1CreateUsersRequest.new # V1CreateUsersRequest | 
 
 
 begin
   #Create Users
-  result = api_instance.public_api_service_create_users(body)
+  result = api_instance.create_users(body)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling UsersApi->public_api_service_create_users: #{e}"
+rescue TurnkeyClient::ApiError => e
+  puts "Exception when calling UsersApi->create_users: #{e}"
 end
 ```
 
@@ -126,8 +126,8 @@ Name | Type | Description  | Notes
 
 
 
-# **public_api_service_get_user**
-> V1GetUserResponse public_api_service_get_user(body)
+# **get_user**
+> V1GetUserResponse get_user(body)
 
 Get User
 
@@ -136,9 +136,9 @@ Get details about a User
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'turnkey_sdk'
 # setup authorization
-SwaggerClient.configure do |config|
+TurnkeyClient.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-Stamp'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -150,16 +150,16 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['X-Stamp-WebAuthn'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::UsersApi.new
-body = SwaggerClient::V1GetUserRequest.new # V1GetUserRequest | 
+api_instance = TurnkeyClient::UsersApi.new
+body = TurnkeyClient::V1GetUserRequest.new # V1GetUserRequest | 
 
 
 begin
   #Get User
-  result = api_instance.public_api_service_get_user(body)
+  result = api_instance.get_user(body)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling UsersApi->public_api_service_get_user: #{e}"
+rescue TurnkeyClient::ApiError => e
+  puts "Exception when calling UsersApi->get_user: #{e}"
 end
 ```
 
@@ -184,8 +184,8 @@ Name | Type | Description  | Notes
 
 
 
-# **public_api_service_get_users**
-> V1GetUsersResponse public_api_service_get_users(body)
+# **get_users**
+> V1GetUsersResponse get_users(body)
 
 List Users
 
@@ -194,9 +194,9 @@ List all Users within an Organization
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'turnkey_sdk'
 # setup authorization
-SwaggerClient.configure do |config|
+TurnkeyClient.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-Stamp'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -208,16 +208,16 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['X-Stamp-WebAuthn'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::UsersApi.new
-body = SwaggerClient::V1GetUsersRequest.new # V1GetUsersRequest | 
+api_instance = TurnkeyClient::UsersApi.new
+body = TurnkeyClient::V1GetUsersRequest.new # V1GetUsersRequest | 
 
 
 begin
   #List Users
-  result = api_instance.public_api_service_get_users(body)
+  result = api_instance.get_users(body)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling UsersApi->public_api_service_get_users: #{e}"
+rescue TurnkeyClient::ApiError => e
+  puts "Exception when calling UsersApi->get_users: #{e}"
 end
 ```
 
@@ -242,8 +242,8 @@ Name | Type | Description  | Notes
 
 
 
-# **public_api_service_update_user**
-> V1ActivityResponse public_api_service_update_user(body)
+# **update_user**
+> V1ActivityResponse update_user(body)
 
 Update User
 
@@ -252,9 +252,9 @@ Update a User in an existing Organization
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'turnkey_sdk'
 # setup authorization
-SwaggerClient.configure do |config|
+TurnkeyClient.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-Stamp'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -266,16 +266,16 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['X-Stamp-WebAuthn'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::UsersApi.new
-body = SwaggerClient::V1UpdateUserRequest.new # V1UpdateUserRequest | 
+api_instance = TurnkeyClient::UsersApi.new
+body = TurnkeyClient::V1UpdateUserRequest.new # V1UpdateUserRequest | 
 
 
 begin
   #Update User
-  result = api_instance.public_api_service_update_user(body)
+  result = api_instance.update_user(body)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling UsersApi->public_api_service_update_user: #{e}"
+rescue TurnkeyClient::ApiError => e
+  puts "Exception when calling UsersApi->update_user: #{e}"
 end
 ```
 

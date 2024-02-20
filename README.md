@@ -14,12 +14,12 @@ Generated with [swagger-codegen](https://github.com/swagger-api/swagger-codegen)
 Eventually we'll publish this generated code and you'll be able to simply list it as a dependency in your Gemfile. For now you need to use local installation:
 
 ```rb
-gem "swagger_client", path: "./gen/"
+gem "turnkey_sdk", path: "./gen/"
 ```
 
 Then `bundle install`. And in your Ruby files:
 ```rb
-require "swagger_client"
+require "turnkey_sdk"
 ```
 
-See the [`example.rb` file](./example.rb) if you're looking for something to copy/paste.
+See the [`example.rb` file](./example.rb) if you're looking for something to copy/paste. To run it `bundle exec ruby example.rb`.
