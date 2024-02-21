@@ -6,11 +6,14 @@ PATH
       typhoeus (~> 1.0, >= 1.0.1)
 
 GEM
+  remote: https://rubygems.org/
   specs:
+    dotenv (3.0.2)
     ethon (0.16.0)
       ffi (>= 1.15.0)
     ffi (1.16.3)
     json (2.5.1)
+    openssl (3.2.0)
     typhoeus (1.4.1)
       ethon (>= 0.9.0)
 
@@ -18,6 +21,8 @@ PLATFORMS
   arm64-darwin-23
 
 DEPENDENCIES
+  dotenv
+  openssl
   turnkey_sdk!
 
 BUNDLED WITH
