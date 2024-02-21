@@ -1,9 +1,10 @@
 {
-  "gemName": "turnkey_sdk",
-  "gemLicense": "Apache 2.0",
-  "gemHomepage": "https://turnkey.com",
-  "gemDescription": "SDK to interact with the Turnkey API",
+  "gemName": "turnkey_client",
+  "gemLicense": "Apache-2.0",
+  "gemHomepage": "https://github.com/tkhq/ruby-sdk",
+  "gemDescription": "HTTP client to interact with the Turnkey API",
   "gemAuthor": "Turnkey Engineering",
+  "gemAuthorEmail": "hello@turnkey.com",
   "moduleName": "TurnkeyClient",
   "gemVersion": "0.0.1"
 }
