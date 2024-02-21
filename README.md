@@ -1,13 +1,9 @@
-# Ruby Turnkey SDK
+# Turnkey Ruby SDK
 
-This repository contains a generated Ruby client to interact with the Turnkey API.
+This repository contains Ruby gems to interact with Turnkey.
 
-Generated with [swagger-codegen](https://github.com/swagger-api/swagger-codegen).
-
-## Generating a new version
-
-* Update the swagger spec in `inputs/`
-* Run `make generate`
+* `turnkey_client` provides `TurnkeyClient`
+* `turnkey_api_key_stamper` provides `ApiKeyStamper`
 
 ## Using Turnkey with Ruby
 
