@@ -2,7 +2,7 @@
 # Long-term we'll probably want to publish the Ruby stamper as its own package.
 $LOAD_PATH.unshift File.dirname(__FILE__) + '/lib'
 
-require "turnkey_sdk"
+require "turnkey_client"
 require "stamper"
 require "dotenv"
 require "json"
