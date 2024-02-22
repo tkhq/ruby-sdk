@@ -57,4 +57,13 @@ We use a swagger spec and [Swagger Codegen](https://github.com/swagger-api/swagg
 * Bump `gemVersion` in [`config.json`](./turnkey_client_inputs/config.json)
 * Run `make`
 
-You can also update the templates if you want to tweak something related to codegen itself ([here](./turnkey_client_inputs/templates/)).
+## Updating codegen templates
+
+We use custom templates to insert custom functionality, namely:
+* added `openssl` as a dependency to load API keys
+* added functionality to insert `X-Stamp` headers to requests for authentication
+* modified `configure` function to require a valid P256 public/private key pair at initialization time
+
+If you want to tweak something related to codegen itself, head ([here](./turnkey_client_inputs/templates/)), make the desired change, and re-generate `turnkey_client`
+
+If you want to update templates with upstream this is a bit harder but possible: these templates were downloaded from [this folder](https://github.com/swagger-api/swagger-codegen-generators/tree/0f7eeb2ca53e5fff886ce1a609bce1b1e75063fe/src/main/resources/handlebars/ruby) (this is a permalink to the right git SHA). You can see all the changes made to these by looking at the history of changes in the templates folder: https://github.com/tkhq/ruby-sdk/commits/main/turnkey_client_inputs/templates
