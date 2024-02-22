@@ -1,6 +1,8 @@
 # Turnkey Ruby SDK
 
-This repository contains a Ruby gem (`turnkey_client`) to interact with Turnkey.
+[![CI](https://github.com/tkhq/ruby-sdk/actions/workflows/rubocop.yml/badge.svg)](https://github.com/tkhq/ruby-sdk/actions/workflows/rubocop.yml) [![Gem Version](https://img.shields.io/gem/v/turnkey_client.svg)](https://rubygems.org/gems/turnkey_client)
+
+This repository contains a Ruby gem, [`turnkey_client`](https://rubygems.org/gems/turnkey_client) to interact with the Turnkey API.
 
 ## Using Turnkey in your Ruby projects
 
@@ -10,7 +12,7 @@ To install `turnkey_client`, install it with bundler:
 bundle install turnkey_client
 ```
 
-Then `require` it in Ruby files and use it:
+Then `require` it in Ruby files to use it:
 
 ```rb
 require "turnkey_client"
@@ -69,7 +71,7 @@ If you want to tweak something related to codegen itself, head ([here](./turnkey
 
 If you want to update templates with upstream this is a bit harder but possible: these templates were downloaded from [this folder](https://github.com/swagger-api/swagger-codegen-generators/tree/0f7eeb2ca53e5fff886ce1a609bce1b1e75063fe/src/main/resources/handlebars/ruby) (this is a permalink to the right git SHA). You can see all the changes made to these by looking at the history of changes in the templates folder: https://github.com/tkhq/ruby-sdk/commits/main/turnkey_client_inputs/templates.
 
-# Rubocop
+## Rubocop
 
 We use Rubocop for linting. To install:
 
@@ -81,4 +83,14 @@ And run:
 
 ```sh
 $ rubocop
+```
+
+## Releasing on Rubygems.org
+
+To build and release:
+
+```sh
+$ cd turnkey_client
+$ gem build turnkey_client.gemspec
+$ gem push turnkey_client-x.y.z.gem 
 ```

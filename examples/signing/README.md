@@ -1,6 +1,6 @@
 # Who am I?
 
-This examples shows how to use `turnkey_client` to create a new wallet and sign a message with it.
+This examples shows how to use [`turnkey_client`](https://rubygems.org/gems/turnkey_client) to create a new wallet and sign a message with it.
 
 To run this example:
 * `cp .env.example .env`

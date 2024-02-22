@@ -1,6 +1,6 @@
 # Who am I?
 
-This examples shows how to use `turnkey_client` to sign requests. Here we sign a "Who am I?" request (see [documentation](https://docs.turnkey.com/api#tag/Sessions/operation/GetWhoami))
+This examples shows how to use [`turnkey_client`](https://rubygems.org/gems/turnkey_client) to sign requests. Here we sign a "Who am I?" request (see [documentation](https://docs.turnkey.com/api#tag/Sessions/operation/GetWhoami))
 
 To run this example:
 * `cp .env.example .env`
