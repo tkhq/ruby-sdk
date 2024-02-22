@@ -66,4 +66,18 @@ We use custom templates to insert custom functionality, namely:
 
 If you want to tweak something related to codegen itself, head ([here](./turnkey_client_inputs/templates/)), make the desired change, and re-generate `turnkey_client`
 
-If you want to update templates with upstream this is a bit harder but possible: these templates were downloaded from [this folder](https://github.com/swagger-api/swagger-codegen-generators/tree/0f7eeb2ca53e5fff886ce1a609bce1b1e75063fe/src/main/resources/handlebars/ruby) (this is a permalink to the right git SHA). You can see all the changes made to these by looking at the history of changes in the templates folder: https://github.com/tkhq/ruby-sdk/commits/main/turnkey_client_inputs/templates
+If you want to update templates with upstream this is a bit harder but possible: these templates were downloaded from [this folder](https://github.com/swagger-api/swagger-codegen-generators/tree/0f7eeb2ca53e5fff886ce1a609bce1b1e75063fe/src/main/resources/handlebars/ruby) (this is a permalink to the right git SHA). You can see all the changes made to these by looking at the history of changes in the templates folder: https://github.com/tkhq/ruby-sdk/commits/main/turnkey_client_inputs/templates.
+
+# Rubocop
+
+We use Rubocop for linting. To install:
+
+```sh
+$ gem install rubocop
+```
+
+And run:
+
+```sh
+$ rubocop
+```
