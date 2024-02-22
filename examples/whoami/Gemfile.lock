@@ -1,5 +1,5 @@
 PATH
-  remote: turnkey_client
+  remote: ../../turnkey_client
   specs:
     turnkey_client (0.0.1)
       json (~> 2.1, >= 2.1.0)

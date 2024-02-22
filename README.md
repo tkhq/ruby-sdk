@@ -24,12 +24,11 @@ response = TurnkeyClient::SessionsApi.new(client).get_whoami({ organization_id: 
 puts response
 ```
 
-See the [`whoami.rb` file](./whoami.rb) if you're looking for something to copy/paste. To run it:
+See the [examples](./examples/) folder if you're looking for a complete sample project
 
-```ruby
-$ bundle exec ruby whoami.rb
-{:organizationId=>"4ecd2483-49db-4d63-bc2a-f70f122c3044", :organizationName=>"Ruby", :userId=>"1299d44a-339d-497d-867c-b78c047a8622", :username=>"Root user"}
-```
+## Examples
+
+* [Whoami](./examples/whoami/): example showcasing API request signing in its simplest form
 
 ## Using Turnkey in your Rails projects
 
