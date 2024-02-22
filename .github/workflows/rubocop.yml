@@ -1,0 +1,29 @@
+name: Rubocop
+
+on:
+  push:
+  branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  rubocop:
+    runs-on: ubuntu-latest
+
+    steps:
+      # https://github.com/actions/checkout
+      - name: Checkout
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # v3.0.2
+
+      # https://github.com/ruby/setup-ruby
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@d4526a55538b775af234ba4af27118ed6f8f6677 # v1.172.0
+        with:
+          ruby-version: '3.3'
+
+      - name: Install rubocop
+        run: gem install rubocop
+
+      - name: Run rubocop
+        run: rubocop
