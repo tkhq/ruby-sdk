@@ -8,6 +8,7 @@ turnkey_client: turnkey_client_inputs
 		--remove-operation-id-prefix true \
 		--disable-examples true
 	rm -rf turnkey_client/docs turnkey_client/spec
+	rm turnkey_client/.rubocop.yml
 
 clean:
 	rm -rf turnkey_client
