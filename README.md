@@ -9,7 +9,7 @@ This repository contains a Ruby gem, [`turnkey_client`](https://rubygems.org/gem
 To install `turnkey_client`, install it with bundler:
 
 ```rb
-bundle install turnkey_client
+bundle add turnkey_client
 ```
 
 Then `require` it in Ruby files to use it:
