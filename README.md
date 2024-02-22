@@ -29,6 +29,7 @@ See the [examples](./examples/) folder if you're looking for a complete sample p
 ## Examples
 
 * [Whoami](./examples/whoami/): example showcasing API request signing in its simplest form
+* [Signing](./examples/whoami/): example showcasing wallet creation and ETH message signing
 
 ## Using Turnkey in your Rails projects
 
