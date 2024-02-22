@@ -13,7 +13,7 @@ bundle install turnkey_client
 Then `require` it in Ruby files and use it:
 
 ```rb
-require "turnkey_sdk"
+require "turnkey_client"
 
 client = TurnkeyClient.configure do |c|
     c.api_public_key = "your API public key"
