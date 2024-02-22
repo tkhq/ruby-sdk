@@ -277,16 +277,13 @@ module TurnkeyClient
   class << self
     # Customize default settings for the SDK using block.
     #   TurnkeyClient.configure do |config|
-    #     config.username = "xxx"
-    #     config.password = "xxx"
+    #     config.api_public_key = "xxx"
+    #     config.api_private_key = "xxx"
     #   end
-    # If no block given, return the default Configuration object.
     def configure
-      if block_given?
-        yield(Configuration.default)
-      else
-        Configuration.default
-      end
+      config = Configuration.default
+      yield(config)
+      ApiClient.new(config)
     end
   end
 end

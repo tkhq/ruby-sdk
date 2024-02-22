@@ -36,6 +36,10 @@ module TurnkeyClient
     #   config.api_key_prefix['api_key'] = 'Token'
     attr_accessor :api_key_prefix
 
+    # Let users configure their Turnkey API key
+    attr_accessor :api_public_key
+    attr_accessor :api_private_key
+
     # Defines the username used with HTTP basic authentication.
     #
     # @return [String]
@@ -127,7 +131,7 @@ module TurnkeyClient
     def initialize
       @scheme = 'https'
       @host = 'api.turnkey.com'
-      @base_path = 'https://api.turnkey.com/'
+      @base_path = '/'
       @api_key = {}
       @api_key_prefix = {}
       @timeout = 0

@@ -15,6 +15,11 @@ require 'logger'
 require 'tempfile'
 require 'typhoeus'
 require 'uri'
+require 'openssl'
+require 'json'
+require 'base64'
+
+ASN1_DER_P256_PRIVATE_KEY_PREFIX = "308141020100301306072a8648ce3d020106082a8648ce3d030107042730250201010420"
 
 module TurnkeyClient
   class ApiClient
@@ -27,14 +32,62 @@ module TurnkeyClient
     attr_accessor :default_headers
 
     # Initializes the ApiClient
-    # @option config [Configuration] Configuration for initializing the object, default to Configuration.default
-    def initialize(config = Configuration.default)
+    # @option config [Configuration] Configuration for initializing the object
+    def initialize(config)
       @config = config
       @user_agent = "Swagger-Codegen/#{VERSION}/ruby"
       @default_headers = {
         'Content-Type' => 'application/json',
         'User-Agent' => @user_agent
       }
+
+      if config.api_public_key.nil?
+        raise "Unable to find :api_public_key in configuration. Please configure it with `TurnkeyClient.configure`"
+      end
+        
+      if config.api_private_key.nil?
+          raise "Unable to find :api_private_key in configuration. Please configure it with `TurnkeyClient.configure`"
+      end
+
+      # This hex prefix represents the start of a private key object in ASN.1, encoded in DER
+      # This is necessary to load the private key in raw format with openssl.
+      pkcs8_hex = ASN1_DER_P256_PRIVATE_KEY_PREFIX + config.api_private_key
+
+      # See https://anthonylewis.com/2011/02/09/to-hex-and-back-with-ruby/
+      pkcs8_bytes = pkcs8_hex.scan(/../).map { |x| x.hex }.pack('c*')
+
+      @turnkey_api_key = OpenSSL::PKey.read(pkcs8_bytes)
+    
+      # Check that we loaded the right key by comparing the public key to the passed in public key
+      if self.turnkey_api_public_key != config.api_public_key.downcase
+          raise "Expected public key to be #{config.api_public_key} (value configured), but computed #{self.turnkey_api_public_key} from configured private key"
+      end
+    end
+
+    # Return the hex-encoded public key in compressed form
+    def turnkey_api_public_key
+      # This gives the public point as a [OpenSSL::BN](https://ruby-doc.org/stdlib-2.4.1/libdoc/openssl/rdoc/OpenSSL/BN.html)
+      public_key_bn = @turnkey_api_key.public_key.to_bn :compressed
+      public_key_hex = public_key_bn.to_s 16
+      public_key_hex.downcase
+    end
+
+    # Given a string (often, a POST request body), returns a hash with the correct auth header
+    # to authenticate the request.
+    def turnkey_stamp(data)
+      hash = OpenSSL::Digest::SHA256.digest(data)
+      signature = @turnkey_api_key.dsa_sign_asn1(hash)
+
+      # See https://anthonylewis.com/2011/02/09/to-hex-and-back-with-ruby/
+      signature_hex = signature.unpack('H*').first
+
+      stamp = {
+          publicKey: self.turnkey_api_public_key,
+          scheme: "SIGNATURE_SCHEME_TK_API_P256",
+          signature: signature_hex,
+      }
+
+      { "x-stamp" => Base64.urlsafe_encode64(stamp.to_json, padding: false) }
     end
 
     def self.default
@@ -117,6 +170,11 @@ module TurnkeyClient
       if [:post, :patch, :put, :delete].include?(http_method)
         req_body = build_request_body(header_params, form_params, opts[:body])
         req_opts.update :body => req_body
+
+        # Now, stamp the request body and add the header to the list of headers
+        turnkey_auth_headers = turnkey_stamp(req_body)
+        req_opts[:headers] = header_params.merge(turnkey_auth_headers)
+
         if @config.debugging
           @config.logger.debug "HTTP request body param ~BEGIN~\n#{req_body}\n~END~\n"
         end
