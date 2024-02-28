@@ -20,7 +20,7 @@ module TurnkeyClient
     # Create new Private Keys
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [V1ActivityResponse]
+    # @return [ActivityResponse]
     def create_private_keys(body, opts = {})
       data, _status_code, _headers = create_private_keys_with_http_info(body, opts)
       data
@@ -30,7 +30,7 @@ module TurnkeyClient
     # Create new Private Keys
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(V1ActivityResponse, Integer, Hash)>] V1ActivityResponse data, response status code and response headers
+    # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
     def create_private_keys_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: PrivateKeysApi.create_private_keys ...'
@@ -58,7 +58,7 @@ module TurnkeyClient
       # http body (model)
       post_body = opts[:body] || @api_client.object_to_http_body(body) 
 
-      return_type = opts[:return_type] || 'V1ActivityResponse' 
+      return_type = opts[:return_type] || 'ActivityResponse' 
 
       auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -78,7 +78,7 @@ module TurnkeyClient
     # Exports a Private Key
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [V1ActivityResponse]
+    # @return [ActivityResponse]
     def export_private_key(body, opts = {})
       data, _status_code, _headers = export_private_key_with_http_info(body, opts)
       data
@@ -88,7 +88,7 @@ module TurnkeyClient
     # Exports a Private Key
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(V1ActivityResponse, Integer, Hash)>] V1ActivityResponse data, response status code and response headers
+    # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
     def export_private_key_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: PrivateKeysApi.export_private_key ...'
@@ -116,7 +116,7 @@ module TurnkeyClient
       # http body (model)
       post_body = opts[:body] || @api_client.object_to_http_body(body) 
 
-      return_type = opts[:return_type] || 'V1ActivityResponse' 
+      return_type = opts[:return_type] || 'ActivityResponse' 
 
       auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -136,7 +136,7 @@ module TurnkeyClient
     # Get details about a Private Key
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [V1GetPrivateKeyResponse]
+    # @return [GetPrivateKeyResponse]
     def get_private_key(body, opts = {})
       data, _status_code, _headers = get_private_key_with_http_info(body, opts)
       data
@@ -146,7 +146,7 @@ module TurnkeyClient
     # Get details about a Private Key
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(V1GetPrivateKeyResponse, Integer, Hash)>] V1GetPrivateKeyResponse data, response status code and response headers
+    # @return [Array<(GetPrivateKeyResponse, Integer, Hash)>] GetPrivateKeyResponse data, response status code and response headers
     def get_private_key_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: PrivateKeysApi.get_private_key ...'
@@ -174,7 +174,7 @@ module TurnkeyClient
       # http body (model)
       post_body = opts[:body] || @api_client.object_to_http_body(body) 
 
-      return_type = opts[:return_type] || 'V1GetPrivateKeyResponse' 
+      return_type = opts[:return_type] || 'GetPrivateKeyResponse' 
 
       auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -194,7 +194,7 @@ module TurnkeyClient
     # List all Private Keys within an Organization
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [V1GetPrivateKeysResponse]
+    # @return [GetPrivateKeysResponse]
     def get_private_keys(body, opts = {})
       data, _status_code, _headers = get_private_keys_with_http_info(body, opts)
       data
@@ -204,7 +204,7 @@ module TurnkeyClient
     # List all Private Keys within an Organization
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(V1GetPrivateKeysResponse, Integer, Hash)>] V1GetPrivateKeysResponse data, response status code and response headers
+    # @return [Array<(GetPrivateKeysResponse, Integer, Hash)>] GetPrivateKeysResponse data, response status code and response headers
     def get_private_keys_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: PrivateKeysApi.get_private_keys ...'
@@ -232,7 +232,7 @@ module TurnkeyClient
       # http body (model)
       post_body = opts[:body] || @api_client.object_to_http_body(body) 
 
-      return_type = opts[:return_type] || 'V1GetPrivateKeysResponse' 
+      return_type = opts[:return_type] || 'GetPrivateKeysResponse' 
 
       auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,

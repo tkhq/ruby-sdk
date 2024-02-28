@@ -20,7 +20,7 @@ module TurnkeyClient
     # Create Authenticators to authenticate requests to Turnkey
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [V1ActivityResponse]
+    # @return [ActivityResponse]
     def create_authenticators(body, opts = {})
       data, _status_code, _headers = create_authenticators_with_http_info(body, opts)
       data
@@ -30,7 +30,7 @@ module TurnkeyClient
     # Create Authenticators to authenticate requests to Turnkey
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(V1ActivityResponse, Integer, Hash)>] V1ActivityResponse data, response status code and response headers
+    # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
     def create_authenticators_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: AuthenticatorsApi.create_authenticators ...'
@@ -58,7 +58,7 @@ module TurnkeyClient
       # http body (model)
       post_body = opts[:body] || @api_client.object_to_http_body(body) 
 
-      return_type = opts[:return_type] || 'V1ActivityResponse' 
+      return_type = opts[:return_type] || 'ActivityResponse' 
 
       auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -78,7 +78,7 @@ module TurnkeyClient
     # Remove authenticators from a User
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [V1ActivityResponse]
+    # @return [ActivityResponse]
     def delete_authenticators(body, opts = {})
       data, _status_code, _headers = delete_authenticators_with_http_info(body, opts)
       data
@@ -88,7 +88,7 @@ module TurnkeyClient
     # Remove authenticators from a User
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(V1ActivityResponse, Integer, Hash)>] V1ActivityResponse data, response status code and response headers
+    # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
     def delete_authenticators_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: AuthenticatorsApi.delete_authenticators ...'
@@ -116,7 +116,7 @@ module TurnkeyClient
       # http body (model)
       post_body = opts[:body] || @api_client.object_to_http_body(body) 
 
-      return_type = opts[:return_type] || 'V1ActivityResponse' 
+      return_type = opts[:return_type] || 'ActivityResponse' 
 
       auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -136,7 +136,7 @@ module TurnkeyClient
     # Get details about an authenticator
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [V1GetAuthenticatorResponse]
+    # @return [GetAuthenticatorResponse]
     def get_authenticator(body, opts = {})
       data, _status_code, _headers = get_authenticator_with_http_info(body, opts)
       data
@@ -146,7 +146,7 @@ module TurnkeyClient
     # Get details about an authenticator
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(V1GetAuthenticatorResponse, Integer, Hash)>] V1GetAuthenticatorResponse data, response status code and response headers
+    # @return [Array<(GetAuthenticatorResponse, Integer, Hash)>] GetAuthenticatorResponse data, response status code and response headers
     def get_authenticator_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: AuthenticatorsApi.get_authenticator ...'
@@ -174,7 +174,7 @@ module TurnkeyClient
       # http body (model)
       post_body = opts[:body] || @api_client.object_to_http_body(body) 
 
-      return_type = opts[:return_type] || 'V1GetAuthenticatorResponse' 
+      return_type = opts[:return_type] || 'GetAuthenticatorResponse' 
 
       auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -194,7 +194,7 @@ module TurnkeyClient
     # Get details about authenticators for a user
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [V1GetAuthenticatorsResponse]
+    # @return [GetAuthenticatorsResponse]
     def get_authenticators(body, opts = {})
       data, _status_code, _headers = get_authenticators_with_http_info(body, opts)
       data
@@ -204,7 +204,7 @@ module TurnkeyClient
     # Get details about authenticators for a user
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(V1GetAuthenticatorsResponse, Integer, Hash)>] V1GetAuthenticatorsResponse data, response status code and response headers
+    # @return [Array<(GetAuthenticatorsResponse, Integer, Hash)>] GetAuthenticatorsResponse data, response status code and response headers
     def get_authenticators_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: AuthenticatorsApi.get_authenticators ...'
@@ -232,7 +232,7 @@ module TurnkeyClient
       # http body (model)
       post_body = opts[:body] || @api_client.object_to_http_body(body) 
 
-      return_type = opts[:return_type] || 'V1GetAuthenticatorsResponse' 
+      return_type = opts[:return_type] || 'GetAuthenticatorsResponse' 
 
       auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,

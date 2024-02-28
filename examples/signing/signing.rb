@@ -18,7 +18,7 @@ begin
   # https://docs.turnkey.com/api#tag/Wallets/operation/CreateWallet
   now_in_ms = DateTime.now.strftime('%Q')
 
-  # We can also use `TurnkeyClient::V1CreateWalletRequest` to create the request object here
+  # We can also use `TurnkeyClient::CreateWalletRequest` to create the request object here
   create_wallet_response = TurnkeyClient::WalletsApi.new(client).create_wallet(
     {
       type: 'ACTIVITY_TYPE_CREATE_WALLET',
@@ -40,7 +40,7 @@ begin
     }
   )
 
-  created_wallet = create_wallet_response&.activity&.dig(:result, :createWalletResult)
+  created_wallet = create_wallet_response&.to_hash&.dig(:activity, :result, :createWalletResult)
   raise "Something went wrong: no wallet in activity response: #{create_wallet_response.to_hash}" if created_wallet.nil?
 
   puts 'created new wallet successfully'
@@ -66,7 +66,7 @@ begin
     }
   )
 
-  signature = signature_response&.activity&.dig(:result, :signRawPayloadResult)
+  signature = signature_response&.to_hash&.dig(:activity, :result, :signRawPayloadResult)
   raise "Something went wrong: no signature in activity response: #{signature_response.to_hash}" if signature.nil?
 
   puts 'successful signature'
@@ -81,5 +81,5 @@ begin
   puts "- signature hash: 0x#{signature[:r]}#{signature[:s]}#{eth_v}"
   puts 'You can verify for yourself at https://etherscan.io/verifiedSignatures > "Verify Signature"'
 rescue TurnkeyClient::ApiError => e
-  puts "Exception when calling Whoami endpoint: #{e}"
+  puts "Exception when calling signing endpoint: #{e}"
 end

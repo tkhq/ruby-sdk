@@ -20,7 +20,7 @@ module TurnkeyClient
     # Sign a raw payload
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [V1ActivityResponse]
+    # @return [ActivityResponse]
     def sign_raw_payload(body, opts = {})
       data, _status_code, _headers = sign_raw_payload_with_http_info(body, opts)
       data
@@ -30,7 +30,7 @@ module TurnkeyClient
     # Sign a raw payload
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(V1ActivityResponse, Integer, Hash)>] V1ActivityResponse data, response status code and response headers
+    # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
     def sign_raw_payload_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: SigningApi.sign_raw_payload ...'
@@ -58,7 +58,7 @@ module TurnkeyClient
       # http body (model)
       post_body = opts[:body] || @api_client.object_to_http_body(body) 
 
-      return_type = opts[:return_type] || 'V1ActivityResponse' 
+      return_type = opts[:return_type] || 'ActivityResponse' 
 
       auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -78,7 +78,7 @@ module TurnkeyClient
     # Sign a transaction
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [V1ActivityResponse]
+    # @return [ActivityResponse]
     def sign_transaction(body, opts = {})
       data, _status_code, _headers = sign_transaction_with_http_info(body, opts)
       data
@@ -88,7 +88,7 @@ module TurnkeyClient
     # Sign a transaction
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(V1ActivityResponse, Integer, Hash)>] V1ActivityResponse data, response status code and response headers
+    # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
     def sign_transaction_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: SigningApi.sign_transaction ...'
@@ -116,7 +116,7 @@ module TurnkeyClient
       # http body (model)
       post_body = opts[:body] || @api_client.object_to_http_body(body) 
 
-      return_type = opts[:return_type] || 'V1ActivityResponse' 
+      return_type = opts[:return_type] || 'ActivityResponse' 
 
       auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,

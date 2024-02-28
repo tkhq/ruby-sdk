@@ -20,7 +20,7 @@ module TurnkeyClient
     # Create a Wallet and derive addresses
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [V1ActivityResponse]
+    # @return [ActivityResponse]
     def create_wallet(body, opts = {})
       data, _status_code, _headers = create_wallet_with_http_info(body, opts)
       data
@@ -30,7 +30,7 @@ module TurnkeyClient
     # Create a Wallet and derive addresses
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(V1ActivityResponse, Integer, Hash)>] V1ActivityResponse data, response status code and response headers
+    # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
     def create_wallet_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: WalletsApi.create_wallet ...'
@@ -58,7 +58,7 @@ module TurnkeyClient
       # http body (model)
       post_body = opts[:body] || @api_client.object_to_http_body(body) 
 
-      return_type = opts[:return_type] || 'V1ActivityResponse' 
+      return_type = opts[:return_type] || 'ActivityResponse' 
 
       auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -78,7 +78,7 @@ module TurnkeyClient
     # Derive additional addresses using an existing wallet
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [V1ActivityResponse]
+    # @return [ActivityResponse]
     def create_wallet_accounts(body, opts = {})
       data, _status_code, _headers = create_wallet_accounts_with_http_info(body, opts)
       data
@@ -88,7 +88,7 @@ module TurnkeyClient
     # Derive additional addresses using an existing wallet
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(V1ActivityResponse, Integer, Hash)>] V1ActivityResponse data, response status code and response headers
+    # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
     def create_wallet_accounts_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: WalletsApi.create_wallet_accounts ...'
@@ -116,7 +116,7 @@ module TurnkeyClient
       # http body (model)
       post_body = opts[:body] || @api_client.object_to_http_body(body) 
 
-      return_type = opts[:return_type] || 'V1ActivityResponse' 
+      return_type = opts[:return_type] || 'ActivityResponse' 
 
       auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -136,7 +136,7 @@ module TurnkeyClient
     # Exports a Wallet
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [V1ActivityResponse]
+    # @return [ActivityResponse]
     def export_wallet(body, opts = {})
       data, _status_code, _headers = export_wallet_with_http_info(body, opts)
       data
@@ -146,7 +146,7 @@ module TurnkeyClient
     # Exports a Wallet
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(V1ActivityResponse, Integer, Hash)>] V1ActivityResponse data, response status code and response headers
+    # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
     def export_wallet_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: WalletsApi.export_wallet ...'
@@ -174,7 +174,7 @@ module TurnkeyClient
       # http body (model)
       post_body = opts[:body] || @api_client.object_to_http_body(body) 
 
-      return_type = opts[:return_type] || 'V1ActivityResponse' 
+      return_type = opts[:return_type] || 'ActivityResponse' 
 
       auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -194,7 +194,7 @@ module TurnkeyClient
     # Exports a Wallet Account
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [V1ActivityResponse]
+    # @return [ActivityResponse]
     def export_wallet_account(body, opts = {})
       data, _status_code, _headers = export_wallet_account_with_http_info(body, opts)
       data
@@ -204,7 +204,7 @@ module TurnkeyClient
     # Exports a Wallet Account
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(V1ActivityResponse, Integer, Hash)>] V1ActivityResponse data, response status code and response headers
+    # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
     def export_wallet_account_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: WalletsApi.export_wallet_account ...'
@@ -232,7 +232,7 @@ module TurnkeyClient
       # http body (model)
       post_body = opts[:body] || @api_client.object_to_http_body(body) 
 
-      return_type = opts[:return_type] || 'V1ActivityResponse' 
+      return_type = opts[:return_type] || 'ActivityResponse' 
 
       auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -252,7 +252,7 @@ module TurnkeyClient
     # Get details about a Wallet
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [V1GetWalletResponse]
+    # @return [GetWalletResponse]
     def get_wallet(body, opts = {})
       data, _status_code, _headers = get_wallet_with_http_info(body, opts)
       data
@@ -262,7 +262,7 @@ module TurnkeyClient
     # Get details about a Wallet
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(V1GetWalletResponse, Integer, Hash)>] V1GetWalletResponse data, response status code and response headers
+    # @return [Array<(GetWalletResponse, Integer, Hash)>] GetWalletResponse data, response status code and response headers
     def get_wallet_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: WalletsApi.get_wallet ...'
@@ -290,7 +290,7 @@ module TurnkeyClient
       # http body (model)
       post_body = opts[:body] || @api_client.object_to_http_body(body) 
 
-      return_type = opts[:return_type] || 'V1GetWalletResponse' 
+      return_type = opts[:return_type] || 'GetWalletResponse' 
 
       auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -310,7 +310,7 @@ module TurnkeyClient
     # List all Accounts wirhin a Wallet
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [V1GetWalletAccountsResponse]
+    # @return [GetWalletAccountsResponse]
     def get_wallet_accounts(body, opts = {})
       data, _status_code, _headers = get_wallet_accounts_with_http_info(body, opts)
       data
@@ -320,7 +320,7 @@ module TurnkeyClient
     # List all Accounts wirhin a Wallet
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(V1GetWalletAccountsResponse, Integer, Hash)>] V1GetWalletAccountsResponse data, response status code and response headers
+    # @return [Array<(GetWalletAccountsResponse, Integer, Hash)>] GetWalletAccountsResponse data, response status code and response headers
     def get_wallet_accounts_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: WalletsApi.get_wallet_accounts ...'
@@ -348,7 +348,7 @@ module TurnkeyClient
       # http body (model)
       post_body = opts[:body] || @api_client.object_to_http_body(body) 
 
-      return_type = opts[:return_type] || 'V1GetWalletAccountsResponse' 
+      return_type = opts[:return_type] || 'GetWalletAccountsResponse' 
 
       auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -368,7 +368,7 @@ module TurnkeyClient
     # List all Wallets within an Organization
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [V1GetWalletsResponse]
+    # @return [GetWalletsResponse]
     def get_wallets(body, opts = {})
       data, _status_code, _headers = get_wallets_with_http_info(body, opts)
       data
@@ -378,7 +378,7 @@ module TurnkeyClient
     # List all Wallets within an Organization
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(V1GetWalletsResponse, Integer, Hash)>] V1GetWalletsResponse data, response status code and response headers
+    # @return [Array<(GetWalletsResponse, Integer, Hash)>] GetWalletsResponse data, response status code and response headers
     def get_wallets_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: WalletsApi.get_wallets ...'
@@ -406,7 +406,7 @@ module TurnkeyClient
       # http body (model)
       post_body = opts[:body] || @api_client.object_to_http_body(body) 
 
-      return_type = opts[:return_type] || 'V1GetWalletsResponse' 
+      return_type = opts[:return_type] || 'GetWalletsResponse' 
 
       auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -419,6 +419,122 @@ module TurnkeyClient
 
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: WalletsApi#get_wallets\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+    # Import Wallet
+    # Imports a wallet
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [ActivityResponse]
+    def import_wallet(body, opts = {})
+      data, _status_code, _headers = import_wallet_with_http_info(body, opts)
+      data
+    end
+
+    # Import Wallet
+    # Imports a wallet
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
+    def import_wallet_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: WalletsApi.import_wallet ...'
+      end
+      # verify the required parameter 'body' is set
+      if @api_client.config.client_side_validation && body.nil?
+        fail ArgumentError, "Missing the required parameter 'body' when calling WalletsApi.import_wallet"
+      end
+      # resource path
+      local_var_path = '/public/v1/submit/import_wallet'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:body] || @api_client.object_to_http_body(body) 
+
+      return_type = opts[:return_type] || 'ActivityResponse' 
+
+      auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type)
+
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WalletsApi#import_wallet\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+    # Init Import Wallet
+    # Initializes a new wallet import
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [ActivityResponse]
+    def init_import_wallet(body, opts = {})
+      data, _status_code, _headers = init_import_wallet_with_http_info(body, opts)
+      data
+    end
+
+    # Init Import Wallet
+    # Initializes a new wallet import
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
+    def init_import_wallet_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: WalletsApi.init_import_wallet ...'
+      end
+      # verify the required parameter 'body' is set
+      if @api_client.config.client_side_validation && body.nil?
+        fail ArgumentError, "Missing the required parameter 'body' when calling WalletsApi.init_import_wallet"
+      end
+      # resource path
+      local_var_path = '/public/v1/submit/init_import_wallet'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:body] || @api_client.object_to_http_body(body) 
+
+      return_type = opts[:return_type] || 'ActivityResponse' 
+
+      auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type)
+
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WalletsApi#init_import_wallet\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

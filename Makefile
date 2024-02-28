@@ -1,4 +1,4 @@
-turnkey_client: turnkey_client_inputs
+turnkey_client: turnkey_client_inputs/public_api.swagger.json turnkey_client_inputs/config.json turnkey_client_inputs/templates
 	swagger-codegen generate \
 		-l ruby \
 		-i turnkey_client_inputs/public_api.swagger.json \

@@ -20,7 +20,7 @@ module TurnkeyClient
     # Get basic information about your current API or WebAuthN user and their organization. Affords Sub-Organization look ups via Parent Organization for WebAuthN users.
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [V1GetWhoamiResponse]
+    # @return [GetWhoamiResponse]
     def get_whoami(body, opts = {})
       data, _status_code, _headers = get_whoami_with_http_info(body, opts)
       data
@@ -30,7 +30,7 @@ module TurnkeyClient
     # Get basic information about your current API or WebAuthN user and their organization. Affords Sub-Organization look ups via Parent Organization for WebAuthN users.
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(V1GetWhoamiResponse, Integer, Hash)>] V1GetWhoamiResponse data, response status code and response headers
+    # @return [Array<(GetWhoamiResponse, Integer, Hash)>] GetWhoamiResponse data, response status code and response headers
     def get_whoami_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: SessionsApi.get_whoami ...'
@@ -58,7 +58,7 @@ module TurnkeyClient
       # http body (model)
       post_body = opts[:body] || @api_client.object_to_http_body(body) 
 
-      return_type = opts[:return_type] || 'V1GetWhoamiResponse' 
+      return_type = opts[:return_type] || 'GetWhoamiResponse' 
 
       auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
