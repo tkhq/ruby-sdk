@@ -8,6 +8,7 @@ Dotenv.load
 
 raise 'Please set TURNKEY_ORGANIZATION_ID in your .env file' if ENV['TURNKEY_ORGANIZATION_ID'].nil?
 raise 'Please set SUB_ORGANIZATION_ROOT_PUBLIC_KEY in your .env file' if ENV['SUB_ORGANIZATION_ROOT_PUBLIC_KEY'].nil?
+raise 'SUB_ORGANIZATION_ROOT_PUBLIC_KEY should be different from TURNKEY_API_PUBLIC_KEY' if ENV['SUB_ORGANIZATION_ROOT_PUBLIC_KEY'] == ENV['TURNKEY_API_PUBLIC_KEY']
 
 # Make a whoami request
 begin
@@ -56,7 +57,6 @@ begin
   )
 
   created_sub_organization = create_sub_organization_response&.activity&.dig(:result, :createSubOrganizationResultV4)
-  # TODO
   raise "Something went wrong: no sub-organization in activity response: #{create_sub_organization_response.to_hash}" if created_sub_organization.nil?
 
   sub_organization_id = created_sub_organization[:subOrganizationId]

@@ -4,7 +4,7 @@ This examples shows how to use [`turnkey_client`](https://rubygems.org/gems/turn
 
 To run this example:
 * `cp .env.example .env`
-* Follow the instructions in the `.env` file to fill in values for `TURNKEY_ORGANIZATION_ID`, `TURNKEY_API_PUBLIC_KEY`, `TURNKEY_API_PRIVATE_KEY`, and `SUB_ORGANIZATION_ROOT_PUBLIC_KEY`
+* Follow the instructions in the `.env` file to fill in values for `TURNKEY_ORGANIZATION_ID`, `TURNKEY_API_PUBLIC_KEY`, `TURNKEY_API_PRIVATE_KEY`, and `SUB_ORGANIZATION_ROOT_PUBLIC_KEY`. Note that`TURNKEY_API_PUBLIC_KEY` and `SUB_ORGANIZATION_ROOT_PUBLIC_KEY` should be different public keys! `TURNKEY_API_PUBLIC_KEY` is a public key attached the main organization, authorized to create sub-organizations, while `SUB_ORGANIZATION_ROOT_PUBLIC_KEY` is a public key that will be attached to the sub-organization, once created.
 * Install the dependencies: `bundle install`
 * Then run the `create_sub_org.rb` script: `bundle exec ruby create_sub_org.rb`
 
