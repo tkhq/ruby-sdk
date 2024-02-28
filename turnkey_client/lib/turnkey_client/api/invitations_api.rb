@@ -20,7 +20,7 @@ module TurnkeyClient
     # Create Invitations to join an existing Organization
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [V1ActivityResponse]
+    # @return [ActivityResponse]
     def create_invitations(body, opts = {})
       data, _status_code, _headers = create_invitations_with_http_info(body, opts)
       data
@@ -30,7 +30,7 @@ module TurnkeyClient
     # Create Invitations to join an existing Organization
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(V1ActivityResponse, Integer, Hash)>] V1ActivityResponse data, response status code and response headers
+    # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
     def create_invitations_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: InvitationsApi.create_invitations ...'
@@ -58,7 +58,7 @@ module TurnkeyClient
       # http body (model)
       post_body = opts[:body] || @api_client.object_to_http_body(body) 
 
-      return_type = opts[:return_type] || 'V1ActivityResponse' 
+      return_type = opts[:return_type] || 'ActivityResponse' 
 
       auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -78,7 +78,7 @@ module TurnkeyClient
     # Delete an existing Invitation
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [V1ActivityResponse]
+    # @return [ActivityResponse]
     def delete_invitation(body, opts = {})
       data, _status_code, _headers = delete_invitation_with_http_info(body, opts)
       data
@@ -88,7 +88,7 @@ module TurnkeyClient
     # Delete an existing Invitation
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(V1ActivityResponse, Integer, Hash)>] V1ActivityResponse data, response status code and response headers
+    # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
     def delete_invitation_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: InvitationsApi.delete_invitation ...'
@@ -116,7 +116,7 @@ module TurnkeyClient
       # http body (model)
       post_body = opts[:body] || @api_client.object_to_http_body(body) 
 
-      return_type = opts[:return_type] || 'V1ActivityResponse' 
+      return_type = opts[:return_type] || 'ActivityResponse' 
 
       auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,

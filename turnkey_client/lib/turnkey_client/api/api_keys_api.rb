@@ -20,7 +20,7 @@ module TurnkeyClient
     # Add api keys to an existing User
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [V1ActivityResponse]
+    # @return [ActivityResponse]
     def create_api_keys(body, opts = {})
       data, _status_code, _headers = create_api_keys_with_http_info(body, opts)
       data
@@ -30,7 +30,7 @@ module TurnkeyClient
     # Add api keys to an existing User
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(V1ActivityResponse, Integer, Hash)>] V1ActivityResponse data, response status code and response headers
+    # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
     def create_api_keys_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: APIKeysApi.create_api_keys ...'
@@ -58,7 +58,7 @@ module TurnkeyClient
       # http body (model)
       post_body = opts[:body] || @api_client.object_to_http_body(body) 
 
-      return_type = opts[:return_type] || 'V1ActivityResponse' 
+      return_type = opts[:return_type] || 'ActivityResponse' 
 
       auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -78,7 +78,7 @@ module TurnkeyClient
     # Remove api keys from a User
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [V1ActivityResponse]
+    # @return [ActivityResponse]
     def delete_api_keys(body, opts = {})
       data, _status_code, _headers = delete_api_keys_with_http_info(body, opts)
       data
@@ -88,7 +88,7 @@ module TurnkeyClient
     # Remove api keys from a User
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(V1ActivityResponse, Integer, Hash)>] V1ActivityResponse data, response status code and response headers
+    # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
     def delete_api_keys_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: APIKeysApi.delete_api_keys ...'
@@ -116,7 +116,7 @@ module TurnkeyClient
       # http body (model)
       post_body = opts[:body] || @api_client.object_to_http_body(body) 
 
-      return_type = opts[:return_type] || 'V1ActivityResponse' 
+      return_type = opts[:return_type] || 'ActivityResponse' 
 
       auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -136,7 +136,7 @@ module TurnkeyClient
     # Get details about an API key
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [V1GetApiKeyResponse]
+    # @return [GetApiKeyResponse]
     def get_api_key(body, opts = {})
       data, _status_code, _headers = get_api_key_with_http_info(body, opts)
       data
@@ -146,7 +146,7 @@ module TurnkeyClient
     # Get details about an API key
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(V1GetApiKeyResponse, Integer, Hash)>] V1GetApiKeyResponse data, response status code and response headers
+    # @return [Array<(GetApiKeyResponse, Integer, Hash)>] GetApiKeyResponse data, response status code and response headers
     def get_api_key_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: APIKeysApi.get_api_key ...'
@@ -174,7 +174,7 @@ module TurnkeyClient
       # http body (model)
       post_body = opts[:body] || @api_client.object_to_http_body(body) 
 
-      return_type = opts[:return_type] || 'V1GetApiKeyResponse' 
+      return_type = opts[:return_type] || 'GetApiKeyResponse' 
 
       auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -194,7 +194,7 @@ module TurnkeyClient
     # Get details about API keys for a user
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [V1GetApiKeysResponse]
+    # @return [GetApiKeysResponse]
     def get_api_keys(body, opts = {})
       data, _status_code, _headers = get_api_keys_with_http_info(body, opts)
       data
@@ -204,7 +204,7 @@ module TurnkeyClient
     # Get details about API keys for a user
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(V1GetApiKeysResponse, Integer, Hash)>] V1GetApiKeysResponse data, response status code and response headers
+    # @return [Array<(GetApiKeysResponse, Integer, Hash)>] GetApiKeysResponse data, response status code and response headers
     def get_api_keys_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: APIKeysApi.get_api_keys ...'
@@ -232,7 +232,7 @@ module TurnkeyClient
       # http body (model)
       post_body = opts[:body] || @api_client.object_to_http_body(body) 
 
-      return_type = opts[:return_type] || 'V1GetApiKeysResponse' 
+      return_type = opts[:return_type] || 'GetApiKeysResponse' 
 
       auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,

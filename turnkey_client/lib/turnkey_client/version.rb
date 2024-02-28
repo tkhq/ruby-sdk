@@ -10,5 +10,5 @@ Swagger Codegen version: 3.0.53
 =end
 
 module TurnkeyClient
-  VERSION = '0.0.1'
+  VERSION = '0.0.2'
 end

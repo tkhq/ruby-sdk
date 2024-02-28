@@ -20,7 +20,7 @@ module TurnkeyClient
     # Create a new Policy
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [V1ActivityResponse]
+    # @return [ActivityResponse]
     def create_policy(body, opts = {})
       data, _status_code, _headers = create_policy_with_http_info(body, opts)
       data
@@ -30,7 +30,7 @@ module TurnkeyClient
     # Create a new Policy
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(V1ActivityResponse, Integer, Hash)>] V1ActivityResponse data, response status code and response headers
+    # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
     def create_policy_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: PoliciesApi.create_policy ...'
@@ -58,7 +58,7 @@ module TurnkeyClient
       # http body (model)
       post_body = opts[:body] || @api_client.object_to_http_body(body) 
 
-      return_type = opts[:return_type] || 'V1ActivityResponse' 
+      return_type = opts[:return_type] || 'ActivityResponse' 
 
       auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -78,7 +78,7 @@ module TurnkeyClient
     # Delete an existing Policy
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [V1ActivityResponse]
+    # @return [ActivityResponse]
     def delete_policy(body, opts = {})
       data, _status_code, _headers = delete_policy_with_http_info(body, opts)
       data
@@ -88,7 +88,7 @@ module TurnkeyClient
     # Delete an existing Policy
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(V1ActivityResponse, Integer, Hash)>] V1ActivityResponse data, response status code and response headers
+    # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
     def delete_policy_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: PoliciesApi.delete_policy ...'
@@ -116,7 +116,7 @@ module TurnkeyClient
       # http body (model)
       post_body = opts[:body] || @api_client.object_to_http_body(body) 
 
-      return_type = opts[:return_type] || 'V1ActivityResponse' 
+      return_type = opts[:return_type] || 'ActivityResponse' 
 
       auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -136,7 +136,7 @@ module TurnkeyClient
     # List all Policies within an Organization
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [V1GetPoliciesResponse]
+    # @return [GetPoliciesResponse]
     def get_policies(body, opts = {})
       data, _status_code, _headers = get_policies_with_http_info(body, opts)
       data
@@ -146,7 +146,7 @@ module TurnkeyClient
     # List all Policies within an Organization
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(V1GetPoliciesResponse, Integer, Hash)>] V1GetPoliciesResponse data, response status code and response headers
+    # @return [Array<(GetPoliciesResponse, Integer, Hash)>] GetPoliciesResponse data, response status code and response headers
     def get_policies_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: PoliciesApi.get_policies ...'
@@ -174,7 +174,7 @@ module TurnkeyClient
       # http body (model)
       post_body = opts[:body] || @api_client.object_to_http_body(body) 
 
-      return_type = opts[:return_type] || 'V1GetPoliciesResponse' 
+      return_type = opts[:return_type] || 'GetPoliciesResponse' 
 
       auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -194,7 +194,7 @@ module TurnkeyClient
     # Get details about a Policy
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [V1GetPolicyResponse]
+    # @return [GetPolicyResponse]
     def get_policy(body, opts = {})
       data, _status_code, _headers = get_policy_with_http_info(body, opts)
       data
@@ -204,7 +204,7 @@ module TurnkeyClient
     # Get details about a Policy
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(V1GetPolicyResponse, Integer, Hash)>] V1GetPolicyResponse data, response status code and response headers
+    # @return [Array<(GetPolicyResponse, Integer, Hash)>] GetPolicyResponse data, response status code and response headers
     def get_policy_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: PoliciesApi.get_policy ...'
@@ -232,7 +232,7 @@ module TurnkeyClient
       # http body (model)
       post_body = opts[:body] || @api_client.object_to_http_body(body) 
 
-      return_type = opts[:return_type] || 'V1GetPolicyResponse' 
+      return_type = opts[:return_type] || 'GetPolicyResponse' 
 
       auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -252,7 +252,7 @@ module TurnkeyClient
     # Update an existing Policy
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [V1ActivityResponse]
+    # @return [ActivityResponse]
     def update_policy(body, opts = {})
       data, _status_code, _headers = update_policy_with_http_info(body, opts)
       data
@@ -262,7 +262,7 @@ module TurnkeyClient
     # Update an existing Policy
     # @param body 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(V1ActivityResponse, Integer, Hash)>] V1ActivityResponse data, response status code and response headers
+    # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
     def update_policy_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: PoliciesApi.update_policy ...'
@@ -290,7 +290,7 @@ module TurnkeyClient
       # http body (model)
       post_body = opts[:body] || @api_client.object_to_http_body(body) 
 
-      return_type = opts[:return_type] || 'V1ActivityResponse' 
+      return_type = opts[:return_type] || 'ActivityResponse' 
 
       auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
