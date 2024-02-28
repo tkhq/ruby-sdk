@@ -18,7 +18,7 @@ begin
   # https://docs.turnkey.com/api#tag/Wallets/operation/CreateWallet
   now_in_ms = DateTime.now.strftime('%Q')
 
-  # We can also use `TurnkeyClient::V1CreateWalletRequest` to create the request object here
+  # We can also use `TurnkeyClient::CreateWalletRequest` to create the request object here
   create_wallet_response = TurnkeyClient::WalletsApi.new(client).create_wallet(
     {
       type: 'ACTIVITY_TYPE_CREATE_WALLET',

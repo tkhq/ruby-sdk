@@ -1,7 +1,7 @@
 PATH
   remote: ../../turnkey_client
   specs:
-    turnkey_client (0.0.1)
+    turnkey_client (0.0.2)
       json (~> 2.1, >= 2.1.0)
       openssl (~> 3.2, >= 3.0.0)
       typhoeus (~> 1.0, >= 1.0.1)
