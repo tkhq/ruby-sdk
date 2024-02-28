@@ -56,7 +56,7 @@ begin
     }
   )
 
-  created_sub_organization = create_sub_organization_response&.activity&.dig(:result, :createSubOrganizationResultV4)
+  created_sub_organization = create_sub_organization_response&.to_hash&.dig(:activity, :result, :createSubOrganizationResultV4)
   raise "Something went wrong: no sub-organization in activity response: #{create_sub_organization_response.to_hash}" if created_sub_organization.nil?
 
   sub_organization_id = created_sub_organization[:subOrganizationId]
