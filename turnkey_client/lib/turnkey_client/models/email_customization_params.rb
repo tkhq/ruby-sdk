@@ -15,7 +15,7 @@ module TurnkeyClient
     # The name of the application.
     attr_accessor :app_name
 
-    # A URL pointing to a logo. Note this logo will be resized to fit into 340px x 124px.
+    # A URL pointing to a logo in PNG format. Note this logo will be resized to fit into 340px x 124px.
     attr_accessor :logo_url
 
     # A template for the URL to be used in a magic link button, e.g. `https://dapp.xyz/%s`. The auth bundle will be interpolated into the `%s`.

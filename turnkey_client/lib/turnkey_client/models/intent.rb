@@ -134,6 +134,10 @@ module TurnkeyClient
 
     attr_accessor :import_private_key_intent
 
+    attr_accessor :create_policies_intent
+
+    attr_accessor :sign_raw_payloads_intent
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -197,7 +201,9 @@ module TurnkeyClient
         :'init_import_wallet_intent' => :'initImportWalletIntent',
         :'import_wallet_intent' => :'importWalletIntent',
         :'init_import_private_key_intent' => :'initImportPrivateKeyIntent',
-        :'import_private_key_intent' => :'importPrivateKeyIntent'
+        :'import_private_key_intent' => :'importPrivateKeyIntent',
+        :'create_policies_intent' => :'createPoliciesIntent',
+        :'sign_raw_payloads_intent' => :'signRawPayloadsIntent'
       }
     end
 
@@ -264,7 +270,9 @@ module TurnkeyClient
         :'init_import_wallet_intent' => :'Object',
         :'import_wallet_intent' => :'Object',
         :'init_import_private_key_intent' => :'Object',
-        :'import_private_key_intent' => :'Object'
+        :'import_private_key_intent' => :'Object',
+        :'create_policies_intent' => :'Object',
+        :'sign_raw_payloads_intent' => :'Object'
       }
     end
 
@@ -532,6 +540,14 @@ module TurnkeyClient
       if attributes.key?(:'import_private_key_intent')
         self.import_private_key_intent = attributes[:'import_private_key_intent']
       end
+
+      if attributes.key?(:'create_policies_intent')
+        self.create_policies_intent = attributes[:'create_policies_intent']
+      end
+
+      if attributes.key?(:'sign_raw_payloads_intent')
+        self.sign_raw_payloads_intent = attributes[:'sign_raw_payloads_intent']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -617,7 +633,9 @@ module TurnkeyClient
           init_import_wallet_intent == o.init_import_wallet_intent &&
           import_wallet_intent == o.import_wallet_intent &&
           init_import_private_key_intent == o.init_import_private_key_intent &&
-          import_private_key_intent == o.import_private_key_intent
+          import_private_key_intent == o.import_private_key_intent &&
+          create_policies_intent == o.create_policies_intent &&
+          sign_raw_payloads_intent == o.sign_raw_payloads_intent
     end
 
     # @see the `==` method
@@ -629,7 +647,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [create_organization_intent, create_authenticators_intent, create_users_intent, create_private_keys_intent, sign_raw_payload_intent, create_invitations_intent, accept_invitation_intent, create_policy_intent, disable_private_key_intent, delete_users_intent, delete_authenticators_intent, delete_invitation_intent, delete_organization_intent, delete_policy_intent, create_user_tag_intent, delete_user_tags_intent, sign_transaction_intent, create_api_keys_intent, delete_api_keys_intent, approve_activity_intent, reject_activity_intent, create_private_key_tag_intent, delete_private_key_tags_intent, create_policy_intent_v2, set_payment_method_intent, activate_billing_tier_intent, delete_payment_method_intent, create_policy_intent_v3, create_api_only_users_intent, update_root_quorum_intent, update_user_tag_intent, update_private_key_tag_intent, create_authenticators_intent_v2, accept_invitation_intent_v2, create_organization_intent_v2, create_users_intent_v2, create_sub_organization_intent, create_sub_organization_intent_v2, update_allowed_origins_intent, create_private_keys_intent_v2, update_user_intent, update_policy_intent, set_payment_method_intent_v2, create_sub_organization_intent_v3, create_wallet_intent, create_wallet_accounts_intent, init_user_email_recovery_intent, recover_user_intent, set_organization_feature_intent, remove_organization_feature_intent, sign_raw_payload_intent_v2, sign_transaction_intent_v2, export_private_key_intent, export_wallet_intent, create_sub_organization_intent_v4, email_auth_intent, export_wallet_account_intent, init_import_wallet_intent, import_wallet_intent, init_import_private_key_intent, import_private_key_intent].hash
+      [create_organization_intent, create_authenticators_intent, create_users_intent, create_private_keys_intent, sign_raw_payload_intent, create_invitations_intent, accept_invitation_intent, create_policy_intent, disable_private_key_intent, delete_users_intent, delete_authenticators_intent, delete_invitation_intent, delete_organization_intent, delete_policy_intent, create_user_tag_intent, delete_user_tags_intent, sign_transaction_intent, create_api_keys_intent, delete_api_keys_intent, approve_activity_intent, reject_activity_intent, create_private_key_tag_intent, delete_private_key_tags_intent, create_policy_intent_v2, set_payment_method_intent, activate_billing_tier_intent, delete_payment_method_intent, create_policy_intent_v3, create_api_only_users_intent, update_root_quorum_intent, update_user_tag_intent, update_private_key_tag_intent, create_authenticators_intent_v2, accept_invitation_intent_v2, create_organization_intent_v2, create_users_intent_v2, create_sub_organization_intent, create_sub_organization_intent_v2, update_allowed_origins_intent, create_private_keys_intent_v2, update_user_intent, update_policy_intent, set_payment_method_intent_v2, create_sub_organization_intent_v3, create_wallet_intent, create_wallet_accounts_intent, init_user_email_recovery_intent, recover_user_intent, set_organization_feature_intent, remove_organization_feature_intent, sign_raw_payload_intent_v2, sign_transaction_intent_v2, export_private_key_intent, export_wallet_intent, create_sub_organization_intent_v4, email_auth_intent, export_wallet_account_intent, init_import_wallet_intent, import_wallet_intent, init_import_private_key_intent, import_private_key_intent, create_policies_intent, sign_raw_payloads_intent].hash
     end
 
     # Builds the object from hash
