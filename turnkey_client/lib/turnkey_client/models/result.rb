@@ -114,6 +114,8 @@ module TurnkeyClient
 
     attr_accessor :sign_raw_payloads_result
 
+    attr_accessor :create_read_only_session_result
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -167,7 +169,8 @@ module TurnkeyClient
         :'init_import_private_key_result' => :'initImportPrivateKeyResult',
         :'import_private_key_result' => :'importPrivateKeyResult',
         :'create_policies_result' => :'createPoliciesResult',
-        :'sign_raw_payloads_result' => :'signRawPayloadsResult'
+        :'sign_raw_payloads_result' => :'signRawPayloadsResult',
+        :'create_read_only_session_result' => :'createReadOnlySessionResult'
       }
     end
 
@@ -224,7 +227,8 @@ module TurnkeyClient
         :'init_import_private_key_result' => :'Object',
         :'import_private_key_result' => :'Object',
         :'create_policies_result' => :'Object',
-        :'sign_raw_payloads_result' => :'Object'
+        :'sign_raw_payloads_result' => :'Object',
+        :'create_read_only_session_result' => :'Object'
       }
     end
 
@@ -452,6 +456,10 @@ module TurnkeyClient
       if attributes.key?(:'sign_raw_payloads_result')
         self.sign_raw_payloads_result = attributes[:'sign_raw_payloads_result']
       end
+
+      if attributes.key?(:'create_read_only_session_result')
+        self.create_read_only_session_result = attributes[:'create_read_only_session_result']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -522,7 +530,8 @@ module TurnkeyClient
           init_import_private_key_result == o.init_import_private_key_result &&
           import_private_key_result == o.import_private_key_result &&
           create_policies_result == o.create_policies_result &&
-          sign_raw_payloads_result == o.sign_raw_payloads_result
+          sign_raw_payloads_result == o.sign_raw_payloads_result &&
+          create_read_only_session_result == o.create_read_only_session_result
     end
 
     # @see the `==` method
@@ -534,7 +543,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [create_organization_result, create_authenticators_result, create_users_result, create_private_keys_result, create_invitations_result, accept_invitation_result, sign_raw_payload_result, create_policy_result, disable_private_key_result, delete_users_result, delete_authenticators_result, delete_invitation_result, delete_organization_result, delete_policy_result, create_user_tag_result, delete_user_tags_result, sign_transaction_result, delete_api_keys_result, create_api_keys_result, create_private_key_tag_result, delete_private_key_tags_result, set_payment_method_result, activate_billing_tier_result, delete_payment_method_result, create_api_only_users_result, update_root_quorum_result, update_user_tag_result, update_private_key_tag_result, create_sub_organization_result, update_allowed_origins_result, create_private_keys_result_v2, update_user_result, update_policy_result, create_sub_organization_result_v3, create_wallet_result, create_wallet_accounts_result, init_user_email_recovery_result, recover_user_result, set_organization_feature_result, remove_organization_feature_result, export_private_key_result, export_wallet_result, create_sub_organization_result_v4, email_auth_result, export_wallet_account_result, init_import_wallet_result, import_wallet_result, init_import_private_key_result, import_private_key_result, create_policies_result, sign_raw_payloads_result].hash
+      [create_organization_result, create_authenticators_result, create_users_result, create_private_keys_result, create_invitations_result, accept_invitation_result, sign_raw_payload_result, create_policy_result, disable_private_key_result, delete_users_result, delete_authenticators_result, delete_invitation_result, delete_organization_result, delete_policy_result, create_user_tag_result, delete_user_tags_result, sign_transaction_result, delete_api_keys_result, create_api_keys_result, create_private_key_tag_result, delete_private_key_tags_result, set_payment_method_result, activate_billing_tier_result, delete_payment_method_result, create_api_only_users_result, update_root_quorum_result, update_user_tag_result, update_private_key_tag_result, create_sub_organization_result, update_allowed_origins_result, create_private_keys_result_v2, update_user_result, update_policy_result, create_sub_organization_result_v3, create_wallet_result, create_wallet_accounts_result, init_user_email_recovery_result, recover_user_result, set_organization_feature_result, remove_organization_feature_result, export_private_key_result, export_wallet_result, create_sub_organization_result_v4, email_auth_result, export_wallet_account_result, init_import_wallet_result, import_wallet_result, init_import_private_key_result, import_private_key_result, create_policies_result, sign_raw_payloads_result, create_read_only_session_result].hash
     end
 
     # Builds the object from hash

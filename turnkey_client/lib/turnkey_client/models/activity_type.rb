@@ -75,6 +75,7 @@ module TurnkeyClient
     IMPORT_PRIVATE_KEY = 'ACTIVITY_TYPE_IMPORT_PRIVATE_KEY'.freeze
     CREATE_POLICIES = 'ACTIVITY_TYPE_CREATE_POLICIES'.freeze
     SIGN_RAW_PAYLOADS = 'ACTIVITY_TYPE_SIGN_RAW_PAYLOADS'.freeze
+    CREATE_READ_ONLY_SESSION = 'ACTIVITY_TYPE_CREATE_READ_ONLY_SESSION'.freeze
 
     # Builds the enum from string
     # @param [String] The enum value in the form of the string
