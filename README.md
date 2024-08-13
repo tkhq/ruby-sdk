@@ -71,6 +71,10 @@ If you want to tweak something related to codegen itself, head ([here](./turnkey
 
 If you want to update templates with upstream this is a bit harder but possible: these templates were downloaded from [this folder](https://github.com/swagger-api/swagger-codegen-generators/tree/0f7eeb2ca53e5fff886ce1a609bce1b1e75063fe/src/main/resources/handlebars/ruby) (this is a permalink to the right git SHA). You can see all the changes made to these by looking at the history of changes in the templates folder: https://github.com/tkhq/ruby-sdk/commits/main/turnkey_client_inputs/templates.
 
+## Ruby
+
+On Mac, Ruby will come installed automatically. However, the default version might not be compatible with certain gems, nor will it allow you to modify the default gems directory. To set up Ruby, there are many options: rbenv, rvm, asdf, chruby, etc. For simplicity, one path is using rbenv, which can be set up by following the instructions [here](https://github.com/rbenv/rbenv?tab=readme-ov-file#installation).
+
 ## Rubocop
 
 We use Rubocop for linting. To install:
