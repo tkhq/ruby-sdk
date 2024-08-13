@@ -73,7 +73,7 @@ If you want to update templates with upstream this is a bit harder but possible:
 
 ## Ruby
 
-On Mac, Ruby will come installed automatically. However, the default version might not be compatible with certain gems, nor will it allow you to modify the default gems directory. To set up Ruby, there are many options: rbenv, rvm, asdf, chruby, etc. For simplicity, one path is using rbenv, which can be set up by following the instructions [here](https://github.com/rbenv/rbenv?tab=readme-ov-file#installation).
+On Mac, Ruby will come installed automatically. However, the default version might not be compatible with certain gems, nor will it allow you to modify the default gems directory. To set up Ruby, there are many options: rbenv, rvm, asdf, chruby, etc. For example, rbenv can be set up by following the instructions [here](https://github.com/rbenv/rbenv?tab=readme-ov-file#installation).
 
 ## Rubocop
 
