@@ -15,7 +15,7 @@ module TurnkeyClient
     # Unique identifier for the parent Organization. This is used to find sub-organizations within it.
     attr_accessor :organization_id
 
-    # Specifies the type of filter to apply, i.e 'CREDENTIAL_ID', 'NAME', 'USERNAME', 'EMAIL' or 'PUBLIC_KEY'
+    # Specifies the type of filter to apply, i.e 'CREDENTIAL_ID', 'NAME', 'USERNAME', 'EMAIL', 'OIDC_TOKEN' or 'PUBLIC_KEY'
     attr_accessor :filter_type
 
     # The value of the filter to apply for the specified type. For example, a specific email or name string.

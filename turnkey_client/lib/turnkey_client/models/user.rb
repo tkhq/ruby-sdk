@@ -30,6 +30,9 @@ module TurnkeyClient
     # A list of User Tag IDs.
     attr_accessor :user_tags
 
+    # A list of Oauth Providers.
+    attr_accessor :oauth_providers
+
     attr_accessor :created_at
 
     attr_accessor :updated_at
@@ -43,6 +46,7 @@ module TurnkeyClient
         :'authenticators' => :'authenticators',
         :'api_keys' => :'apiKeys',
         :'user_tags' => :'userTags',
+        :'oauth_providers' => :'oauthProviders',
         :'created_at' => :'createdAt',
         :'updated_at' => :'updatedAt'
       }
@@ -57,6 +61,7 @@ module TurnkeyClient
         :'authenticators' => :'Object',
         :'api_keys' => :'Object',
         :'user_tags' => :'Object',
+        :'oauth_providers' => :'Object',
         :'created_at' => :'Object',
         :'updated_at' => :'Object'
       }
@@ -113,6 +118,12 @@ module TurnkeyClient
         end
       end
 
+      if attributes.key?(:'oauth_providers')
+        if (value = attributes[:'oauth_providers']).is_a?(Array)
+          self.oauth_providers = value
+        end
+      end
+
       if attributes.key?(:'created_at')
         self.created_at = attributes[:'created_at']
       end
@@ -146,6 +157,10 @@ module TurnkeyClient
         invalid_properties.push('invalid value for "user_tags", user_tags cannot be nil.')
       end
 
+      if @oauth_providers.nil?
+        invalid_properties.push('invalid value for "oauth_providers", oauth_providers cannot be nil.')
+      end
+
       if @created_at.nil?
         invalid_properties.push('invalid value for "created_at", created_at cannot be nil.')
       end
@@ -165,6 +180,7 @@ module TurnkeyClient
       return false if @authenticators.nil?
       return false if @api_keys.nil?
       return false if @user_tags.nil?
+      return false if @oauth_providers.nil?
       return false if @created_at.nil?
       return false if @updated_at.nil?
       true
@@ -181,6 +197,7 @@ module TurnkeyClient
           authenticators == o.authenticators &&
           api_keys == o.api_keys &&
           user_tags == o.user_tags &&
+          oauth_providers == o.oauth_providers &&
           created_at == o.created_at &&
           updated_at == o.updated_at
     end
@@ -194,7 +211,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [user_id, user_name, user_email, authenticators, api_keys, user_tags, created_at, updated_at].hash
+      [user_id, user_name, user_email, authenticators, api_keys, user_tags, oauth_providers, created_at, updated_at].hash
     end
 
     # Builds the object from hash

@@ -26,6 +26,9 @@ module TurnkeyClient
 
     attr_accessor :email_customization
 
+    # Invalidate all other previously generated Email Auth API keys
+    attr_accessor :invalidate_existing
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -33,7 +36,8 @@ module TurnkeyClient
         :'target_public_key' => :'targetPublicKey',
         :'api_key_name' => :'apiKeyName',
         :'expiration_seconds' => :'expirationSeconds',
-        :'email_customization' => :'emailCustomization'
+        :'email_customization' => :'emailCustomization',
+        :'invalidate_existing' => :'invalidateExisting'
       }
     end
 
@@ -44,7 +48,8 @@ module TurnkeyClient
         :'target_public_key' => :'Object',
         :'api_key_name' => :'Object',
         :'expiration_seconds' => :'Object',
-        :'email_customization' => :'Object'
+        :'email_customization' => :'Object',
+        :'invalidate_existing' => :'Object'
       }
     end
 
@@ -88,6 +93,10 @@ module TurnkeyClient
       if attributes.key?(:'email_customization')
         self.email_customization = attributes[:'email_customization']
       end
+
+      if attributes.key?(:'invalidate_existing')
+        self.invalidate_existing = attributes[:'invalidate_existing']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -122,7 +131,8 @@ module TurnkeyClient
           target_public_key == o.target_public_key &&
           api_key_name == o.api_key_name &&
           expiration_seconds == o.expiration_seconds &&
-          email_customization == o.email_customization
+          email_customization == o.email_customization &&
+          invalidate_existing == o.invalidate_existing
     end
 
     # @see the `==` method
@@ -134,7 +144,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [email, target_public_key, api_key_name, expiration_seconds, email_customization].hash
+      [email, target_public_key, api_key_name, expiration_seconds, email_customization, invalidate_existing].hash
     end
 
     # Builds the object from hash
