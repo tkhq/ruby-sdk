@@ -84,6 +84,8 @@ module TurnkeyClient
     CREATE_READ_WRITE_SESSION = 'ACTIVITY_TYPE_CREATE_READ_WRITE_SESSION'.freeze
     EMAIL_AUTH_V2 = 'ACTIVITY_TYPE_EMAIL_AUTH_V2'.freeze
     CREATE_SUB_ORGANIZATION_V6 = 'ACTIVITY_TYPE_CREATE_SUB_ORGANIZATION_V6'.freeze
+    DELETE_PRIVATE_KEYS = 'ACTIVITY_TYPE_DELETE_PRIVATE_KEYS'.freeze
+    DELETE_WALLETS = 'ACTIVITY_TYPE_DELETE_WALLETS'.freeze
 
     # Builds the enum from string
     # @param [String] The enum value in the form of the string

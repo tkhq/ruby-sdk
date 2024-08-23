@@ -128,6 +128,10 @@ module TurnkeyClient
 
     attr_accessor :create_sub_organization_result_v6
 
+    attr_accessor :delete_private_keys_result
+
+    attr_accessor :delete_wallets_result
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -188,7 +192,9 @@ module TurnkeyClient
         :'create_sub_organization_result_v5' => :'createSubOrganizationResultV5',
         :'oauth_result' => :'oauthResult',
         :'create_read_write_session_result' => :'createReadWriteSessionResult',
-        :'create_sub_organization_result_v6' => :'createSubOrganizationResultV6'
+        :'create_sub_organization_result_v6' => :'createSubOrganizationResultV6',
+        :'delete_private_keys_result' => :'deletePrivateKeysResult',
+        :'delete_wallets_result' => :'deleteWalletsResult'
       }
     end
 
@@ -252,7 +258,9 @@ module TurnkeyClient
         :'create_sub_organization_result_v5' => :'Object',
         :'oauth_result' => :'Object',
         :'create_read_write_session_result' => :'Object',
-        :'create_sub_organization_result_v6' => :'Object'
+        :'create_sub_organization_result_v6' => :'Object',
+        :'delete_private_keys_result' => :'Object',
+        :'delete_wallets_result' => :'Object'
       }
     end
 
@@ -508,6 +516,14 @@ module TurnkeyClient
       if attributes.key?(:'create_sub_organization_result_v6')
         self.create_sub_organization_result_v6 = attributes[:'create_sub_organization_result_v6']
       end
+
+      if attributes.key?(:'delete_private_keys_result')
+        self.delete_private_keys_result = attributes[:'delete_private_keys_result']
+      end
+
+      if attributes.key?(:'delete_wallets_result')
+        self.delete_wallets_result = attributes[:'delete_wallets_result']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -585,7 +601,9 @@ module TurnkeyClient
           create_sub_organization_result_v5 == o.create_sub_organization_result_v5 &&
           oauth_result == o.oauth_result &&
           create_read_write_session_result == o.create_read_write_session_result &&
-          create_sub_organization_result_v6 == o.create_sub_organization_result_v6
+          create_sub_organization_result_v6 == o.create_sub_organization_result_v6 &&
+          delete_private_keys_result == o.delete_private_keys_result &&
+          delete_wallets_result == o.delete_wallets_result
     end
 
     # @see the `==` method
@@ -597,7 +615,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [create_organization_result, create_authenticators_result, create_users_result, create_private_keys_result, create_invitations_result, accept_invitation_result, sign_raw_payload_result, create_policy_result, disable_private_key_result, delete_users_result, delete_authenticators_result, delete_invitation_result, delete_organization_result, delete_policy_result, create_user_tag_result, delete_user_tags_result, sign_transaction_result, delete_api_keys_result, create_api_keys_result, create_private_key_tag_result, delete_private_key_tags_result, set_payment_method_result, activate_billing_tier_result, delete_payment_method_result, create_api_only_users_result, update_root_quorum_result, update_user_tag_result, update_private_key_tag_result, create_sub_organization_result, update_allowed_origins_result, create_private_keys_result_v2, update_user_result, update_policy_result, create_sub_organization_result_v3, create_wallet_result, create_wallet_accounts_result, init_user_email_recovery_result, recover_user_result, set_organization_feature_result, remove_organization_feature_result, export_private_key_result, export_wallet_result, create_sub_organization_result_v4, email_auth_result, export_wallet_account_result, init_import_wallet_result, import_wallet_result, init_import_private_key_result, import_private_key_result, create_policies_result, sign_raw_payloads_result, create_read_only_session_result, create_oauth_providers_result, delete_oauth_providers_result, create_sub_organization_result_v5, oauth_result, create_read_write_session_result, create_sub_organization_result_v6].hash
+      [create_organization_result, create_authenticators_result, create_users_result, create_private_keys_result, create_invitations_result, accept_invitation_result, sign_raw_payload_result, create_policy_result, disable_private_key_result, delete_users_result, delete_authenticators_result, delete_invitation_result, delete_organization_result, delete_policy_result, create_user_tag_result, delete_user_tags_result, sign_transaction_result, delete_api_keys_result, create_api_keys_result, create_private_key_tag_result, delete_private_key_tags_result, set_payment_method_result, activate_billing_tier_result, delete_payment_method_result, create_api_only_users_result, update_root_quorum_result, update_user_tag_result, update_private_key_tag_result, create_sub_organization_result, update_allowed_origins_result, create_private_keys_result_v2, update_user_result, update_policy_result, create_sub_organization_result_v3, create_wallet_result, create_wallet_accounts_result, init_user_email_recovery_result, recover_user_result, set_organization_feature_result, remove_organization_feature_result, export_private_key_result, export_wallet_result, create_sub_organization_result_v4, email_auth_result, export_wallet_account_result, init_import_wallet_result, import_wallet_result, init_import_private_key_result, import_private_key_result, create_policies_result, sign_raw_payloads_result, create_read_only_session_result, create_oauth_providers_result, delete_oauth_providers_result, create_sub_organization_result_v5, oauth_result, create_read_write_session_result, create_sub_organization_result_v6, delete_private_keys_result, delete_wallets_result].hash
     end
 
     # Builds the object from hash
