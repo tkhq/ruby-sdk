@@ -73,7 +73,7 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Delete organization private keys
+    # Delete Private Keys
     # Deletes private keys for an organization
     # @param body 
     # @param [Hash] opts the optional parameters
@@ -83,7 +83,7 @@ module TurnkeyClient
       data
     end
 
-    # Delete organization private keys
+    # Delete Private Keys
     # Deletes private keys for an organization
     # @param body 
     # @param [Hash] opts the optional parameters
