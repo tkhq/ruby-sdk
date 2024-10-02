@@ -12,7 +12,8 @@ require 'date'
 
 module TurnkeyClient
   class TransactionType
-    TRANSACTION_TYPE_ETHEREUM = 'TRANSACTION_TYPE_ETHEREUM'.freeze
+    ETHEREUM = 'TRANSACTION_TYPE_ETHEREUM'.freeze
+    SOLANA = 'TRANSACTION_TYPE_SOLANA'.freeze
 
     # Builds the enum from string
     # @param [String] The enum value in the form of the string
