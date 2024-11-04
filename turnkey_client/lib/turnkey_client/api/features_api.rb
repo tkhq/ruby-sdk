@@ -16,7 +16,7 @@ module TurnkeyClient
       @api_client = api_client
     end
     # Remove Organization Feature
-    # Removes an organization feature
+    # Removes an organization feature. This activity must be approved by the current root quorum.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -26,7 +26,7 @@ module TurnkeyClient
     end
 
     # Remove Organization Feature
-    # Removes an organization feature
+    # Removes an organization feature. This activity must be approved by the current root quorum.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
@@ -74,7 +74,7 @@ module TurnkeyClient
       return data, status_code, headers
     end
     # Set Organization Feature
-    # Sets an organization feature
+    # Sets an organization feature. This activity must be approved by the current root quorum.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -84,7 +84,7 @@ module TurnkeyClient
     end
 
     # Set Organization Feature
-    # Sets an organization feature
+    # Sets an organization feature. This activity must be approved by the current root quorum.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers

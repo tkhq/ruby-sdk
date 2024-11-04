@@ -17,6 +17,8 @@ module TurnkeyClient
     EMAIL_AUTH = 'FEATURE_NAME_EMAIL_AUTH'.freeze
     EMAIL_RECOVERY = 'FEATURE_NAME_EMAIL_RECOVERY'.freeze
     WEBHOOK = 'FEATURE_NAME_WEBHOOK'.freeze
+    SMS_AUTH = 'FEATURE_NAME_SMS_AUTH'.freeze
+    OTP_EMAIL_AUTH = 'FEATURE_NAME_OTP_EMAIL_AUTH'.freeze
 
     # Builds the enum from string
     # @param [String] The enum value in the form of the string

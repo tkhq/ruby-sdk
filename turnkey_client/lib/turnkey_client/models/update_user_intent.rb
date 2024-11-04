@@ -24,13 +24,17 @@ module TurnkeyClient
     # An updated list of User Tags to apply to this User.
     attr_accessor :user_tag_ids
 
+    # The user's phone number in E.164 format e.g. +13214567890
+    attr_accessor :user_phone_number
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'user_id' => :'userId',
         :'user_name' => :'userName',
         :'user_email' => :'userEmail',
-        :'user_tag_ids' => :'userTagIds'
+        :'user_tag_ids' => :'userTagIds',
+        :'user_phone_number' => :'userPhoneNumber'
       }
     end
 
@@ -40,7 +44,8 @@ module TurnkeyClient
         :'user_id' => :'Object',
         :'user_name' => :'Object',
         :'user_email' => :'Object',
-        :'user_tag_ids' => :'Object'
+        :'user_tag_ids' => :'Object',
+        :'user_phone_number' => :'Object'
       }
     end
 
@@ -82,6 +87,10 @@ module TurnkeyClient
           self.user_tag_ids = value
         end
       end
+
+      if attributes.key?(:'user_phone_number')
+        self.user_phone_number = attributes[:'user_phone_number']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -110,7 +119,8 @@ module TurnkeyClient
           user_id == o.user_id &&
           user_name == o.user_name &&
           user_email == o.user_email &&
-          user_tag_ids == o.user_tag_ids
+          user_tag_ids == o.user_tag_ids &&
+          user_phone_number == o.user_phone_number
     end
 
     # @see the `==` method
@@ -122,7 +132,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [user_id, user_name, user_email, user_tag_ids].hash
+      [user_id, user_name, user_email, user_tag_ids, user_phone_number].hash
     end
 
     # Builds the object from hash

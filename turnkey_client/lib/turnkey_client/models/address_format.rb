@@ -40,6 +40,12 @@ module TurnkeyClient
     BITCOIN_REGTEST_P2_WPKH = 'ADDRESS_FORMAT_BITCOIN_REGTEST_P2WPKH'.freeze
     BITCOIN_REGTEST_P2_WSH = 'ADDRESS_FORMAT_BITCOIN_REGTEST_P2WSH'.freeze
     BITCOIN_REGTEST_P2_TR = 'ADDRESS_FORMAT_BITCOIN_REGTEST_P2TR'.freeze
+    SEI = 'ADDRESS_FORMAT_SEI'.freeze
+    XLM = 'ADDRESS_FORMAT_XLM'.freeze
+    DOGE_MAINNET = 'ADDRESS_FORMAT_DOGE_MAINNET'.freeze
+    DOGE_TESTNET = 'ADDRESS_FORMAT_DOGE_TESTNET'.freeze
+    TON_V3_R2 = 'ADDRESS_FORMAT_TON_V3R2'.freeze
+    TON_V4_R2 = 'ADDRESS_FORMAT_TON_V4R2'.freeze
 
     # Builds the enum from string
     # @param [String] The enum value in the form of the string
