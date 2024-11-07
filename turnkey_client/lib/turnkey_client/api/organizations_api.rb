@@ -248,7 +248,7 @@ module TurnkeyClient
       return data, status_code, headers
     end
     # Update Root Quorum
-    # Set the threshold and members of the root quorum. This must be approved by the current root quorum.
+    # Set the threshold and members of the root quorum. This activity must be approved by the current root quorum.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -258,7 +258,7 @@ module TurnkeyClient
     end
 
     # Update Root Quorum
-    # Set the threshold and members of the root quorum. This must be approved by the current root quorum.
+    # Set the threshold and members of the root quorum. This activity must be approved by the current root quorum.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
