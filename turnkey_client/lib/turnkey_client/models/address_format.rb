@@ -46,6 +46,7 @@ module TurnkeyClient
     DOGE_TESTNET = 'ADDRESS_FORMAT_DOGE_TESTNET'.freeze
     TON_V3_R2 = 'ADDRESS_FORMAT_TON_V3R2'.freeze
     TON_V4_R2 = 'ADDRESS_FORMAT_TON_V4R2'.freeze
+    XRP = 'ADDRESS_FORMAT_XRP'.freeze
 
     # Builds the enum from string
     # @param [String] The enum value in the form of the string
