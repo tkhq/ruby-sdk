@@ -25,6 +25,9 @@ module TurnkeyClient
     # Optional client-generated user identifier to enable per-user rate limiting for SMS auth. We recommend using a hash of the client-side IP address.
     attr_accessor :user_identifier
 
+    # Optional custom email address from which to send the OTP email
+    attr_accessor :send_from_email_address
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -32,7 +35,8 @@ module TurnkeyClient
         :'contact' => :'contact',
         :'email_customization' => :'emailCustomization',
         :'sms_customization' => :'smsCustomization',
-        :'user_identifier' => :'userIdentifier'
+        :'user_identifier' => :'userIdentifier',
+        :'send_from_email_address' => :'sendFromEmailAddress'
       }
     end
 
@@ -43,7 +47,8 @@ module TurnkeyClient
         :'contact' => :'Object',
         :'email_customization' => :'Object',
         :'sms_customization' => :'Object',
-        :'user_identifier' => :'Object'
+        :'user_identifier' => :'Object',
+        :'send_from_email_address' => :'Object'
       }
     end
 
@@ -87,6 +92,10 @@ module TurnkeyClient
       if attributes.key?(:'user_identifier')
         self.user_identifier = attributes[:'user_identifier']
       end
+
+      if attributes.key?(:'send_from_email_address')
+        self.send_from_email_address = attributes[:'send_from_email_address']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -121,7 +130,8 @@ module TurnkeyClient
           contact == o.contact &&
           email_customization == o.email_customization &&
           sms_customization == o.sms_customization &&
-          user_identifier == o.user_identifier
+          user_identifier == o.user_identifier &&
+          send_from_email_address == o.send_from_email_address
     end
 
     # @see the `==` method
@@ -133,7 +143,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [otp_type, contact, email_customization, sms_customization, user_identifier].hash
+      [otp_type, contact, email_customization, sms_customization, user_identifier, send_from_email_address].hash
     end
 
     # Builds the object from hash
