@@ -29,6 +29,9 @@ module TurnkeyClient
     # Invalidate all other previously generated Email Auth API keys
     attr_accessor :invalidate_existing
 
+    # Optional custom email address from which to send the email
+    attr_accessor :send_from_email_address
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -37,7 +40,8 @@ module TurnkeyClient
         :'api_key_name' => :'apiKeyName',
         :'expiration_seconds' => :'expirationSeconds',
         :'email_customization' => :'emailCustomization',
-        :'invalidate_existing' => :'invalidateExisting'
+        :'invalidate_existing' => :'invalidateExisting',
+        :'send_from_email_address' => :'sendFromEmailAddress'
       }
     end
 
@@ -49,7 +53,8 @@ module TurnkeyClient
         :'api_key_name' => :'Object',
         :'expiration_seconds' => :'Object',
         :'email_customization' => :'Object',
-        :'invalidate_existing' => :'Object'
+        :'invalidate_existing' => :'Object',
+        :'send_from_email_address' => :'Object'
       }
     end
 
@@ -97,6 +102,10 @@ module TurnkeyClient
       if attributes.key?(:'invalidate_existing')
         self.invalidate_existing = attributes[:'invalidate_existing']
       end
+
+      if attributes.key?(:'send_from_email_address')
+        self.send_from_email_address = attributes[:'send_from_email_address']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -132,7 +141,8 @@ module TurnkeyClient
           api_key_name == o.api_key_name &&
           expiration_seconds == o.expiration_seconds &&
           email_customization == o.email_customization &&
-          invalidate_existing == o.invalidate_existing
+          invalidate_existing == o.invalidate_existing &&
+          send_from_email_address == o.send_from_email_address
     end
 
     # @see the `==` method
@@ -144,7 +154,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [email, target_public_key, api_key_name, expiration_seconds, email_customization, invalidate_existing].hash
+      [email, target_public_key, api_key_name, expiration_seconds, email_customization, invalidate_existing, send_from_email_address].hash
     end
 
     # Builds the object from hash

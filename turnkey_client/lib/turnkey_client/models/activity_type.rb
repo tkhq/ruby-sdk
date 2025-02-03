@@ -91,6 +91,7 @@ module TurnkeyClient
     INIT_OTP_AUTH = 'ACTIVITY_TYPE_INIT_OTP_AUTH'.freeze
     OTP_AUTH = 'ACTIVITY_TYPE_OTP_AUTH'.freeze
     CREATE_SUB_ORGANIZATION_V7 = 'ACTIVITY_TYPE_CREATE_SUB_ORGANIZATION_V7'.freeze
+    UPDATE_WALLET = 'ACTIVITY_TYPE_UPDATE_WALLET'.freeze
 
     # Builds the enum from string
     # @param [String] The enum value in the form of the string
