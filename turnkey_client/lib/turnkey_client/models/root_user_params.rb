@@ -18,10 +18,10 @@ module TurnkeyClient
     # The user's email address.
     attr_accessor :user_email
 
-    # A list of API Key parameters.
+    # A list of API Key parameters. This field, if not needed, should be an empty array in your request body.
     attr_accessor :api_keys
 
-    # A list of Authenticator parameters.
+    # A list of Authenticator parameters. This field, if not needed, should be an empty array in your request body.
     attr_accessor :authenticators
 
     # Attribute mapping from ruby-style variable name to JSON key.

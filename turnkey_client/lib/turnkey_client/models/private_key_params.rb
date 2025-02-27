@@ -17,7 +17,7 @@ module TurnkeyClient
 
     attr_accessor :curve
 
-    # A list of Private Key Tag IDs.
+    # A list of Private Key Tag IDs. This field, if not needed, should be an empty array in your request body.
     attr_accessor :private_key_tags
 
     # Cryptocurrency-specific formats for a derived address (e.g., Ethereum).

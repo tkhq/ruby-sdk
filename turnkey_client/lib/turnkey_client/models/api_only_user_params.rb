@@ -18,10 +18,10 @@ module TurnkeyClient
     # The email address for this API-only User (optional).
     attr_accessor :user_email
 
-    # A list of tags assigned to the new API-only User.
+    # A list of tags assigned to the new API-only User. This field, if not needed, should be an empty array in your request body.
     attr_accessor :user_tags
 
-    # A list of API Key parameters.
+    # A list of API Key parameters. This field, if not needed, should be an empty array in your request body.
     attr_accessor :api_keys
 
     # Attribute mapping from ruby-style variable name to JSON key.

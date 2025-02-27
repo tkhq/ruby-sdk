@@ -18,7 +18,7 @@ module TurnkeyClient
     # The email address of the intended Invitation recipient.
     attr_accessor :receiver_user_email
 
-    # A list of tags assigned to the Invitation recipient.
+    # A list of tags assigned to the Invitation recipient. This field, if not needed, should be an empty array in your request body.
     attr_accessor :receiver_user_tags
 
     attr_accessor :access_type
