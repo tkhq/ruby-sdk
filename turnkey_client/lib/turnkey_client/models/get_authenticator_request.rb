@@ -12,10 +12,10 @@ require 'date'
 
 module TurnkeyClient
   class GetAuthenticatorRequest
-    # Unique identifier for a given Organization.
+    # Unique identifier for a given organization.
     attr_accessor :organization_id
 
-    # Unique identifier for a given Authenticator.
+    # Unique identifier for a given authenticator.
     attr_accessor :authenticator_id
 
     # Attribute mapping from ruby-style variable name to JSON key.

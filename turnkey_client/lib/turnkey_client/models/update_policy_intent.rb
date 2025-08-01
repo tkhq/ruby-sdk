@@ -56,6 +56,10 @@ module TurnkeyClient
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'policy_name',
+        :'policy_condition',
+        :'policy_consensus',
+        :'policy_notes'
       ])
     end
   

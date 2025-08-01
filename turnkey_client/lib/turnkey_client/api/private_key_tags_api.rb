@@ -15,7 +15,7 @@ module TurnkeyClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
-    # Create Private Key Tag
+    # Create private key tag
     # Create a private key tag and add it to private keys.
     # @param body 
     # @param [Hash] opts the optional parameters
@@ -25,7 +25,7 @@ module TurnkeyClient
       data
     end
 
-    # Create Private Key Tag
+    # Create private key tag
     # Create a private key tag and add it to private keys.
     # @param body 
     # @param [Hash] opts the optional parameters
@@ -73,8 +73,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Delete Private Key Tags
-    # Delete Private Key Tags within an Organization
+    # Delete private key tags
+    # Delete private key tags within an organization.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -83,8 +83,8 @@ module TurnkeyClient
       data
     end
 
-    # Delete Private Key Tags
-    # Delete Private Key Tags within an Organization
+    # Delete private key tags
+    # Delete private key tags within an organization.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
@@ -131,8 +131,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # List Private Key Tags
-    # List all Private Key Tags within an Organization
+    # List private key tags
+    # List all private key tags within an organization.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ListPrivateKeyTagsResponse]
@@ -141,8 +141,8 @@ module TurnkeyClient
       data
     end
 
-    # List Private Key Tags
-    # List all Private Key Tags within an Organization
+    # List private key tags
+    # List all private key tags within an organization.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ListPrivateKeyTagsResponse, Integer, Hash)>] ListPrivateKeyTagsResponse data, response status code and response headers
@@ -189,7 +189,7 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Update Private Key Tag
+    # Update private key tag
     # Update human-readable name or associated private keys. Note that this activity is atomic: all of the updates will succeed at once, or all of them will fail.
     # @param body 
     # @param [Hash] opts the optional parameters
@@ -199,7 +199,7 @@ module TurnkeyClient
       data
     end
 
-    # Update Private Key Tag
+    # Update private key tag
     # Update human-readable name or associated private keys. Note that this activity is atomic: all of the updates will succeed at once, or all of them will fail.
     # @param body 
     # @param [Hash] opts the optional parameters

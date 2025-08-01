@@ -15,7 +15,7 @@ module TurnkeyClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
-    # Create User Tag
+    # Create user tag
     # Create a user tag and add it to users.
     # @param body 
     # @param [Hash] opts the optional parameters
@@ -25,7 +25,7 @@ module TurnkeyClient
       data
     end
 
-    # Create User Tag
+    # Create user tag
     # Create a user tag and add it to users.
     # @param body 
     # @param [Hash] opts the optional parameters
@@ -73,8 +73,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Delete User Tags
-    # Delete User Tags within an Organization
+    # Delete user tags
+    # Delete user tags within an organization.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -83,8 +83,8 @@ module TurnkeyClient
       data
     end
 
-    # Delete User Tags
-    # Delete User Tags within an Organization
+    # Delete user tags
+    # Delete user tags within an organization.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
@@ -131,8 +131,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # List User Tags
-    # List all User Tags within an Organization
+    # List user tags
+    # List all user tags within an organization.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ListUserTagsResponse]
@@ -141,8 +141,8 @@ module TurnkeyClient
       data
     end
 
-    # List User Tags
-    # List all User Tags within an Organization
+    # List user tags
+    # List all user tags within an organization.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ListUserTagsResponse, Integer, Hash)>] ListUserTagsResponse data, response status code and response headers
@@ -189,7 +189,7 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Update User Tag
+    # Update user tag
     # Update human-readable name or associated users. Note that this activity is atomic: all of the updates will succeed at once, or all of them will fail.
     # @param body 
     # @param [Hash] opts the optional parameters
@@ -199,7 +199,7 @@ module TurnkeyClient
       data
     end
 
-    # Update User Tag
+    # Update user tag
     # Update human-readable name or associated users. Note that this activity is atomic: all of the updates will succeed at once, or all of them will fail.
     # @param body 
     # @param [Hash] opts the optional parameters

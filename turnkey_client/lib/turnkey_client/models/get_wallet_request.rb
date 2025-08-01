@@ -12,10 +12,10 @@ require 'date'
 
 module TurnkeyClient
   class GetWalletRequest
-    # Unique identifier for a given Organization.
+    # Unique identifier for a given organization.
     attr_accessor :organization_id
 
-    # Unique identifier for a given Wallet.
+    # Unique identifier for a given wallet.
     attr_accessor :wallet_id
 
     # Attribute mapping from ruby-style variable name to JSON key.

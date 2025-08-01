@@ -15,8 +15,8 @@ module TurnkeyClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
-    # Create Wallet
-    # Create a Wallet and derive addresses
+    # Create wallet
+    # Create a wallet and derive addresses.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -25,8 +25,8 @@ module TurnkeyClient
       data
     end
 
-    # Create Wallet
-    # Create a Wallet and derive addresses
+    # Create wallet
+    # Create a wallet and derive addresses.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
@@ -73,8 +73,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Create Wallet Accounts
-    # Derive additional addresses using an existing wallet
+    # Create wallet accounts
+    # Derive additional addresses using an existing wallet.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -83,8 +83,8 @@ module TurnkeyClient
       data
     end
 
-    # Create Wallet Accounts
-    # Derive additional addresses using an existing wallet
+    # Create wallet accounts
+    # Derive additional addresses using an existing wallet.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
@@ -131,8 +131,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Delete Wallets
-    # Deletes wallets for an organization
+    # Delete wallets
+    # Delete wallets for an organization.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -141,8 +141,8 @@ module TurnkeyClient
       data
     end
 
-    # Delete Wallets
-    # Deletes wallets for an organization
+    # Delete wallets
+    # Delete wallets for an organization.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
@@ -189,8 +189,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Export Wallet
-    # Exports a Wallet
+    # Export wallet
+    # Export a wallet.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -199,8 +199,8 @@ module TurnkeyClient
       data
     end
 
-    # Export Wallet
-    # Exports a Wallet
+    # Export wallet
+    # Export a wallet.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
@@ -247,8 +247,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Export Wallet Account
-    # Exports a Wallet Account
+    # Export wallet account
+    # Export a wallet account.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -257,8 +257,8 @@ module TurnkeyClient
       data
     end
 
-    # Export Wallet Account
-    # Exports a Wallet Account
+    # Export wallet account
+    # Export a wallet account.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
@@ -305,8 +305,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Get Wallet
-    # Get details about a Wallet
+    # Get wallet
+    # Get details about a wallet.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [GetWalletResponse]
@@ -315,8 +315,8 @@ module TurnkeyClient
       data
     end
 
-    # Get Wallet
-    # Get details about a Wallet
+    # Get wallet
+    # Get details about a wallet.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(GetWalletResponse, Integer, Hash)>] GetWalletResponse data, response status code and response headers
@@ -363,8 +363,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Get Wallet Account
-    # Get a single wallet account
+    # Get wallet account
+    # Get a single wallet account.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [GetWalletAccountResponse]
@@ -373,8 +373,8 @@ module TurnkeyClient
       data
     end
 
-    # Get Wallet Account
-    # Get a single wallet account
+    # Get wallet account
+    # Get a single wallet account.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(GetWalletAccountResponse, Integer, Hash)>] GetWalletAccountResponse data, response status code and response headers
@@ -421,8 +421,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # List Wallets Accounts
-    # List all Accounts within a Wallet
+    # List wallets accounts
+    # List all accounts within a wallet.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [GetWalletAccountsResponse]
@@ -431,8 +431,8 @@ module TurnkeyClient
       data
     end
 
-    # List Wallets Accounts
-    # List all Accounts within a Wallet
+    # List wallets accounts
+    # List all accounts within a wallet.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(GetWalletAccountsResponse, Integer, Hash)>] GetWalletAccountsResponse data, response status code and response headers
@@ -479,8 +479,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # List Wallets
-    # List all Wallets within an Organization
+    # List wallets
+    # List all wallets within an organization.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [GetWalletsResponse]
@@ -489,8 +489,8 @@ module TurnkeyClient
       data
     end
 
-    # List Wallets
-    # List all Wallets within an Organization
+    # List wallets
+    # List all wallets within an organization.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(GetWalletsResponse, Integer, Hash)>] GetWalletsResponse data, response status code and response headers
@@ -537,8 +537,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Import Wallet
-    # Imports a wallet
+    # Import wallet
+    # Import a wallet.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -547,8 +547,8 @@ module TurnkeyClient
       data
     end
 
-    # Import Wallet
-    # Imports a wallet
+    # Import wallet
+    # Import a wallet.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
@@ -595,8 +595,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Init Import Wallet
-    # Initializes a new wallet import
+    # Init import wallet
+    # Initialize a new wallet import.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -605,8 +605,8 @@ module TurnkeyClient
       data
     end
 
-    # Init Import Wallet
-    # Initializes a new wallet import
+    # Init import wallet
+    # Initialize a new wallet import.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
@@ -653,8 +653,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Update Wallet
-    # Update a wallet for an organization
+    # Update wallet
+    # Update a wallet for an organization.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -663,8 +663,8 @@ module TurnkeyClient
       data
     end
 
-    # Update Wallet
-    # Update a wallet for an organization
+    # Update wallet
+    # Update a wallet for an organization.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers

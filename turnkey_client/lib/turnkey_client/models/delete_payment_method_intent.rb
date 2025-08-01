@@ -32,6 +32,7 @@ module TurnkeyClient
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'payment_method_id'
       ])
     end
   

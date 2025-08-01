@@ -12,7 +12,7 @@ require 'date'
 
 module TurnkeyClient
   class GetPoliciesResponse
-    # A list of Policies.
+    # A list of policies.
     attr_accessor :policies
 
     # Attribute mapping from ruby-style variable name to JSON key.

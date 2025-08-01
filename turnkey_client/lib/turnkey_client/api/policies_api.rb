@@ -15,8 +15,8 @@ module TurnkeyClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
-    # Create Policies
-    # Create new Policies
+    # Create policies
+    # Create new policies.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -25,8 +25,8 @@ module TurnkeyClient
       data
     end
 
-    # Create Policies
-    # Create new Policies
+    # Create policies
+    # Create new policies.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
@@ -73,8 +73,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Create Policy
-    # Create a new Policy
+    # Create policy
+    # Create a new policy.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -83,8 +83,8 @@ module TurnkeyClient
       data
     end
 
-    # Create Policy
-    # Create a new Policy
+    # Create policy
+    # Create a new policy.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
@@ -131,8 +131,66 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Delete Policy
-    # Delete an existing Policy
+    # Create smart contract interface
+    # Create an ABI/IDL in JSON.
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [ActivityResponse]
+    def create_smart_contract_interface(body, opts = {})
+      data, _status_code, _headers = create_smart_contract_interface_with_http_info(body, opts)
+      data
+    end
+
+    # Create smart contract interface
+    # Create an ABI/IDL in JSON.
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
+    def create_smart_contract_interface_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: PoliciesApi.create_smart_contract_interface ...'
+      end
+      # verify the required parameter 'body' is set
+      if @api_client.config.client_side_validation && body.nil?
+        fail ArgumentError, "Missing the required parameter 'body' when calling PoliciesApi.create_smart_contract_interface"
+      end
+      # resource path
+      local_var_path = '/public/v1/submit/create_smart_contract_interface'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:body] || @api_client.object_to_http_body(body) 
+
+      return_type = opts[:return_type] || 'ActivityResponse' 
+
+      auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type)
+
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PoliciesApi#create_smart_contract_interface\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+    # Delete policy
+    # Delete an existing policy.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -141,8 +199,8 @@ module TurnkeyClient
       data
     end
 
-    # Delete Policy
-    # Delete an existing Policy
+    # Delete policy
+    # Delete an existing policy.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
@@ -189,8 +247,66 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # List Policies
-    # List all Policies within an Organization
+    # Delete smart contract interface
+    # Delete a smart contract interface.
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [ActivityResponse]
+    def delete_smart_contract_interface(body, opts = {})
+      data, _status_code, _headers = delete_smart_contract_interface_with_http_info(body, opts)
+      data
+    end
+
+    # Delete smart contract interface
+    # Delete a smart contract interface.
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
+    def delete_smart_contract_interface_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: PoliciesApi.delete_smart_contract_interface ...'
+      end
+      # verify the required parameter 'body' is set
+      if @api_client.config.client_side_validation && body.nil?
+        fail ArgumentError, "Missing the required parameter 'body' when calling PoliciesApi.delete_smart_contract_interface"
+      end
+      # resource path
+      local_var_path = '/public/v1/submit/delete_smart_contract_interface'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:body] || @api_client.object_to_http_body(body) 
+
+      return_type = opts[:return_type] || 'ActivityResponse' 
+
+      auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type)
+
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PoliciesApi#delete_smart_contract_interface\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+    # List policies
+    # List all policies within an organization.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [GetPoliciesResponse]
@@ -199,8 +315,8 @@ module TurnkeyClient
       data
     end
 
-    # List Policies
-    # List all Policies within an Organization
+    # List policies
+    # List all policies within an organization.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(GetPoliciesResponse, Integer, Hash)>] GetPoliciesResponse data, response status code and response headers
@@ -247,8 +363,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Get Policy
-    # Get details about a Policy
+    # Get policy
+    # Get details about a policy.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [GetPolicyResponse]
@@ -257,8 +373,8 @@ module TurnkeyClient
       data
     end
 
-    # Get Policy
-    # Get details about a Policy
+    # Get policy
+    # Get details about a policy.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(GetPolicyResponse, Integer, Hash)>] GetPolicyResponse data, response status code and response headers
@@ -305,8 +421,124 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Update Policy
-    # Update an existing Policy
+    # Get smart contract interface
+    # Get details about a smart contract interface.
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [GetSmartContractInterfaceResponse]
+    def get_smart_contract_interface(body, opts = {})
+      data, _status_code, _headers = get_smart_contract_interface_with_http_info(body, opts)
+      data
+    end
+
+    # Get smart contract interface
+    # Get details about a smart contract interface.
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(GetSmartContractInterfaceResponse, Integer, Hash)>] GetSmartContractInterfaceResponse data, response status code and response headers
+    def get_smart_contract_interface_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: PoliciesApi.get_smart_contract_interface ...'
+      end
+      # verify the required parameter 'body' is set
+      if @api_client.config.client_side_validation && body.nil?
+        fail ArgumentError, "Missing the required parameter 'body' when calling PoliciesApi.get_smart_contract_interface"
+      end
+      # resource path
+      local_var_path = '/public/v1/query/get_smart_contract_interface'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:body] || @api_client.object_to_http_body(body) 
+
+      return_type = opts[:return_type] || 'GetSmartContractInterfaceResponse' 
+
+      auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type)
+
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PoliciesApi#get_smart_contract_interface\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+    # List smart contract interfaces
+    # List all smart contract interfaces within an organization.
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [GetSmartContractInterfacesResponse]
+    def get_smart_contract_interfaces(body, opts = {})
+      data, _status_code, _headers = get_smart_contract_interfaces_with_http_info(body, opts)
+      data
+    end
+
+    # List smart contract interfaces
+    # List all smart contract interfaces within an organization.
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(GetSmartContractInterfacesResponse, Integer, Hash)>] GetSmartContractInterfacesResponse data, response status code and response headers
+    def get_smart_contract_interfaces_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: PoliciesApi.get_smart_contract_interfaces ...'
+      end
+      # verify the required parameter 'body' is set
+      if @api_client.config.client_side_validation && body.nil?
+        fail ArgumentError, "Missing the required parameter 'body' when calling PoliciesApi.get_smart_contract_interfaces"
+      end
+      # resource path
+      local_var_path = '/public/v1/query/list_smart_contract_interfaces'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:body] || @api_client.object_to_http_body(body) 
+
+      return_type = opts[:return_type] || 'GetSmartContractInterfacesResponse' 
+
+      auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type)
+
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PoliciesApi#get_smart_contract_interfaces\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+    # Update policy
+    # Update an existing policy.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -315,8 +547,8 @@ module TurnkeyClient
       data
     end
 
-    # Update Policy
-    # Update an existing Policy
+    # Update policy
+    # Update an existing policy.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers

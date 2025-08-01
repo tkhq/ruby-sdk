@@ -12,7 +12,7 @@ require 'date'
 
 module TurnkeyClient
   class GetPrivateKeysResponse
-    # A list of Private Keys.
+    # A list of private keys.
     attr_accessor :private_keys
 
     # Attribute mapping from ruby-style variable name to JSON key.

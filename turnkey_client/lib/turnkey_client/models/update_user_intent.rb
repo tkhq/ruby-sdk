@@ -21,7 +21,7 @@ module TurnkeyClient
     # The user's email address.
     attr_accessor :user_email
 
-    # An updated list of User Tags to apply to this User.
+    # An updated list of User Tags to apply to this User. This field, if not needed, should be an empty array in your request body.
     attr_accessor :user_tag_ids
 
     # The user's phone number in E.164 format e.g. +13214567890
@@ -52,6 +52,9 @@ module TurnkeyClient
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'user_name',
+        :'user_email',
+        :'user_phone_number'
       ])
     end
   

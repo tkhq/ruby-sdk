@@ -52,6 +52,11 @@ module TurnkeyClient
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'app_name',
+        :'logo_url',
+        :'magic_link_template',
+        :'template_variables',
+        :'template_id'
       ])
     end
   

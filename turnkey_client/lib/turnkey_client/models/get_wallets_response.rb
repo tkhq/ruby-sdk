@@ -12,7 +12,7 @@ require 'date'
 
 module TurnkeyClient
   class GetWalletsResponse
-    # A list of Wallets.
+    # A list of wallets.
     attr_accessor :wallets
 
     # Attribute mapping from ruby-style variable name to JSON key.

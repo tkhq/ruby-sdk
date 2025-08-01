@@ -12,16 +12,16 @@ require 'date'
 
 module TurnkeyClient
   class GetWhoamiResponse
-    # Unique identifier for a given Organization.
+    # Unique identifier for a given organization.
     attr_accessor :organization_id
 
-    # Human-readable name for an Organization.
+    # Human-readable name for an organization.
     attr_accessor :organization_name
 
-    # Unique identifier for a given User.
+    # Unique identifier for a given user.
     attr_accessor :user_id
 
-    # Human-readable name for a User.
+    # Human-readable name for a user.
     attr_accessor :username
 
     # Attribute mapping from ruby-style variable name to JSON key.

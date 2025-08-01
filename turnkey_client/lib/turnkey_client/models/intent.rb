@@ -172,6 +172,34 @@ module TurnkeyClient
 
     attr_accessor :update_wallet_intent
 
+    attr_accessor :update_policy_intent_v2
+
+    attr_accessor :create_users_intent_v3
+
+    attr_accessor :init_otp_auth_intent_v2
+
+    attr_accessor :init_otp_intent
+
+    attr_accessor :verify_otp_intent
+
+    attr_accessor :otp_login_intent
+
+    attr_accessor :stamp_login_intent
+
+    attr_accessor :oauth_login_intent
+
+    attr_accessor :update_user_name_intent
+
+    attr_accessor :update_user_email_intent
+
+    attr_accessor :update_user_phone_number_intent
+
+    attr_accessor :init_fiat_on_ramp_intent
+
+    attr_accessor :create_smart_contract_interface_intent
+
+    attr_accessor :delete_smart_contract_interface_intent
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -254,7 +282,21 @@ module TurnkeyClient
         :'init_otp_auth_intent' => :'initOtpAuthIntent',
         :'otp_auth_intent' => :'otpAuthIntent',
         :'create_sub_organization_intent_v7' => :'createSubOrganizationIntentV7',
-        :'update_wallet_intent' => :'updateWalletIntent'
+        :'update_wallet_intent' => :'updateWalletIntent',
+        :'update_policy_intent_v2' => :'updatePolicyIntentV2',
+        :'create_users_intent_v3' => :'createUsersIntentV3',
+        :'init_otp_auth_intent_v2' => :'initOtpAuthIntentV2',
+        :'init_otp_intent' => :'initOtpIntent',
+        :'verify_otp_intent' => :'verifyOtpIntent',
+        :'otp_login_intent' => :'otpLoginIntent',
+        :'stamp_login_intent' => :'stampLoginIntent',
+        :'oauth_login_intent' => :'oauthLoginIntent',
+        :'update_user_name_intent' => :'updateUserNameIntent',
+        :'update_user_email_intent' => :'updateUserEmailIntent',
+        :'update_user_phone_number_intent' => :'updateUserPhoneNumberIntent',
+        :'init_fiat_on_ramp_intent' => :'initFiatOnRampIntent',
+        :'create_smart_contract_interface_intent' => :'createSmartContractInterfaceIntent',
+        :'delete_smart_contract_interface_intent' => :'deleteSmartContractInterfaceIntent'
       }
     end
 
@@ -340,7 +382,21 @@ module TurnkeyClient
         :'init_otp_auth_intent' => :'Object',
         :'otp_auth_intent' => :'Object',
         :'create_sub_organization_intent_v7' => :'Object',
-        :'update_wallet_intent' => :'Object'
+        :'update_wallet_intent' => :'Object',
+        :'update_policy_intent_v2' => :'Object',
+        :'create_users_intent_v3' => :'Object',
+        :'init_otp_auth_intent_v2' => :'Object',
+        :'init_otp_intent' => :'Object',
+        :'verify_otp_intent' => :'Object',
+        :'otp_login_intent' => :'Object',
+        :'stamp_login_intent' => :'Object',
+        :'oauth_login_intent' => :'Object',
+        :'update_user_name_intent' => :'Object',
+        :'update_user_email_intent' => :'Object',
+        :'update_user_phone_number_intent' => :'Object',
+        :'init_fiat_on_ramp_intent' => :'Object',
+        :'create_smart_contract_interface_intent' => :'Object',
+        :'delete_smart_contract_interface_intent' => :'Object'
       }
     end
 
@@ -684,6 +740,62 @@ module TurnkeyClient
       if attributes.key?(:'update_wallet_intent')
         self.update_wallet_intent = attributes[:'update_wallet_intent']
       end
+
+      if attributes.key?(:'update_policy_intent_v2')
+        self.update_policy_intent_v2 = attributes[:'update_policy_intent_v2']
+      end
+
+      if attributes.key?(:'create_users_intent_v3')
+        self.create_users_intent_v3 = attributes[:'create_users_intent_v3']
+      end
+
+      if attributes.key?(:'init_otp_auth_intent_v2')
+        self.init_otp_auth_intent_v2 = attributes[:'init_otp_auth_intent_v2']
+      end
+
+      if attributes.key?(:'init_otp_intent')
+        self.init_otp_intent = attributes[:'init_otp_intent']
+      end
+
+      if attributes.key?(:'verify_otp_intent')
+        self.verify_otp_intent = attributes[:'verify_otp_intent']
+      end
+
+      if attributes.key?(:'otp_login_intent')
+        self.otp_login_intent = attributes[:'otp_login_intent']
+      end
+
+      if attributes.key?(:'stamp_login_intent')
+        self.stamp_login_intent = attributes[:'stamp_login_intent']
+      end
+
+      if attributes.key?(:'oauth_login_intent')
+        self.oauth_login_intent = attributes[:'oauth_login_intent']
+      end
+
+      if attributes.key?(:'update_user_name_intent')
+        self.update_user_name_intent = attributes[:'update_user_name_intent']
+      end
+
+      if attributes.key?(:'update_user_email_intent')
+        self.update_user_email_intent = attributes[:'update_user_email_intent']
+      end
+
+      if attributes.key?(:'update_user_phone_number_intent')
+        self.update_user_phone_number_intent = attributes[:'update_user_phone_number_intent']
+      end
+
+      if attributes.key?(:'init_fiat_on_ramp_intent')
+        self.init_fiat_on_ramp_intent = attributes[:'init_fiat_on_ramp_intent']
+      end
+
+      if attributes.key?(:'create_smart_contract_interface_intent')
+        self.create_smart_contract_interface_intent = attributes[:'create_smart_contract_interface_intent']
+      end
+
+      if attributes.key?(:'delete_smart_contract_interface_intent')
+        self.delete_smart_contract_interface_intent = attributes[:'delete_smart_contract_interface_intent']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -783,7 +895,21 @@ module TurnkeyClient
           init_otp_auth_intent == o.init_otp_auth_intent &&
           otp_auth_intent == o.otp_auth_intent &&
           create_sub_organization_intent_v7 == o.create_sub_organization_intent_v7 &&
-          update_wallet_intent == o.update_wallet_intent
+          update_wallet_intent == o.update_wallet_intent &&
+          update_policy_intent_v2 == o.update_policy_intent_v2 &&
+          create_users_intent_v3 == o.create_users_intent_v3 &&
+          init_otp_auth_intent_v2 == o.init_otp_auth_intent_v2 &&
+          init_otp_intent == o.init_otp_intent &&
+          verify_otp_intent == o.verify_otp_intent &&
+          otp_login_intent == o.otp_login_intent &&
+          stamp_login_intent == o.stamp_login_intent &&
+          oauth_login_intent == o.oauth_login_intent &&
+          update_user_name_intent == o.update_user_name_intent &&
+          update_user_email_intent == o.update_user_email_intent &&
+          update_user_phone_number_intent == o.update_user_phone_number_intent &&
+          init_fiat_on_ramp_intent == o.init_fiat_on_ramp_intent &&
+          create_smart_contract_interface_intent == o.create_smart_contract_interface_intent &&
+          delete_smart_contract_interface_intent == o.delete_smart_contract_interface_intent
     end
 
     # @see the `==` method
@@ -795,7 +921,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [create_organization_intent, create_authenticators_intent, create_users_intent, create_private_keys_intent, sign_raw_payload_intent, create_invitations_intent, accept_invitation_intent, create_policy_intent, disable_private_key_intent, delete_users_intent, delete_authenticators_intent, delete_invitation_intent, delete_organization_intent, delete_policy_intent, create_user_tag_intent, delete_user_tags_intent, sign_transaction_intent, create_api_keys_intent, delete_api_keys_intent, approve_activity_intent, reject_activity_intent, create_private_key_tag_intent, delete_private_key_tags_intent, create_policy_intent_v2, set_payment_method_intent, activate_billing_tier_intent, delete_payment_method_intent, create_policy_intent_v3, create_api_only_users_intent, update_root_quorum_intent, update_user_tag_intent, update_private_key_tag_intent, create_authenticators_intent_v2, accept_invitation_intent_v2, create_organization_intent_v2, create_users_intent_v2, create_sub_organization_intent, create_sub_organization_intent_v2, update_allowed_origins_intent, create_private_keys_intent_v2, update_user_intent, update_policy_intent, set_payment_method_intent_v2, create_sub_organization_intent_v3, create_wallet_intent, create_wallet_accounts_intent, init_user_email_recovery_intent, recover_user_intent, set_organization_feature_intent, remove_organization_feature_intent, sign_raw_payload_intent_v2, sign_transaction_intent_v2, export_private_key_intent, export_wallet_intent, create_sub_organization_intent_v4, email_auth_intent, export_wallet_account_intent, init_import_wallet_intent, import_wallet_intent, init_import_private_key_intent, import_private_key_intent, create_policies_intent, sign_raw_payloads_intent, create_read_only_session_intent, create_oauth_providers_intent, delete_oauth_providers_intent, create_sub_organization_intent_v5, oauth_intent, create_api_keys_intent_v2, create_read_write_session_intent, email_auth_intent_v2, create_sub_organization_intent_v6, delete_private_keys_intent, delete_wallets_intent, create_read_write_session_intent_v2, delete_sub_organization_intent, init_otp_auth_intent, otp_auth_intent, create_sub_organization_intent_v7, update_wallet_intent].hash
+      [create_organization_intent, create_authenticators_intent, create_users_intent, create_private_keys_intent, sign_raw_payload_intent, create_invitations_intent, accept_invitation_intent, create_policy_intent, disable_private_key_intent, delete_users_intent, delete_authenticators_intent, delete_invitation_intent, delete_organization_intent, delete_policy_intent, create_user_tag_intent, delete_user_tags_intent, sign_transaction_intent, create_api_keys_intent, delete_api_keys_intent, approve_activity_intent, reject_activity_intent, create_private_key_tag_intent, delete_private_key_tags_intent, create_policy_intent_v2, set_payment_method_intent, activate_billing_tier_intent, delete_payment_method_intent, create_policy_intent_v3, create_api_only_users_intent, update_root_quorum_intent, update_user_tag_intent, update_private_key_tag_intent, create_authenticators_intent_v2, accept_invitation_intent_v2, create_organization_intent_v2, create_users_intent_v2, create_sub_organization_intent, create_sub_organization_intent_v2, update_allowed_origins_intent, create_private_keys_intent_v2, update_user_intent, update_policy_intent, set_payment_method_intent_v2, create_sub_organization_intent_v3, create_wallet_intent, create_wallet_accounts_intent, init_user_email_recovery_intent, recover_user_intent, set_organization_feature_intent, remove_organization_feature_intent, sign_raw_payload_intent_v2, sign_transaction_intent_v2, export_private_key_intent, export_wallet_intent, create_sub_organization_intent_v4, email_auth_intent, export_wallet_account_intent, init_import_wallet_intent, import_wallet_intent, init_import_private_key_intent, import_private_key_intent, create_policies_intent, sign_raw_payloads_intent, create_read_only_session_intent, create_oauth_providers_intent, delete_oauth_providers_intent, create_sub_organization_intent_v5, oauth_intent, create_api_keys_intent_v2, create_read_write_session_intent, email_auth_intent_v2, create_sub_organization_intent_v6, delete_private_keys_intent, delete_wallets_intent, create_read_write_session_intent_v2, delete_sub_organization_intent, init_otp_auth_intent, otp_auth_intent, create_sub_organization_intent_v7, update_wallet_intent, update_policy_intent_v2, create_users_intent_v3, init_otp_auth_intent_v2, init_otp_intent, verify_otp_intent, otp_login_intent, stamp_login_intent, oauth_login_intent, update_user_name_intent, update_user_email_intent, update_user_phone_number_intent, init_fiat_on_ramp_intent, create_smart_contract_interface_intent, delete_smart_contract_interface_intent].hash
     end
 
     # Builds the object from hash

@@ -21,13 +21,13 @@ module TurnkeyClient
     # The user's phone number in E.164 format e.g. +13214567890
     attr_accessor :user_phone_number
 
-    # A list of API Key parameters.
+    # A list of API Key parameters. This field, if not needed, should be an empty array in your request body.
     attr_accessor :api_keys
 
-    # A list of Authenticator parameters.
+    # A list of Authenticator parameters. This field, if not needed, should be an empty array in your request body.
     attr_accessor :authenticators
 
-    # A list of Oauth providers.
+    # A list of Oauth providers. This field, if not needed, should be an empty array in your request body.
     attr_accessor :oauth_providers
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -57,6 +57,8 @@ module TurnkeyClient
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'user_email',
+        :'user_phone_number',
       ])
     end
   

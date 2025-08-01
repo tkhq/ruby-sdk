@@ -12,7 +12,7 @@ require 'date'
 
 module TurnkeyClient
   class GetWhoamiRequest
-    # Unique identifier for a given Organization. If the request is being made by a WebAuthN user and their Sub-Organization ID is unknown, this can be the Parent Organization ID; using the Sub-Organization ID when possible is preferred due to performance reasons.
+    # Unique identifier for a given organization. If the request is being made by a WebAuthN user and their sub-organization ID is unknown, this can be the parent organization ID; using the sub-organization ID when possible is preferred due to performance reasons.
     attr_accessor :organization_id
 
     # Attribute mapping from ruby-style variable name to JSON key.

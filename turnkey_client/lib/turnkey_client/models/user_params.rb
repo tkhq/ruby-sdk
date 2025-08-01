@@ -20,13 +20,13 @@ module TurnkeyClient
 
     attr_accessor :access_type
 
-    # A list of API Key parameters.
+    # A list of API Key parameters. This field, if not needed, should be an empty array in your request body.
     attr_accessor :api_keys
 
-    # A list of Authenticator parameters.
+    # A list of Authenticator parameters. This field, if not needed, should be an empty array in your request body.
     attr_accessor :authenticators
 
-    # A list of User Tag IDs.
+    # A list of User Tag IDs. This field, if not needed, should be an empty array in your request body.
     attr_accessor :user_tags
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -56,6 +56,7 @@ module TurnkeyClient
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'user_email',
       ])
     end
   

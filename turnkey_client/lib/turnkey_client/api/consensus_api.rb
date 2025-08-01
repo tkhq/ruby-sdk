@@ -15,8 +15,8 @@ module TurnkeyClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
-    # Approve Activity
-    # Approve an Activity
+    # Approve activity
+    # Approve an activity.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -25,8 +25,8 @@ module TurnkeyClient
       data
     end
 
-    # Approve Activity
-    # Approve an Activity
+    # Approve activity
+    # Approve an activity.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
@@ -73,8 +73,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Reject Activity
-    # Reject an Activity
+    # Reject activity
+    # Reject an activity.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -83,8 +83,8 @@ module TurnkeyClient
       data
     end
 
-    # Reject Activity
-    # Reject an Activity
+    # Reject activity
+    # Reject an activity.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers

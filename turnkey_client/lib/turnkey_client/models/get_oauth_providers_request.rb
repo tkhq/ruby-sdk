@@ -12,10 +12,10 @@ require 'date'
 
 module TurnkeyClient
   class GetOauthProvidersRequest
-    # Unique identifier for a given Organization.
+    # Unique identifier for a given organization.
     attr_accessor :organization_id
 
-    # Unique identifier for a given User.
+    # Unique identifier for a given user.
     attr_accessor :user_id
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -37,6 +37,7 @@ module TurnkeyClient
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'user_id'
       ])
     end
   

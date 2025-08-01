@@ -12,10 +12,10 @@ require 'date'
 
 module TurnkeyClient
   class GetVerifiedSubOrgIdsRequest
-    # Unique identifier for the parent Organization. This is used to find sub-organizations within it.
+    # Unique identifier for the parent organization. This is used to find sub-organizations within it.
     attr_accessor :organization_id
 
-    # Specifies the type of filter to apply, i.e 'EMAIL', 'PHONE_NUMBER'
+    # Specifies the type of filter to apply, i.e 'EMAIL', 'PHONE_NUMBER'.
     attr_accessor :filter_type
 
     # The value of the filter to apply for the specified type. For example, a specific email or phone number string.

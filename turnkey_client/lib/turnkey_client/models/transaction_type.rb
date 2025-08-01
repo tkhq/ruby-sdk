@@ -14,6 +14,7 @@ module TurnkeyClient
   class TransactionType
     ETHEREUM = 'TRANSACTION_TYPE_ETHEREUM'.freeze
     SOLANA = 'TRANSACTION_TYPE_SOLANA'.freeze
+    TRON = 'TRANSACTION_TYPE_TRON'.freeze
 
     # Builds the enum from string
     # @param [String] The enum value in the form of the string

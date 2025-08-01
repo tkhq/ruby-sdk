@@ -12,7 +12,7 @@ require 'date'
 
 module TurnkeyClient
   class ListPrivateKeyTagsResponse
-    # A list of Private Key Tags
+    # A list of private key tags.
     attr_accessor :private_key_tags
 
     # Attribute mapping from ruby-style variable name to JSON key.

@@ -19,6 +19,9 @@ module TurnkeyClient
     EMAIL_AUTH_KEY_P256 = 'CREDENTIAL_TYPE_EMAIL_AUTH_KEY_P256'.freeze
     API_KEY_ED25519 = 'CREDENTIAL_TYPE_API_KEY_ED25519'.freeze
     OTP_AUTH_KEY_P256 = 'CREDENTIAL_TYPE_OTP_AUTH_KEY_P256'.freeze
+    READ_WRITE_SESSION_KEY_P256 = 'CREDENTIAL_TYPE_READ_WRITE_SESSION_KEY_P256'.freeze
+    OAUTH_KEY_P256 = 'CREDENTIAL_TYPE_OAUTH_KEY_P256'.freeze
+    LOGIN = 'CREDENTIAL_TYPE_LOGIN'.freeze
 
     # Builds the enum from string
     # @param [String] The enum value in the form of the string
