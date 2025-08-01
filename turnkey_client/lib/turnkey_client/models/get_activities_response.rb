@@ -12,7 +12,7 @@ require 'date'
 
 module TurnkeyClient
   class GetActivitiesResponse
-    # A list of Activities.
+    # A list of activities.
     attr_accessor :activities
 
     # Attribute mapping from ruby-style variable name to JSON key.

@@ -21,7 +21,7 @@ module TurnkeyClient
     # Optional human-readable name for an API Key. If none provided, default to Email Auth - <Timestamp>
     attr_accessor :api_key_name
 
-    # Expiration window (in seconds) indicating how long the API key is valid. If not provided, a default of 15 minutes will be used.
+    # Expiration window (in seconds) indicating how long the API key is valid for. If not provided, a default of 15 minutes will be used.
     attr_accessor :expiration_seconds
 
     attr_accessor :email_customization
@@ -32,6 +32,12 @@ module TurnkeyClient
     # Optional custom email address from which to send the email
     attr_accessor :send_from_email_address
 
+    # Optional custom sender name for use with sendFromEmailAddress; if left empty, will default to 'Notifications'
+    attr_accessor :send_from_email_sender_name
+
+    # Optional custom email address to use as reply-to
+    attr_accessor :reply_to_email_address
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -41,7 +47,9 @@ module TurnkeyClient
         :'expiration_seconds' => :'expirationSeconds',
         :'email_customization' => :'emailCustomization',
         :'invalidate_existing' => :'invalidateExisting',
-        :'send_from_email_address' => :'sendFromEmailAddress'
+        :'send_from_email_address' => :'sendFromEmailAddress',
+        :'send_from_email_sender_name' => :'sendFromEmailSenderName',
+        :'reply_to_email_address' => :'replyToEmailAddress'
       }
     end
 
@@ -54,13 +62,21 @@ module TurnkeyClient
         :'expiration_seconds' => :'Object',
         :'email_customization' => :'Object',
         :'invalidate_existing' => :'Object',
-        :'send_from_email_address' => :'Object'
+        :'send_from_email_address' => :'Object',
+        :'send_from_email_sender_name' => :'Object',
+        :'reply_to_email_address' => :'Object'
       }
     end
 
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'api_key_name',
+        :'expiration_seconds',
+        :'invalidate_existing',
+        :'send_from_email_address',
+        :'send_from_email_sender_name',
+        :'reply_to_email_address'
       ])
     end
   
@@ -106,6 +122,14 @@ module TurnkeyClient
       if attributes.key?(:'send_from_email_address')
         self.send_from_email_address = attributes[:'send_from_email_address']
       end
+
+      if attributes.key?(:'send_from_email_sender_name')
+        self.send_from_email_sender_name = attributes[:'send_from_email_sender_name']
+      end
+
+      if attributes.key?(:'reply_to_email_address')
+        self.reply_to_email_address = attributes[:'reply_to_email_address']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -142,7 +166,9 @@ module TurnkeyClient
           expiration_seconds == o.expiration_seconds &&
           email_customization == o.email_customization &&
           invalidate_existing == o.invalidate_existing &&
-          send_from_email_address == o.send_from_email_address
+          send_from_email_address == o.send_from_email_address &&
+          send_from_email_sender_name == o.send_from_email_sender_name &&
+          reply_to_email_address == o.reply_to_email_address
     end
 
     # @see the `==` method
@@ -154,7 +180,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [email, target_public_key, api_key_name, expiration_seconds, email_customization, invalidate_existing, send_from_email_address].hash
+      [email, target_public_key, api_key_name, expiration_seconds, email_customization, invalidate_existing, send_from_email_address, send_from_email_sender_name, reply_to_email_address].hash
     end
 
     # Builds the object from hash

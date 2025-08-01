@@ -15,8 +15,8 @@ module TurnkeyClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
-    # Init Email Recovery
-    # Initializes a new email recovery
+    # Init email recovery
+    # Initialize a new email recovery.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -25,8 +25,8 @@ module TurnkeyClient
       data
     end
 
-    # Init Email Recovery
-    # Initializes a new email recovery
+    # Init email recovery
+    # Initialize a new email recovery.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
@@ -74,7 +74,7 @@ module TurnkeyClient
       return data, status_code, headers
     end
     # Recover a user
-    # Completes the process of recovering a user by adding an authenticator
+    # Complete the process of recovering a user by adding an authenticator.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -84,7 +84,7 @@ module TurnkeyClient
     end
 
     # Recover a user
-    # Completes the process of recovering a user by adding an authenticator
+    # Complete the process of recovering a user by adding an authenticator.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers

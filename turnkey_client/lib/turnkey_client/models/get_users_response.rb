@@ -12,7 +12,7 @@ require 'date'
 
 module TurnkeyClient
   class GetUsersResponse
-    # A list of Users.
+    # A list of users.
     attr_accessor :users
 
     # Attribute mapping from ruby-style variable name to JSON key.

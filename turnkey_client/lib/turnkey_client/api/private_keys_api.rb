@@ -15,8 +15,8 @@ module TurnkeyClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
-    # Create Private Keys
-    # Create new Private Keys
+    # Create private keys
+    # Create new private keys.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -25,8 +25,8 @@ module TurnkeyClient
       data
     end
 
-    # Create Private Keys
-    # Create new Private Keys
+    # Create private keys
+    # Create new private keys.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
@@ -73,8 +73,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Delete Private Keys
-    # Deletes private keys for an organization
+    # Delete private keys
+    # Delete private keys for an organization.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -83,8 +83,8 @@ module TurnkeyClient
       data
     end
 
-    # Delete Private Keys
-    # Deletes private keys for an organization
+    # Delete private keys
+    # Delete private keys for an organization.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
@@ -131,8 +131,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Export Private Key
-    # Exports a Private Key
+    # Export private key
+    # Export a private key.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -141,8 +141,8 @@ module TurnkeyClient
       data
     end
 
-    # Export Private Key
-    # Exports a Private Key
+    # Export private key
+    # Export a private key.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
@@ -189,8 +189,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Get Private Key
-    # Get details about a Private Key
+    # Get private key
+    # Get details about a private key.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [GetPrivateKeyResponse]
@@ -199,8 +199,8 @@ module TurnkeyClient
       data
     end
 
-    # Get Private Key
-    # Get details about a Private Key
+    # Get private key
+    # Get details about a private key.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(GetPrivateKeyResponse, Integer, Hash)>] GetPrivateKeyResponse data, response status code and response headers
@@ -247,8 +247,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # List Private Keys
-    # List all Private Keys within an Organization
+    # List private keys
+    # List all private keys within an organization.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [GetPrivateKeysResponse]
@@ -257,8 +257,8 @@ module TurnkeyClient
       data
     end
 
-    # List Private Keys
-    # List all Private Keys within an Organization
+    # List private keys
+    # List all private keys within an organization.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(GetPrivateKeysResponse, Integer, Hash)>] GetPrivateKeysResponse data, response status code and response headers
@@ -305,8 +305,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Import Private Key
-    # Imports a private key
+    # Import private key
+    # Import a private key.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -315,8 +315,8 @@ module TurnkeyClient
       data
     end
 
-    # Import Private Key
-    # Imports a private key
+    # Import private key
+    # Import a private key.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
@@ -363,8 +363,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Init Import Private Key
-    # Initializes a new private key import
+    # Init import private key
+    # Initialize a new private key import.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -373,8 +373,8 @@ module TurnkeyClient
       data
     end
 
-    # Init Import Private Key
-    # Initializes a new private key import
+    # Init import private key
+    # Initialize a new private key import.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers

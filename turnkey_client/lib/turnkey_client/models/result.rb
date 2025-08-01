@@ -144,6 +144,32 @@ module TurnkeyClient
 
     attr_accessor :update_wallet_result
 
+    attr_accessor :update_policy_result_v2
+
+    attr_accessor :init_otp_auth_result_v2
+
+    attr_accessor :init_otp_result
+
+    attr_accessor :verify_otp_result
+
+    attr_accessor :otp_login_result
+
+    attr_accessor :stamp_login_result
+
+    attr_accessor :oauth_login_result
+
+    attr_accessor :update_user_name_result
+
+    attr_accessor :update_user_email_result
+
+    attr_accessor :update_user_phone_number_result
+
+    attr_accessor :init_fiat_on_ramp_result
+
+    attr_accessor :create_smart_contract_interface_result
+
+    attr_accessor :delete_smart_contract_interface_result
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -212,7 +238,20 @@ module TurnkeyClient
         :'init_otp_auth_result' => :'initOtpAuthResult',
         :'otp_auth_result' => :'otpAuthResult',
         :'create_sub_organization_result_v7' => :'createSubOrganizationResultV7',
-        :'update_wallet_result' => :'updateWalletResult'
+        :'update_wallet_result' => :'updateWalletResult',
+        :'update_policy_result_v2' => :'updatePolicyResultV2',
+        :'init_otp_auth_result_v2' => :'initOtpAuthResultV2',
+        :'init_otp_result' => :'initOtpResult',
+        :'verify_otp_result' => :'verifyOtpResult',
+        :'otp_login_result' => :'otpLoginResult',
+        :'stamp_login_result' => :'stampLoginResult',
+        :'oauth_login_result' => :'oauthLoginResult',
+        :'update_user_name_result' => :'updateUserNameResult',
+        :'update_user_email_result' => :'updateUserEmailResult',
+        :'update_user_phone_number_result' => :'updateUserPhoneNumberResult',
+        :'init_fiat_on_ramp_result' => :'initFiatOnRampResult',
+        :'create_smart_contract_interface_result' => :'createSmartContractInterfaceResult',
+        :'delete_smart_contract_interface_result' => :'deleteSmartContractInterfaceResult'
       }
     end
 
@@ -284,7 +323,20 @@ module TurnkeyClient
         :'init_otp_auth_result' => :'Object',
         :'otp_auth_result' => :'Object',
         :'create_sub_organization_result_v7' => :'Object',
-        :'update_wallet_result' => :'Object'
+        :'update_wallet_result' => :'Object',
+        :'update_policy_result_v2' => :'Object',
+        :'init_otp_auth_result_v2' => :'Object',
+        :'init_otp_result' => :'Object',
+        :'verify_otp_result' => :'Object',
+        :'otp_login_result' => :'Object',
+        :'stamp_login_result' => :'Object',
+        :'oauth_login_result' => :'Object',
+        :'update_user_name_result' => :'Object',
+        :'update_user_email_result' => :'Object',
+        :'update_user_phone_number_result' => :'Object',
+        :'init_fiat_on_ramp_result' => :'Object',
+        :'create_smart_contract_interface_result' => :'Object',
+        :'delete_smart_contract_interface_result' => :'Object'
       }
     end
 
@@ -572,6 +624,58 @@ module TurnkeyClient
       if attributes.key?(:'update_wallet_result')
         self.update_wallet_result = attributes[:'update_wallet_result']
       end
+
+      if attributes.key?(:'update_policy_result_v2')
+        self.update_policy_result_v2 = attributes[:'update_policy_result_v2']
+      end
+
+      if attributes.key?(:'init_otp_auth_result_v2')
+        self.init_otp_auth_result_v2 = attributes[:'init_otp_auth_result_v2']
+      end
+
+      if attributes.key?(:'init_otp_result')
+        self.init_otp_result = attributes[:'init_otp_result']
+      end
+
+      if attributes.key?(:'verify_otp_result')
+        self.verify_otp_result = attributes[:'verify_otp_result']
+      end
+
+      if attributes.key?(:'otp_login_result')
+        self.otp_login_result = attributes[:'otp_login_result']
+      end
+
+      if attributes.key?(:'stamp_login_result')
+        self.stamp_login_result = attributes[:'stamp_login_result']
+      end
+
+      if attributes.key?(:'oauth_login_result')
+        self.oauth_login_result = attributes[:'oauth_login_result']
+      end
+
+      if attributes.key?(:'update_user_name_result')
+        self.update_user_name_result = attributes[:'update_user_name_result']
+      end
+
+      if attributes.key?(:'update_user_email_result')
+        self.update_user_email_result = attributes[:'update_user_email_result']
+      end
+
+      if attributes.key?(:'update_user_phone_number_result')
+        self.update_user_phone_number_result = attributes[:'update_user_phone_number_result']
+      end
+
+      if attributes.key?(:'init_fiat_on_ramp_result')
+        self.init_fiat_on_ramp_result = attributes[:'init_fiat_on_ramp_result']
+      end
+
+      if attributes.key?(:'create_smart_contract_interface_result')
+        self.create_smart_contract_interface_result = attributes[:'create_smart_contract_interface_result']
+      end
+
+      if attributes.key?(:'delete_smart_contract_interface_result')
+        self.delete_smart_contract_interface_result = attributes[:'delete_smart_contract_interface_result']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -657,7 +761,20 @@ module TurnkeyClient
           init_otp_auth_result == o.init_otp_auth_result &&
           otp_auth_result == o.otp_auth_result &&
           create_sub_organization_result_v7 == o.create_sub_organization_result_v7 &&
-          update_wallet_result == o.update_wallet_result
+          update_wallet_result == o.update_wallet_result &&
+          update_policy_result_v2 == o.update_policy_result_v2 &&
+          init_otp_auth_result_v2 == o.init_otp_auth_result_v2 &&
+          init_otp_result == o.init_otp_result &&
+          verify_otp_result == o.verify_otp_result &&
+          otp_login_result == o.otp_login_result &&
+          stamp_login_result == o.stamp_login_result &&
+          oauth_login_result == o.oauth_login_result &&
+          update_user_name_result == o.update_user_name_result &&
+          update_user_email_result == o.update_user_email_result &&
+          update_user_phone_number_result == o.update_user_phone_number_result &&
+          init_fiat_on_ramp_result == o.init_fiat_on_ramp_result &&
+          create_smart_contract_interface_result == o.create_smart_contract_interface_result &&
+          delete_smart_contract_interface_result == o.delete_smart_contract_interface_result
     end
 
     # @see the `==` method
@@ -669,7 +786,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [create_organization_result, create_authenticators_result, create_users_result, create_private_keys_result, create_invitations_result, accept_invitation_result, sign_raw_payload_result, create_policy_result, disable_private_key_result, delete_users_result, delete_authenticators_result, delete_invitation_result, delete_organization_result, delete_policy_result, create_user_tag_result, delete_user_tags_result, sign_transaction_result, delete_api_keys_result, create_api_keys_result, create_private_key_tag_result, delete_private_key_tags_result, set_payment_method_result, activate_billing_tier_result, delete_payment_method_result, create_api_only_users_result, update_root_quorum_result, update_user_tag_result, update_private_key_tag_result, create_sub_organization_result, update_allowed_origins_result, create_private_keys_result_v2, update_user_result, update_policy_result, create_sub_organization_result_v3, create_wallet_result, create_wallet_accounts_result, init_user_email_recovery_result, recover_user_result, set_organization_feature_result, remove_organization_feature_result, export_private_key_result, export_wallet_result, create_sub_organization_result_v4, email_auth_result, export_wallet_account_result, init_import_wallet_result, import_wallet_result, init_import_private_key_result, import_private_key_result, create_policies_result, sign_raw_payloads_result, create_read_only_session_result, create_oauth_providers_result, delete_oauth_providers_result, create_sub_organization_result_v5, oauth_result, create_read_write_session_result, create_sub_organization_result_v6, delete_private_keys_result, delete_wallets_result, create_read_write_session_result_v2, delete_sub_organization_result, init_otp_auth_result, otp_auth_result, create_sub_organization_result_v7, update_wallet_result].hash
+      [create_organization_result, create_authenticators_result, create_users_result, create_private_keys_result, create_invitations_result, accept_invitation_result, sign_raw_payload_result, create_policy_result, disable_private_key_result, delete_users_result, delete_authenticators_result, delete_invitation_result, delete_organization_result, delete_policy_result, create_user_tag_result, delete_user_tags_result, sign_transaction_result, delete_api_keys_result, create_api_keys_result, create_private_key_tag_result, delete_private_key_tags_result, set_payment_method_result, activate_billing_tier_result, delete_payment_method_result, create_api_only_users_result, update_root_quorum_result, update_user_tag_result, update_private_key_tag_result, create_sub_organization_result, update_allowed_origins_result, create_private_keys_result_v2, update_user_result, update_policy_result, create_sub_organization_result_v3, create_wallet_result, create_wallet_accounts_result, init_user_email_recovery_result, recover_user_result, set_organization_feature_result, remove_organization_feature_result, export_private_key_result, export_wallet_result, create_sub_organization_result_v4, email_auth_result, export_wallet_account_result, init_import_wallet_result, import_wallet_result, init_import_private_key_result, import_private_key_result, create_policies_result, sign_raw_payloads_result, create_read_only_session_result, create_oauth_providers_result, delete_oauth_providers_result, create_sub_organization_result_v5, oauth_result, create_read_write_session_result, create_sub_organization_result_v6, delete_private_keys_result, delete_wallets_result, create_read_write_session_result_v2, delete_sub_organization_result, init_otp_auth_result, otp_auth_result, create_sub_organization_result_v7, update_wallet_result, update_policy_result_v2, init_otp_auth_result_v2, init_otp_result, verify_otp_result, otp_login_result, stamp_login_result, oauth_login_result, update_user_name_result, update_user_email_result, update_user_phone_number_result, init_fiat_on_ramp_result, create_smart_contract_interface_result, delete_smart_contract_interface_result].hash
     end
 
     # Builds the object from hash

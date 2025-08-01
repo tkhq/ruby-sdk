@@ -28,6 +28,12 @@ module TurnkeyClient
     # Optional custom email address from which to send the OTP email
     attr_accessor :send_from_email_address
 
+    # Optional custom sender name for use with sendFromEmailAddress; if left empty, will default to 'Notifications'
+    attr_accessor :send_from_email_sender_name
+
+    # Optional custom email address to use as reply-to
+    attr_accessor :reply_to_email_address
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -36,7 +42,9 @@ module TurnkeyClient
         :'email_customization' => :'emailCustomization',
         :'sms_customization' => :'smsCustomization',
         :'user_identifier' => :'userIdentifier',
-        :'send_from_email_address' => :'sendFromEmailAddress'
+        :'send_from_email_address' => :'sendFromEmailAddress',
+        :'send_from_email_sender_name' => :'sendFromEmailSenderName',
+        :'reply_to_email_address' => :'replyToEmailAddress'
       }
     end
 
@@ -48,13 +56,19 @@ module TurnkeyClient
         :'email_customization' => :'Object',
         :'sms_customization' => :'Object',
         :'user_identifier' => :'Object',
-        :'send_from_email_address' => :'Object'
+        :'send_from_email_address' => :'Object',
+        :'send_from_email_sender_name' => :'Object',
+        :'reply_to_email_address' => :'Object'
       }
     end
 
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'user_identifier',
+        :'send_from_email_address',
+        :'send_from_email_sender_name',
+        :'reply_to_email_address'
       ])
     end
   
@@ -96,6 +110,14 @@ module TurnkeyClient
       if attributes.key?(:'send_from_email_address')
         self.send_from_email_address = attributes[:'send_from_email_address']
       end
+
+      if attributes.key?(:'send_from_email_sender_name')
+        self.send_from_email_sender_name = attributes[:'send_from_email_sender_name']
+      end
+
+      if attributes.key?(:'reply_to_email_address')
+        self.reply_to_email_address = attributes[:'reply_to_email_address']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -131,7 +153,9 @@ module TurnkeyClient
           email_customization == o.email_customization &&
           sms_customization == o.sms_customization &&
           user_identifier == o.user_identifier &&
-          send_from_email_address == o.send_from_email_address
+          send_from_email_address == o.send_from_email_address &&
+          send_from_email_sender_name == o.send_from_email_sender_name &&
+          reply_to_email_address == o.reply_to_email_address
     end
 
     # @see the `==` method
@@ -143,7 +167,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [otp_type, contact, email_customization, sms_customization, user_identifier, send_from_email_address].hash
+      [otp_type, contact, email_customization, sms_customization, user_identifier, send_from_email_address, send_from_email_sender_name, reply_to_email_address].hash
     end
 
     # Builds the object from hash

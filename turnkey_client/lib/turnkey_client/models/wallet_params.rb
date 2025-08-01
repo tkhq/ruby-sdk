@@ -15,7 +15,7 @@ module TurnkeyClient
     # Human-readable name for a Wallet.
     attr_accessor :wallet_name
 
-    # A list of wallet Accounts.
+    # A list of wallet Accounts. This field, if not needed, should be an empty array in your request body.
     attr_accessor :accounts
 
     # Length of mnemonic to generate the Wallet seed. Defaults to 12. Accepted values: 12, 15, 18, 21, 24.
@@ -42,6 +42,7 @@ module TurnkeyClient
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'mnemonic_length'
       ])
     end
   

@@ -12,10 +12,10 @@ require 'date'
 
 module TurnkeyClient
   class GetWalletAccountsRequest
-    # Unique identifier for a given Organization.
+    # Unique identifier for a given organization.
     attr_accessor :organization_id
 
-    # Unique identifier for a given Wallet.
+    # Unique identifier for a given wallet. If not provided, all accounts for the organization will be returned.
     attr_accessor :wallet_id
 
     attr_accessor :pagination_options
@@ -41,6 +41,7 @@ module TurnkeyClient
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'wallet_id',
       ])
     end
   
@@ -80,10 +81,6 @@ module TurnkeyClient
         invalid_properties.push('invalid value for "organization_id", organization_id cannot be nil.')
       end
 
-      if @wallet_id.nil?
-        invalid_properties.push('invalid value for "wallet_id", wallet_id cannot be nil.')
-      end
-
       invalid_properties
     end
 
@@ -91,7 +88,6 @@ module TurnkeyClient
     # @return true if the model is valid
     def valid?
       return false if @organization_id.nil?
-      return false if @wallet_id.nil?
       true
     end
 

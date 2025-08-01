@@ -15,8 +15,8 @@ module TurnkeyClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
-    # Create Invitations
-    # Create Invitations to join an existing Organization
+    # Create invitations
+    # Create invitations to join an existing organization.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -25,8 +25,8 @@ module TurnkeyClient
       data
     end
 
-    # Create Invitations
-    # Create Invitations to join an existing Organization
+    # Create invitations
+    # Create invitations to join an existing organization.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
@@ -73,8 +73,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Delete Invitation
-    # Delete an existing Invitation
+    # Delete invitation
+    # Delete an existing invitation.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -83,8 +83,8 @@ module TurnkeyClient
       data
     end
 
-    # Delete Invitation
-    # Delete an existing Invitation
+    # Delete invitation
+    # Delete an existing invitation.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers

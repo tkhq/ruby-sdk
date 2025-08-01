@@ -12,7 +12,7 @@ require 'date'
 
 module TurnkeyClient
   class GetOauthProvidersResponse
-    # A list of Oauth Providers
+    # A list of Oauth providers.
     attr_accessor :oauth_providers
 
     # Attribute mapping from ruby-style variable name to JSON key.

@@ -15,8 +15,8 @@ module TurnkeyClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
-    # Create Oauth Providers
-    # Creates Oauth providers for a specified user - BETA
+    # Create Oauth providers
+    # Create Oauth providers for a specified user.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -25,8 +25,8 @@ module TurnkeyClient
       data
     end
 
-    # Create Oauth Providers
-    # Creates Oauth providers for a specified user - BETA
+    # Create Oauth providers
+    # Create Oauth providers for a specified user.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
@@ -73,8 +73,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Delete Oauth Providers
-    # Removes Oauth providers for a specified user - BETA
+    # Delete Oauth providers
+    # Remove Oauth providers for a specified user.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -83,8 +83,8 @@ module TurnkeyClient
       data
     end
 
-    # Delete Oauth Providers
-    # Removes Oauth providers for a specified user - BETA
+    # Delete Oauth providers
+    # Remove Oauth providers for a specified user.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
@@ -131,8 +131,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Perform Email Auth
-    # Authenticate a user via Email
+    # Perform email auth
+    # Authenticate a user via email.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -141,8 +141,8 @@ module TurnkeyClient
       data
     end
 
-    # Perform Email Auth
-    # Authenticate a user via Email
+    # Perform email auth
+    # Authenticate a user via email.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
@@ -190,7 +190,7 @@ module TurnkeyClient
       return data, status_code, headers
     end
     # Get Oauth providers
-    # Get details about Oauth providers for a user
+    # Get details about Oauth providers for a user.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [GetOauthProvidersResponse]
@@ -200,7 +200,7 @@ module TurnkeyClient
     end
 
     # Get Oauth providers
-    # Get details about Oauth providers for a user
+    # Get details about Oauth providers for a user.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(GetOauthProvidersResponse, Integer, Hash)>] GetOauthProvidersResponse data, response status code and response headers
@@ -248,7 +248,7 @@ module TurnkeyClient
       return data, status_code, headers
     end
     # Init OTP auth
-    # Initiate an OTP auth activity
+    # Initiate an OTP auth activity.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -258,7 +258,7 @@ module TurnkeyClient
     end
 
     # Init OTP auth
-    # Initiate an OTP auth activity
+    # Initiate an OTP auth activity.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
@@ -306,7 +306,7 @@ module TurnkeyClient
       return data, status_code, headers
     end
     # Oauth
-    # Authenticate a user with an Oidc token (Oauth) - BETA
+    # Authenticate a user with an OIDC token (Oauth).
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -316,7 +316,7 @@ module TurnkeyClient
     end
 
     # Oauth
-    # Authenticate a user with an Oidc token (Oauth) - BETA
+    # Authenticate a user with an OIDC token (Oauth).
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
@@ -364,7 +364,7 @@ module TurnkeyClient
       return data, status_code, headers
     end
     # OTP auth
-    # Authenticate a user with an OTP code sent via email or SMS
+    # Authenticate a user with an OTP code sent via email or SMS.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -374,7 +374,7 @@ module TurnkeyClient
     end
 
     # OTP auth
-    # Authenticate a user with an OTP code sent via email or SMS
+    # Authenticate a user with an OTP code sent via email or SMS.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers

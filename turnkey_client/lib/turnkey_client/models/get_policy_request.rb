@@ -12,10 +12,10 @@ require 'date'
 
 module TurnkeyClient
   class GetPolicyRequest
-    # Unique identifier for a given Organization.
+    # Unique identifier for a given organization.
     attr_accessor :organization_id
 
-    # Unique identifier for a given Policy.
+    # Unique identifier for a given policy.
     attr_accessor :policy_id
 
     # Attribute mapping from ruby-style variable name to JSON key.

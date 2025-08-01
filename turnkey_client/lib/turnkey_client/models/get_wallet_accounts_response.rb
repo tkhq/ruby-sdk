@@ -12,7 +12,7 @@ require 'date'
 
 module TurnkeyClient
   class GetWalletAccountsResponse
-    # A list of Accounts generated from a Wallet that share a common seed.
+    # A list of accounts generated from a wallet that share a common seed.
     attr_accessor :accounts
 
     # Attribute mapping from ruby-style variable name to JSON key.

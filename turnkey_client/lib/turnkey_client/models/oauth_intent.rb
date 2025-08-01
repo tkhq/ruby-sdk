@@ -21,8 +21,11 @@ module TurnkeyClient
     # Optional human-readable name for an API Key. If none provided, default to Oauth - <Timestamp>
     attr_accessor :api_key_name
 
-    # Expiration window (in seconds) indicating how long the API key is valid. If not provided, a default of 15 minutes will be used.
+    # Expiration window (in seconds) indicating how long the API key is valid for. If not provided, a default of 15 minutes will be used.
     attr_accessor :expiration_seconds
+
+    # Invalidate all other previously generated Oauth API keys
+    attr_accessor :invalidate_existing
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -30,7 +33,8 @@ module TurnkeyClient
         :'oidc_token' => :'oidcToken',
         :'target_public_key' => :'targetPublicKey',
         :'api_key_name' => :'apiKeyName',
-        :'expiration_seconds' => :'expirationSeconds'
+        :'expiration_seconds' => :'expirationSeconds',
+        :'invalidate_existing' => :'invalidateExisting'
       }
     end
 
@@ -40,13 +44,17 @@ module TurnkeyClient
         :'oidc_token' => :'Object',
         :'target_public_key' => :'Object',
         :'api_key_name' => :'Object',
-        :'expiration_seconds' => :'Object'
+        :'expiration_seconds' => :'Object',
+        :'invalidate_existing' => :'Object'
       }
     end
 
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'api_key_name',
+        :'expiration_seconds',
+        :'invalidate_existing'
       ])
     end
   
@@ -79,6 +87,10 @@ module TurnkeyClient
 
       if attributes.key?(:'expiration_seconds')
         self.expiration_seconds = attributes[:'expiration_seconds']
+      end
+
+      if attributes.key?(:'invalidate_existing')
+        self.invalidate_existing = attributes[:'invalidate_existing']
       end
     end
 
@@ -113,7 +125,8 @@ module TurnkeyClient
           oidc_token == o.oidc_token &&
           target_public_key == o.target_public_key &&
           api_key_name == o.api_key_name &&
-          expiration_seconds == o.expiration_seconds
+          expiration_seconds == o.expiration_seconds &&
+          invalidate_existing == o.invalidate_existing
     end
 
     # @see the `==` method
@@ -125,7 +138,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [oidc_token, target_public_key, api_key_name, expiration_seconds].hash
+      [oidc_token, target_public_key, api_key_name, expiration_seconds, invalidate_existing].hash
     end
 
     # Builds the object from hash

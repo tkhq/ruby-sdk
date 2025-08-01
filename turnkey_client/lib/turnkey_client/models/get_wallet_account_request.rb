@@ -12,16 +12,16 @@ require 'date'
 
 module TurnkeyClient
   class GetWalletAccountRequest
-    # Unique identifier for a given Organization.
+    # Unique identifier for a given organization.
     attr_accessor :organization_id
 
-    # Unique identifier for a given Wallet.
+    # Unique identifier for a given wallet.
     attr_accessor :wallet_id
 
-    # Address corresponding to a Wallet Account.
+    # Address corresponding to a wallet account.
     attr_accessor :address
 
-    # Path corresponding to a Wallet Account.
+    # Path corresponding to a wallet account.
     attr_accessor :path
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -47,6 +47,8 @@ module TurnkeyClient
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'address',
+        :'path'
       ])
     end
   

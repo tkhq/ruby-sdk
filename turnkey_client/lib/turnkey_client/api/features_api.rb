@@ -15,8 +15,8 @@ module TurnkeyClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
-    # Remove Organization Feature
-    # Removes an organization feature. This activity must be approved by the current root quorum.
+    # Remove organization feature
+    # Remove an organization feature. This activity must be approved by the current root quorum.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -25,8 +25,8 @@ module TurnkeyClient
       data
     end
 
-    # Remove Organization Feature
-    # Removes an organization feature. This activity must be approved by the current root quorum.
+    # Remove organization feature
+    # Remove an organization feature. This activity must be approved by the current root quorum.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
@@ -73,8 +73,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Set Organization Feature
-    # Sets an organization feature. This activity must be approved by the current root quorum.
+    # Set organization feature
+    # Set an organization feature. This activity must be approved by the current root quorum.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -83,8 +83,8 @@ module TurnkeyClient
       data
     end
 
-    # Set Organization Feature
-    # Sets an organization feature. This activity must be approved by the current root quorum.
+    # Set organization feature
+    # Set an organization feature. This activity must be approved by the current root quorum.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers

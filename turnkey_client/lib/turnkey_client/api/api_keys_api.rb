@@ -15,8 +15,8 @@ module TurnkeyClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
-    # Create API Keys
-    # Add api keys to an existing User
+    # Create API keys
+    # Add API keys to an existing user.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -25,8 +25,8 @@ module TurnkeyClient
       data
     end
 
-    # Create API Keys
-    # Add api keys to an existing User
+    # Create API keys
+    # Add API keys to an existing user.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
@@ -73,8 +73,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Delete API Keys
-    # Remove api keys from a User
+    # Delete API keys
+    # Remove api keys from a user.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -83,8 +83,8 @@ module TurnkeyClient
       data
     end
 
-    # Delete API Keys
-    # Remove api keys from a User
+    # Delete API keys
+    # Remove api keys from a user.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
@@ -132,7 +132,7 @@ module TurnkeyClient
       return data, status_code, headers
     end
     # Get API key
-    # Get details about an API key
+    # Get details about an API key.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [GetApiKeyResponse]
@@ -142,7 +142,7 @@ module TurnkeyClient
     end
 
     # Get API key
-    # Get details about an API key
+    # Get details about an API key.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(GetApiKeyResponse, Integer, Hash)>] GetApiKeyResponse data, response status code and response headers
@@ -189,8 +189,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Get API key
-    # Get details about API keys for a user
+    # Get API keys
+    # Get details about API keys for a user.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [GetApiKeysResponse]
@@ -199,8 +199,8 @@ module TurnkeyClient
       data
     end
 
-    # Get API key
-    # Get details about API keys for a user
+    # Get API keys
+    # Get details about API keys for a user.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(GetApiKeysResponse, Integer, Hash)>] GetApiKeysResponse data, response status code and response headers

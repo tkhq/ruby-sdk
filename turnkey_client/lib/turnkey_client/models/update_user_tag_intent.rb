@@ -47,6 +47,7 @@ module TurnkeyClient
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'new_user_tag_name',
       ])
     end
   

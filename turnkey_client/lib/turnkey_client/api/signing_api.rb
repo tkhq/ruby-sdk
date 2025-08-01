@@ -15,8 +15,8 @@ module TurnkeyClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
-    # Sign Raw Payload
-    # Sign a raw payload
+    # Sign raw payload
+    # Sign a raw payload.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -25,8 +25,8 @@ module TurnkeyClient
       data
     end
 
-    # Sign Raw Payload
-    # Sign a raw payload
+    # Sign raw payload
+    # Sign a raw payload.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
@@ -73,8 +73,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Sign Raw Payloads
-    # Sign multiple raw payloads with the same signing parameters
+    # Sign raw payloads
+    # Sign multiple raw payloads with the same signing parameters.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -83,8 +83,8 @@ module TurnkeyClient
       data
     end
 
-    # Sign Raw Payloads
-    # Sign multiple raw payloads with the same signing parameters
+    # Sign raw payloads
+    # Sign multiple raw payloads with the same signing parameters.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
@@ -131,8 +131,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Sign Transaction
-    # Sign a transaction
+    # Sign transaction
+    # Sign a transaction.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -141,8 +141,8 @@ module TurnkeyClient
       data
     end
 
-    # Sign Transaction
-    # Sign a transaction
+    # Sign transaction
+    # Sign a transaction.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers

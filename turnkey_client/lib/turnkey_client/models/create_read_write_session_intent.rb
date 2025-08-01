@@ -21,7 +21,7 @@ module TurnkeyClient
     # Optional human-readable name for an API Key. If none provided, default to Read Write Session - <Timestamp>
     attr_accessor :api_key_name
 
-    # Expiration window (in seconds) indicating how long the API key is valid. If not provided, a default of 15 minutes will be used.
+    # Expiration window (in seconds) indicating how long the API key is valid for. If not provided, a default of 15 minutes will be used.
     attr_accessor :expiration_seconds
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -47,6 +47,8 @@ module TurnkeyClient
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'api_key_name',
+        :'expiration_seconds'
       ])
     end
   

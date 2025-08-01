@@ -15,8 +15,8 @@ module TurnkeyClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
-    # Create Sub-Organization
-    # Create a new Sub-Organization
+    # Create sub-organization
+    # Create a new sub-organization.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -25,8 +25,8 @@ module TurnkeyClient
       data
     end
 
-    # Create Sub-Organization
-    # Create a new Sub-Organization
+    # Create sub-organization
+    # Create a new sub-organization.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
@@ -73,8 +73,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Delete Sub Organization
-    # Deletes a sub organization
+    # Delete sub-organization
+    # Delete a sub-organization.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -83,8 +83,8 @@ module TurnkeyClient
       data
     end
 
-    # Delete Sub Organization
-    # Deletes a sub organization
+    # Delete sub-organization
+    # Delete a sub-organization.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
@@ -131,8 +131,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Get Configs
-    # Get quorum settings and features for an organization
+    # Get configs
+    # Get quorum settings and features for an organization.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [GetOrganizationConfigsResponse]
@@ -141,8 +141,8 @@ module TurnkeyClient
       data
     end
 
-    # Get Configs
-    # Get quorum settings and features for an organization
+    # Get configs
+    # Get quorum settings and features for an organization.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(GetOrganizationConfigsResponse, Integer, Hash)>] GetOrganizationConfigsResponse data, response status code and response headers
@@ -189,7 +189,7 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Get Suborgs
+    # Get sub-organizations
     # Get all suborg IDs associated given a parent org ID and an optional filter.
     # @param body 
     # @param [Hash] opts the optional parameters
@@ -199,7 +199,7 @@ module TurnkeyClient
       data
     end
 
-    # Get Suborgs
+    # Get sub-organizations
     # Get all suborg IDs associated given a parent org ID and an optional filter.
     # @param body 
     # @param [Hash] opts the optional parameters
@@ -247,7 +247,7 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Get Verified Suborgs
+    # Get verified sub-organizations
     # Get all email or phone verified suborg IDs associated given a parent org ID.
     # @param body 
     # @param [Hash] opts the optional parameters
@@ -257,7 +257,7 @@ module TurnkeyClient
       data
     end
 
-    # Get Verified Suborgs
+    # Get verified sub-organizations
     # Get all email or phone verified suborg IDs associated given a parent org ID.
     # @param body 
     # @param [Hash] opts the optional parameters
@@ -305,7 +305,7 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Update Root Quorum
+    # Update root quorum
     # Set the threshold and members of the root quorum. This activity must be approved by the current root quorum.
     # @param body 
     # @param [Hash] opts the optional parameters
@@ -315,7 +315,7 @@ module TurnkeyClient
       data
     end
 
-    # Update Root Quorum
+    # Update root quorum
     # Set the threshold and members of the root quorum. This activity must be approved by the current root quorum.
     # @param body 
     # @param [Hash] opts the optional parameters

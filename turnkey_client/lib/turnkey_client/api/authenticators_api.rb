@@ -15,8 +15,8 @@ module TurnkeyClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
-    # Create Authenticators
-    # Create Authenticators to authenticate requests to Turnkey
+    # Create authenticators
+    # Create authenticators to authenticate requests to Turnkey.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -25,8 +25,8 @@ module TurnkeyClient
       data
     end
 
-    # Create Authenticators
-    # Create Authenticators to authenticate requests to Turnkey
+    # Create authenticators
+    # Create authenticators to authenticate requests to Turnkey.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
@@ -73,8 +73,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Delete Authenticators
-    # Remove authenticators from a User
+    # Delete authenticators
+    # Remove authenticators from a user.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -83,8 +83,8 @@ module TurnkeyClient
       data
     end
 
-    # Delete Authenticators
-    # Remove authenticators from a User
+    # Delete authenticators
+    # Remove authenticators from a user.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
@@ -131,8 +131,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Get Authenticator
-    # Get details about an authenticator
+    # Get authenticator
+    # Get details about an authenticator.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [GetAuthenticatorResponse]
@@ -141,8 +141,8 @@ module TurnkeyClient
       data
     end
 
-    # Get Authenticator
-    # Get details about an authenticator
+    # Get authenticator
+    # Get details about an authenticator.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(GetAuthenticatorResponse, Integer, Hash)>] GetAuthenticatorResponse data, response status code and response headers
@@ -189,8 +189,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Get Authenticators
-    # Get details about authenticators for a user
+    # Get authenticators
+    # Get details about authenticators for a user.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [GetAuthenticatorsResponse]
@@ -199,8 +199,8 @@ module TurnkeyClient
       data
     end
 
-    # Get Authenticators
-    # Get details about authenticators for a user
+    # Get authenticators
+    # Get details about authenticators for a user.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(GetAuthenticatorsResponse, Integer, Hash)>] GetAuthenticatorsResponse data, response status code and response headers

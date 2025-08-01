@@ -12,7 +12,7 @@ require 'date'
 
 module TurnkeyClient
   class GetApiKeyRequest
-    # Unique identifier for a given Organization.
+    # Unique identifier for a given organization.
     attr_accessor :organization_id
 
     # Unique identifier for a given API key.

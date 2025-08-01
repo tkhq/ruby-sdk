@@ -12,7 +12,7 @@ require 'date'
 
 module TurnkeyClient
   class ListUserTagsResponse
-    # A list of User Tags
+    # A list of user tags.
     attr_accessor :user_tags
 
     # Attribute mapping from ruby-style variable name to JSON key.

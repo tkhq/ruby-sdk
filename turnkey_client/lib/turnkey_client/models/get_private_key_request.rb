@@ -12,10 +12,10 @@ require 'date'
 
 module TurnkeyClient
   class GetPrivateKeyRequest
-    # Unique identifier for a given Organization.
+    # Unique identifier for a given organization.
     attr_accessor :organization_id
 
-    # Unique identifier for a given Private Key.
+    # Unique identifier for a given private key.
     attr_accessor :private_key_id
 
     # Attribute mapping from ruby-style variable name to JSON key.

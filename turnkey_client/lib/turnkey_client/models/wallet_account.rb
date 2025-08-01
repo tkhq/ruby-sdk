@@ -37,6 +37,9 @@ module TurnkeyClient
 
     attr_accessor :updated_at
 
+    # The public component of this wallet account's underlying cryptographic key pair.
+    attr_accessor :public_key
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -49,7 +52,8 @@ module TurnkeyClient
         :'address_format' => :'addressFormat',
         :'address' => :'address',
         :'created_at' => :'createdAt',
-        :'updated_at' => :'updatedAt'
+        :'updated_at' => :'updatedAt',
+        :'public_key' => :'publicKey'
       }
     end
 
@@ -65,13 +69,15 @@ module TurnkeyClient
         :'address_format' => :'Object',
         :'address' => :'Object',
         :'created_at' => :'Object',
-        :'updated_at' => :'Object'
+        :'updated_at' => :'Object',
+        :'public_key' => :'Object'
       }
     end
 
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'public_key'
       ])
     end
   
@@ -128,6 +134,10 @@ module TurnkeyClient
 
       if attributes.key?(:'updated_at')
         self.updated_at = attributes[:'updated_at']
+      end
+
+      if attributes.key?(:'public_key')
+        self.public_key = attributes[:'public_key']
       end
     end
 
@@ -208,7 +218,8 @@ module TurnkeyClient
           address_format == o.address_format &&
           address == o.address &&
           created_at == o.created_at &&
-          updated_at == o.updated_at
+          updated_at == o.updated_at &&
+          public_key == o.public_key
     end
 
     # @see the `==` method
@@ -220,7 +231,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [wallet_account_id, organization_id, wallet_id, curve, path_format, path, address_format, address, created_at, updated_at].hash
+      [wallet_account_id, organization_id, wallet_id, curve, path_format, path, address_format, address, created_at, updated_at, public_key].hash
     end
 
     # Builds the object from hash

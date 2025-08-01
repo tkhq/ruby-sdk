@@ -66,6 +66,10 @@ module TurnkeyClient
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'disable_email_recovery',
+        :'disable_email_auth',
+        :'disable_sms_auth',
+        :'disable_otp_email_auth'
       ])
     end
   

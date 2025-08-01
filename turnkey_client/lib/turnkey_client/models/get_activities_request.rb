@@ -12,15 +12,15 @@ require 'date'
 
 module TurnkeyClient
   class GetActivitiesRequest
-    # Unique identifier for a given Organization.
+    # Unique identifier for a given organization.
     attr_accessor :organization_id
 
-    # Array of Activity Statuses filtering which Activities will be listed in the response.
+    # Array of activity statuses filtering which activities will be listed in the response.
     attr_accessor :filter_by_status
 
     attr_accessor :pagination_options
 
-    # Array of Activity Types filtering which Activities will be listed in the response.
+    # Array of activity types filtering which activities will be listed in the response.
     attr_accessor :filter_by_type
 
     # Attribute mapping from ruby-style variable name to JSON key.

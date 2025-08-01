@@ -12,10 +12,10 @@ require 'date'
 
 module TurnkeyClient
   class GetActivityRequest
-    # Unique identifier for a given Organization.
+    # Unique identifier for a given organization.
     attr_accessor :organization_id
 
-    # Unique identifier for a given Activity object.
+    # Unique identifier for a given activity object.
     attr_accessor :activity_id
 
     # Attribute mapping from ruby-style variable name to JSON key.
