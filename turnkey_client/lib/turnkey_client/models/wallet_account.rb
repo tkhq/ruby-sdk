@@ -40,6 +40,8 @@ module TurnkeyClient
     # The public component of this wallet account's underlying cryptographic key pair.
     attr_accessor :public_key
 
+    attr_accessor :wallet_details
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -53,7 +55,8 @@ module TurnkeyClient
         :'address' => :'address',
         :'created_at' => :'createdAt',
         :'updated_at' => :'updatedAt',
-        :'public_key' => :'publicKey'
+        :'public_key' => :'publicKey',
+        :'wallet_details' => :'walletDetails'
       }
     end
 
@@ -70,14 +73,15 @@ module TurnkeyClient
         :'address' => :'Object',
         :'created_at' => :'Object',
         :'updated_at' => :'Object',
-        :'public_key' => :'Object'
+        :'public_key' => :'Object',
+        :'wallet_details' => :'Object'
       }
     end
 
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
-        :'public_key'
+        :'public_key',
       ])
     end
   
@@ -138,6 +142,10 @@ module TurnkeyClient
 
       if attributes.key?(:'public_key')
         self.public_key = attributes[:'public_key']
+      end
+
+      if attributes.key?(:'wallet_details')
+        self.wallet_details = attributes[:'wallet_details']
       end
     end
 
@@ -219,7 +227,8 @@ module TurnkeyClient
           address == o.address &&
           created_at == o.created_at &&
           updated_at == o.updated_at &&
-          public_key == o.public_key
+          public_key == o.public_key &&
+          wallet_details == o.wallet_details
     end
 
     # @see the `==` method
@@ -231,7 +240,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [wallet_account_id, organization_id, wallet_id, curve, path_format, path, address_format, address, created_at, updated_at, public_key].hash
+      [wallet_account_id, organization_id, wallet_id, curve, path_format, path, address_format, address, created_at, updated_at, public_key, wallet_details].hash
     end
 
     # Builds the object from hash
