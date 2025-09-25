@@ -37,6 +37,9 @@ module TurnkeyClient
     # Optional flag to indicate whether to use the sandbox mode to simulate transactions for the on-ramp provider. Default is false.
     attr_accessor :sandbox_mode
 
+    # Optional MoonPay Widget URL to sign when using MoonPay client SDKs with URL Signing enabled.
+    attr_accessor :url_for_signature
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -49,7 +52,8 @@ module TurnkeyClient
         :'payment_method' => :'paymentMethod',
         :'country_code' => :'countryCode',
         :'country_subdivision_code' => :'countrySubdivisionCode',
-        :'sandbox_mode' => :'sandboxMode'
+        :'sandbox_mode' => :'sandboxMode',
+        :'url_for_signature' => :'urlForSignature'
       }
     end
 
@@ -65,7 +69,8 @@ module TurnkeyClient
         :'payment_method' => :'Object',
         :'country_code' => :'Object',
         :'country_subdivision_code' => :'Object',
-        :'sandbox_mode' => :'Object'
+        :'sandbox_mode' => :'Object',
+        :'url_for_signature' => :'Object'
       }
     end
 
@@ -75,7 +80,8 @@ module TurnkeyClient
         :'fiat_currency_amount',
         :'country_code',
         :'country_subdivision_code',
-        :'sandbox_mode'
+        :'sandbox_mode',
+        :'url_for_signature'
       ])
     end
   
@@ -133,6 +139,10 @@ module TurnkeyClient
       if attributes.key?(:'sandbox_mode')
         self.sandbox_mode = attributes[:'sandbox_mode']
       end
+
+      if attributes.key?(:'url_for_signature')
+        self.url_for_signature = attributes[:'url_for_signature']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -182,7 +192,8 @@ module TurnkeyClient
           payment_method == o.payment_method &&
           country_code == o.country_code &&
           country_subdivision_code == o.country_subdivision_code &&
-          sandbox_mode == o.sandbox_mode
+          sandbox_mode == o.sandbox_mode &&
+          url_for_signature == o.url_for_signature
     end
 
     # @see the `==` method
@@ -194,7 +205,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [onramp_provider, wallet_address, network, crypto_currency_code, fiat_currency_code, fiat_currency_amount, payment_method, country_code, country_subdivision_code, sandbox_mode].hash
+      [onramp_provider, wallet_address, network, crypto_currency_code, fiat_currency_code, fiat_currency_amount, payment_method, country_code, country_subdivision_code, sandbox_mode, url_for_signature].hash
     end
 
     # Builds the object from hash

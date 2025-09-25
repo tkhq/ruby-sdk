@@ -200,6 +200,20 @@ module TurnkeyClient
 
     attr_accessor :delete_smart_contract_interface_intent
 
+    attr_accessor :enable_auth_proxy_intent
+
+    attr_accessor :disable_auth_proxy_intent
+
+    attr_accessor :update_auth_proxy_config_intent
+
+    attr_accessor :create_oauth2_credential_intent
+
+    attr_accessor :update_oauth2_credential_intent
+
+    attr_accessor :delete_oauth2_credential_intent
+
+    attr_accessor :oauth2_authenticate_intent
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -296,7 +310,14 @@ module TurnkeyClient
         :'update_user_phone_number_intent' => :'updateUserPhoneNumberIntent',
         :'init_fiat_on_ramp_intent' => :'initFiatOnRampIntent',
         :'create_smart_contract_interface_intent' => :'createSmartContractInterfaceIntent',
-        :'delete_smart_contract_interface_intent' => :'deleteSmartContractInterfaceIntent'
+        :'delete_smart_contract_interface_intent' => :'deleteSmartContractInterfaceIntent',
+        :'enable_auth_proxy_intent' => :'enableAuthProxyIntent',
+        :'disable_auth_proxy_intent' => :'disableAuthProxyIntent',
+        :'update_auth_proxy_config_intent' => :'updateAuthProxyConfigIntent',
+        :'create_oauth2_credential_intent' => :'createOauth2CredentialIntent',
+        :'update_oauth2_credential_intent' => :'updateOauth2CredentialIntent',
+        :'delete_oauth2_credential_intent' => :'deleteOauth2CredentialIntent',
+        :'oauth2_authenticate_intent' => :'oauth2AuthenticateIntent'
       }
     end
 
@@ -396,7 +417,14 @@ module TurnkeyClient
         :'update_user_phone_number_intent' => :'Object',
         :'init_fiat_on_ramp_intent' => :'Object',
         :'create_smart_contract_interface_intent' => :'Object',
-        :'delete_smart_contract_interface_intent' => :'Object'
+        :'delete_smart_contract_interface_intent' => :'Object',
+        :'enable_auth_proxy_intent' => :'Object',
+        :'disable_auth_proxy_intent' => :'Object',
+        :'update_auth_proxy_config_intent' => :'Object',
+        :'create_oauth2_credential_intent' => :'Object',
+        :'update_oauth2_credential_intent' => :'Object',
+        :'delete_oauth2_credential_intent' => :'Object',
+        :'oauth2_authenticate_intent' => :'Object'
       }
     end
 
@@ -796,6 +824,34 @@ module TurnkeyClient
       if attributes.key?(:'delete_smart_contract_interface_intent')
         self.delete_smart_contract_interface_intent = attributes[:'delete_smart_contract_interface_intent']
       end
+
+      if attributes.key?(:'enable_auth_proxy_intent')
+        self.enable_auth_proxy_intent = attributes[:'enable_auth_proxy_intent']
+      end
+
+      if attributes.key?(:'disable_auth_proxy_intent')
+        self.disable_auth_proxy_intent = attributes[:'disable_auth_proxy_intent']
+      end
+
+      if attributes.key?(:'update_auth_proxy_config_intent')
+        self.update_auth_proxy_config_intent = attributes[:'update_auth_proxy_config_intent']
+      end
+
+      if attributes.key?(:'create_oauth2_credential_intent')
+        self.create_oauth2_credential_intent = attributes[:'create_oauth2_credential_intent']
+      end
+
+      if attributes.key?(:'update_oauth2_credential_intent')
+        self.update_oauth2_credential_intent = attributes[:'update_oauth2_credential_intent']
+      end
+
+      if attributes.key?(:'delete_oauth2_credential_intent')
+        self.delete_oauth2_credential_intent = attributes[:'delete_oauth2_credential_intent']
+      end
+
+      if attributes.key?(:'oauth2_authenticate_intent')
+        self.oauth2_authenticate_intent = attributes[:'oauth2_authenticate_intent']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -909,7 +965,14 @@ module TurnkeyClient
           update_user_phone_number_intent == o.update_user_phone_number_intent &&
           init_fiat_on_ramp_intent == o.init_fiat_on_ramp_intent &&
           create_smart_contract_interface_intent == o.create_smart_contract_interface_intent &&
-          delete_smart_contract_interface_intent == o.delete_smart_contract_interface_intent
+          delete_smart_contract_interface_intent == o.delete_smart_contract_interface_intent &&
+          enable_auth_proxy_intent == o.enable_auth_proxy_intent &&
+          disable_auth_proxy_intent == o.disable_auth_proxy_intent &&
+          update_auth_proxy_config_intent == o.update_auth_proxy_config_intent &&
+          create_oauth2_credential_intent == o.create_oauth2_credential_intent &&
+          update_oauth2_credential_intent == o.update_oauth2_credential_intent &&
+          delete_oauth2_credential_intent == o.delete_oauth2_credential_intent &&
+          oauth2_authenticate_intent == o.oauth2_authenticate_intent
     end
 
     # @see the `==` method
@@ -921,7 +984,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [create_organization_intent, create_authenticators_intent, create_users_intent, create_private_keys_intent, sign_raw_payload_intent, create_invitations_intent, accept_invitation_intent, create_policy_intent, disable_private_key_intent, delete_users_intent, delete_authenticators_intent, delete_invitation_intent, delete_organization_intent, delete_policy_intent, create_user_tag_intent, delete_user_tags_intent, sign_transaction_intent, create_api_keys_intent, delete_api_keys_intent, approve_activity_intent, reject_activity_intent, create_private_key_tag_intent, delete_private_key_tags_intent, create_policy_intent_v2, set_payment_method_intent, activate_billing_tier_intent, delete_payment_method_intent, create_policy_intent_v3, create_api_only_users_intent, update_root_quorum_intent, update_user_tag_intent, update_private_key_tag_intent, create_authenticators_intent_v2, accept_invitation_intent_v2, create_organization_intent_v2, create_users_intent_v2, create_sub_organization_intent, create_sub_organization_intent_v2, update_allowed_origins_intent, create_private_keys_intent_v2, update_user_intent, update_policy_intent, set_payment_method_intent_v2, create_sub_organization_intent_v3, create_wallet_intent, create_wallet_accounts_intent, init_user_email_recovery_intent, recover_user_intent, set_organization_feature_intent, remove_organization_feature_intent, sign_raw_payload_intent_v2, sign_transaction_intent_v2, export_private_key_intent, export_wallet_intent, create_sub_organization_intent_v4, email_auth_intent, export_wallet_account_intent, init_import_wallet_intent, import_wallet_intent, init_import_private_key_intent, import_private_key_intent, create_policies_intent, sign_raw_payloads_intent, create_read_only_session_intent, create_oauth_providers_intent, delete_oauth_providers_intent, create_sub_organization_intent_v5, oauth_intent, create_api_keys_intent_v2, create_read_write_session_intent, email_auth_intent_v2, create_sub_organization_intent_v6, delete_private_keys_intent, delete_wallets_intent, create_read_write_session_intent_v2, delete_sub_organization_intent, init_otp_auth_intent, otp_auth_intent, create_sub_organization_intent_v7, update_wallet_intent, update_policy_intent_v2, create_users_intent_v3, init_otp_auth_intent_v2, init_otp_intent, verify_otp_intent, otp_login_intent, stamp_login_intent, oauth_login_intent, update_user_name_intent, update_user_email_intent, update_user_phone_number_intent, init_fiat_on_ramp_intent, create_smart_contract_interface_intent, delete_smart_contract_interface_intent].hash
+      [create_organization_intent, create_authenticators_intent, create_users_intent, create_private_keys_intent, sign_raw_payload_intent, create_invitations_intent, accept_invitation_intent, create_policy_intent, disable_private_key_intent, delete_users_intent, delete_authenticators_intent, delete_invitation_intent, delete_organization_intent, delete_policy_intent, create_user_tag_intent, delete_user_tags_intent, sign_transaction_intent, create_api_keys_intent, delete_api_keys_intent, approve_activity_intent, reject_activity_intent, create_private_key_tag_intent, delete_private_key_tags_intent, create_policy_intent_v2, set_payment_method_intent, activate_billing_tier_intent, delete_payment_method_intent, create_policy_intent_v3, create_api_only_users_intent, update_root_quorum_intent, update_user_tag_intent, update_private_key_tag_intent, create_authenticators_intent_v2, accept_invitation_intent_v2, create_organization_intent_v2, create_users_intent_v2, create_sub_organization_intent, create_sub_organization_intent_v2, update_allowed_origins_intent, create_private_keys_intent_v2, update_user_intent, update_policy_intent, set_payment_method_intent_v2, create_sub_organization_intent_v3, create_wallet_intent, create_wallet_accounts_intent, init_user_email_recovery_intent, recover_user_intent, set_organization_feature_intent, remove_organization_feature_intent, sign_raw_payload_intent_v2, sign_transaction_intent_v2, export_private_key_intent, export_wallet_intent, create_sub_organization_intent_v4, email_auth_intent, export_wallet_account_intent, init_import_wallet_intent, import_wallet_intent, init_import_private_key_intent, import_private_key_intent, create_policies_intent, sign_raw_payloads_intent, create_read_only_session_intent, create_oauth_providers_intent, delete_oauth_providers_intent, create_sub_organization_intent_v5, oauth_intent, create_api_keys_intent_v2, create_read_write_session_intent, email_auth_intent_v2, create_sub_organization_intent_v6, delete_private_keys_intent, delete_wallets_intent, create_read_write_session_intent_v2, delete_sub_organization_intent, init_otp_auth_intent, otp_auth_intent, create_sub_organization_intent_v7, update_wallet_intent, update_policy_intent_v2, create_users_intent_v3, init_otp_auth_intent_v2, init_otp_intent, verify_otp_intent, otp_login_intent, stamp_login_intent, oauth_login_intent, update_user_name_intent, update_user_email_intent, update_user_phone_number_intent, init_fiat_on_ramp_intent, create_smart_contract_interface_intent, delete_smart_contract_interface_intent, enable_auth_proxy_intent, disable_auth_proxy_intent, update_auth_proxy_config_intent, create_oauth2_credential_intent, update_oauth2_credential_intent, delete_oauth2_credential_intent, oauth2_authenticate_intent].hash
     end
 
     # Builds the object from hash

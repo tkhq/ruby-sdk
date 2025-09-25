@@ -24,13 +24,17 @@ module TurnkeyClient
     # Invalidate all other previously generated Login API keys
     attr_accessor :invalidate_existing
 
+    # Optional signature associated with the public key passed into the verification step. This must be a hex-encoded ECDSA signature over the verification token. Only required if a public key was provided during the verification step.
+    attr_accessor :client_signature
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'verification_token' => :'verificationToken',
         :'public_key' => :'publicKey',
         :'expiration_seconds' => :'expirationSeconds',
-        :'invalidate_existing' => :'invalidateExisting'
+        :'invalidate_existing' => :'invalidateExisting',
+        :'client_signature' => :'clientSignature'
       }
     end
 
@@ -40,7 +44,8 @@ module TurnkeyClient
         :'verification_token' => :'Object',
         :'public_key' => :'Object',
         :'expiration_seconds' => :'Object',
-        :'invalidate_existing' => :'Object'
+        :'invalidate_existing' => :'Object',
+        :'client_signature' => :'Object'
       }
     end
 
@@ -48,7 +53,8 @@ module TurnkeyClient
     def self.openapi_nullable
       Set.new([
         :'expiration_seconds',
-        :'invalidate_existing'
+        :'invalidate_existing',
+        :'client_signature'
       ])
     end
   
@@ -81,6 +87,10 @@ module TurnkeyClient
 
       if attributes.key?(:'invalidate_existing')
         self.invalidate_existing = attributes[:'invalidate_existing']
+      end
+
+      if attributes.key?(:'client_signature')
+        self.client_signature = attributes[:'client_signature']
       end
     end
 
@@ -115,7 +125,8 @@ module TurnkeyClient
           verification_token == o.verification_token &&
           public_key == o.public_key &&
           expiration_seconds == o.expiration_seconds &&
-          invalidate_existing == o.invalidate_existing
+          invalidate_existing == o.invalidate_existing &&
+          client_signature == o.client_signature
     end
 
     # @see the `==` method
@@ -127,7 +138,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [verification_token, public_key, expiration_seconds, invalidate_existing].hash
+      [verification_token, public_key, expiration_seconds, invalidate_existing, client_signature].hash
     end
 
     # Builds the object from hash

@@ -18,11 +18,15 @@ module TurnkeyClient
     # Unique identifier used to retrieve transaction statuses for a given fiat on-ramp flow.
     attr_accessor :on_ramp_transaction_id
 
+    # Optional signature of the MoonPay Widget URL. The signature is generated if the Init Fiat On Ramp intent includes the urlForSignature field. The signature can be used to initialize the MoonPay SDKs when URL signing is enabled for your project.
+    attr_accessor :on_ramp_url_signature
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'on_ramp_url' => :'onRampUrl',
-        :'on_ramp_transaction_id' => :'onRampTransactionId'
+        :'on_ramp_transaction_id' => :'onRampTransactionId',
+        :'on_ramp_url_signature' => :'onRampUrlSignature'
       }
     end
 
@@ -30,7 +34,8 @@ module TurnkeyClient
     def self.openapi_types
       {
         :'on_ramp_url' => :'Object',
-        :'on_ramp_transaction_id' => :'Object'
+        :'on_ramp_transaction_id' => :'Object',
+        :'on_ramp_url_signature' => :'Object'
       }
     end
 
@@ -61,6 +66,10 @@ module TurnkeyClient
 
       if attributes.key?(:'on_ramp_transaction_id')
         self.on_ramp_transaction_id = attributes[:'on_ramp_transaction_id']
+      end
+
+      if attributes.key?(:'on_ramp_url_signature')
+        self.on_ramp_url_signature = attributes[:'on_ramp_url_signature']
       end
     end
 
@@ -93,7 +102,8 @@ module TurnkeyClient
       return true if self.equal?(o)
       self.class == o.class &&
           on_ramp_url == o.on_ramp_url &&
-          on_ramp_transaction_id == o.on_ramp_transaction_id
+          on_ramp_transaction_id == o.on_ramp_transaction_id &&
+          on_ramp_url_signature == o.on_ramp_url_signature
     end
 
     # @see the `==` method
@@ -105,7 +115,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [on_ramp_url, on_ramp_transaction_id].hash
+      [on_ramp_url, on_ramp_transaction_id, on_ramp_url_signature].hash
     end
 
     # Builds the object from hash

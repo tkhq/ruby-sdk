@@ -170,6 +170,20 @@ module TurnkeyClient
 
     attr_accessor :delete_smart_contract_interface_result
 
+    attr_accessor :enable_auth_proxy_result
+
+    attr_accessor :disable_auth_proxy_result
+
+    attr_accessor :update_auth_proxy_config_result
+
+    attr_accessor :create_oauth2_credential_result
+
+    attr_accessor :update_oauth2_credential_result
+
+    attr_accessor :delete_oauth2_credential_result
+
+    attr_accessor :oauth2_authenticate_result
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -251,7 +265,14 @@ module TurnkeyClient
         :'update_user_phone_number_result' => :'updateUserPhoneNumberResult',
         :'init_fiat_on_ramp_result' => :'initFiatOnRampResult',
         :'create_smart_contract_interface_result' => :'createSmartContractInterfaceResult',
-        :'delete_smart_contract_interface_result' => :'deleteSmartContractInterfaceResult'
+        :'delete_smart_contract_interface_result' => :'deleteSmartContractInterfaceResult',
+        :'enable_auth_proxy_result' => :'enableAuthProxyResult',
+        :'disable_auth_proxy_result' => :'disableAuthProxyResult',
+        :'update_auth_proxy_config_result' => :'updateAuthProxyConfigResult',
+        :'create_oauth2_credential_result' => :'createOauth2CredentialResult',
+        :'update_oauth2_credential_result' => :'updateOauth2CredentialResult',
+        :'delete_oauth2_credential_result' => :'deleteOauth2CredentialResult',
+        :'oauth2_authenticate_result' => :'oauth2AuthenticateResult'
       }
     end
 
@@ -336,7 +357,14 @@ module TurnkeyClient
         :'update_user_phone_number_result' => :'Object',
         :'init_fiat_on_ramp_result' => :'Object',
         :'create_smart_contract_interface_result' => :'Object',
-        :'delete_smart_contract_interface_result' => :'Object'
+        :'delete_smart_contract_interface_result' => :'Object',
+        :'enable_auth_proxy_result' => :'Object',
+        :'disable_auth_proxy_result' => :'Object',
+        :'update_auth_proxy_config_result' => :'Object',
+        :'create_oauth2_credential_result' => :'Object',
+        :'update_oauth2_credential_result' => :'Object',
+        :'delete_oauth2_credential_result' => :'Object',
+        :'oauth2_authenticate_result' => :'Object'
       }
     end
 
@@ -676,6 +704,34 @@ module TurnkeyClient
       if attributes.key?(:'delete_smart_contract_interface_result')
         self.delete_smart_contract_interface_result = attributes[:'delete_smart_contract_interface_result']
       end
+
+      if attributes.key?(:'enable_auth_proxy_result')
+        self.enable_auth_proxy_result = attributes[:'enable_auth_proxy_result']
+      end
+
+      if attributes.key?(:'disable_auth_proxy_result')
+        self.disable_auth_proxy_result = attributes[:'disable_auth_proxy_result']
+      end
+
+      if attributes.key?(:'update_auth_proxy_config_result')
+        self.update_auth_proxy_config_result = attributes[:'update_auth_proxy_config_result']
+      end
+
+      if attributes.key?(:'create_oauth2_credential_result')
+        self.create_oauth2_credential_result = attributes[:'create_oauth2_credential_result']
+      end
+
+      if attributes.key?(:'update_oauth2_credential_result')
+        self.update_oauth2_credential_result = attributes[:'update_oauth2_credential_result']
+      end
+
+      if attributes.key?(:'delete_oauth2_credential_result')
+        self.delete_oauth2_credential_result = attributes[:'delete_oauth2_credential_result']
+      end
+
+      if attributes.key?(:'oauth2_authenticate_result')
+        self.oauth2_authenticate_result = attributes[:'oauth2_authenticate_result']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -774,7 +830,14 @@ module TurnkeyClient
           update_user_phone_number_result == o.update_user_phone_number_result &&
           init_fiat_on_ramp_result == o.init_fiat_on_ramp_result &&
           create_smart_contract_interface_result == o.create_smart_contract_interface_result &&
-          delete_smart_contract_interface_result == o.delete_smart_contract_interface_result
+          delete_smart_contract_interface_result == o.delete_smart_contract_interface_result &&
+          enable_auth_proxy_result == o.enable_auth_proxy_result &&
+          disable_auth_proxy_result == o.disable_auth_proxy_result &&
+          update_auth_proxy_config_result == o.update_auth_proxy_config_result &&
+          create_oauth2_credential_result == o.create_oauth2_credential_result &&
+          update_oauth2_credential_result == o.update_oauth2_credential_result &&
+          delete_oauth2_credential_result == o.delete_oauth2_credential_result &&
+          oauth2_authenticate_result == o.oauth2_authenticate_result
     end
 
     # @see the `==` method
@@ -786,7 +849,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [create_organization_result, create_authenticators_result, create_users_result, create_private_keys_result, create_invitations_result, accept_invitation_result, sign_raw_payload_result, create_policy_result, disable_private_key_result, delete_users_result, delete_authenticators_result, delete_invitation_result, delete_organization_result, delete_policy_result, create_user_tag_result, delete_user_tags_result, sign_transaction_result, delete_api_keys_result, create_api_keys_result, create_private_key_tag_result, delete_private_key_tags_result, set_payment_method_result, activate_billing_tier_result, delete_payment_method_result, create_api_only_users_result, update_root_quorum_result, update_user_tag_result, update_private_key_tag_result, create_sub_organization_result, update_allowed_origins_result, create_private_keys_result_v2, update_user_result, update_policy_result, create_sub_organization_result_v3, create_wallet_result, create_wallet_accounts_result, init_user_email_recovery_result, recover_user_result, set_organization_feature_result, remove_organization_feature_result, export_private_key_result, export_wallet_result, create_sub_organization_result_v4, email_auth_result, export_wallet_account_result, init_import_wallet_result, import_wallet_result, init_import_private_key_result, import_private_key_result, create_policies_result, sign_raw_payloads_result, create_read_only_session_result, create_oauth_providers_result, delete_oauth_providers_result, create_sub_organization_result_v5, oauth_result, create_read_write_session_result, create_sub_organization_result_v6, delete_private_keys_result, delete_wallets_result, create_read_write_session_result_v2, delete_sub_organization_result, init_otp_auth_result, otp_auth_result, create_sub_organization_result_v7, update_wallet_result, update_policy_result_v2, init_otp_auth_result_v2, init_otp_result, verify_otp_result, otp_login_result, stamp_login_result, oauth_login_result, update_user_name_result, update_user_email_result, update_user_phone_number_result, init_fiat_on_ramp_result, create_smart_contract_interface_result, delete_smart_contract_interface_result].hash
+      [create_organization_result, create_authenticators_result, create_users_result, create_private_keys_result, create_invitations_result, accept_invitation_result, sign_raw_payload_result, create_policy_result, disable_private_key_result, delete_users_result, delete_authenticators_result, delete_invitation_result, delete_organization_result, delete_policy_result, create_user_tag_result, delete_user_tags_result, sign_transaction_result, delete_api_keys_result, create_api_keys_result, create_private_key_tag_result, delete_private_key_tags_result, set_payment_method_result, activate_billing_tier_result, delete_payment_method_result, create_api_only_users_result, update_root_quorum_result, update_user_tag_result, update_private_key_tag_result, create_sub_organization_result, update_allowed_origins_result, create_private_keys_result_v2, update_user_result, update_policy_result, create_sub_organization_result_v3, create_wallet_result, create_wallet_accounts_result, init_user_email_recovery_result, recover_user_result, set_organization_feature_result, remove_organization_feature_result, export_private_key_result, export_wallet_result, create_sub_organization_result_v4, email_auth_result, export_wallet_account_result, init_import_wallet_result, import_wallet_result, init_import_private_key_result, import_private_key_result, create_policies_result, sign_raw_payloads_result, create_read_only_session_result, create_oauth_providers_result, delete_oauth_providers_result, create_sub_organization_result_v5, oauth_result, create_read_write_session_result, create_sub_organization_result_v6, delete_private_keys_result, delete_wallets_result, create_read_write_session_result_v2, delete_sub_organization_result, init_otp_auth_result, otp_auth_result, create_sub_organization_result_v7, update_wallet_result, update_policy_result_v2, init_otp_auth_result_v2, init_otp_result, verify_otp_result, otp_login_result, stamp_login_result, oauth_login_result, update_user_name_result, update_user_email_result, update_user_phone_number_result, init_fiat_on_ramp_result, create_smart_contract_interface_result, delete_smart_contract_interface_result, enable_auth_proxy_result, disable_auth_proxy_result, update_auth_proxy_config_result, create_oauth2_credential_result, update_oauth2_credential_result, delete_oauth2_credential_result, oauth2_authenticate_result].hash
     end
 
     # Builds the object from hash

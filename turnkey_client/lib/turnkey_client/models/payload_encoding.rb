@@ -15,6 +15,7 @@ module TurnkeyClient
     HEXADECIMAL = 'PAYLOAD_ENCODING_HEXADECIMAL'.freeze
     TEXT_UTF8 = 'PAYLOAD_ENCODING_TEXT_UTF8'.freeze
     EIP712 = 'PAYLOAD_ENCODING_EIP712'.freeze
+    EIP7702_AUTHORIZATION = 'PAYLOAD_ENCODING_EIP7702_AUTHORIZATION'.freeze
 
     # Builds the enum from string
     # @param [String] The enum value in the form of the string
