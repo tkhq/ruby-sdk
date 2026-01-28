@@ -89,6 +89,21 @@ And run:
 $ rubocop
 ```
 
+## Contributing
+
+Before opening a PR containing your changes, please create a changeset detailing the package bump and a brief note on what has changed.
+> [!NOTE]
+> - The note is what will be added to the changelog
+> - Quick version bump guide:
+>   - patch: Bug fixes and small changes (0.0.1 → 0.0.2)
+>   - minor: New features, backwards compatible (0.0.1 → 0.1.0)
+>   - major: Breaking changes (0.0.1 → 1.0.0)
+
+**Run this make cmd to create a new changeset:**
+```sh
+$ make changeset
+```
+
 ## Releasing on Rubygems.org
 
 To build and release:
