@@ -15,8 +15,8 @@ module TurnkeyClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
-    # List app proofs for an activity
-    # List the app proofs for the given activity.
+    # List App Proofs for an activity
+    # List the App Proofs for the given activity.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [GetAppProofsResponse]
@@ -25,8 +25,8 @@ module TurnkeyClient
       data
     end
 
-    # List app proofs for an activity
-    # List the app proofs for the given activity.
+    # List App Proofs for an activity
+    # List the App Proofs for the given activity.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(GetAppProofsResponse, Integer, Hash)>] GetAppProofsResponse data, response status code and response headers

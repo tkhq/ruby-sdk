@@ -15,7 +15,7 @@ module TurnkeyClient
     # Corresponding contract address or program ID
     attr_accessor :smart_contract_address
 
-    # ABI/IDL as a JSON string
+    # ABI/IDL as a JSON string. Limited to 400kb
     attr_accessor :smart_contract_interface
 
     attr_accessor :type

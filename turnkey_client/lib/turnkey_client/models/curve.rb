@@ -14,6 +14,7 @@ module TurnkeyClient
   class Curve
     SECP256_K1 = 'CURVE_SECP256K1'.freeze
     ED25519 = 'CURVE_ED25519'.freeze
+    P256 = 'CURVE_P256'.freeze
 
     # Builds the enum from string
     # @param [String] The enum value in the form of the string

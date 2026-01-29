@@ -23,6 +23,7 @@ module TurnkeyClient
     # The consensus expression that triggers the Effect
     attr_accessor :consensus
 
+    # Notes for a Policy.
     attr_accessor :notes
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -103,6 +104,10 @@ module TurnkeyClient
         invalid_properties.push('invalid value for "effect", effect cannot be nil.')
       end
 
+      if @notes.nil?
+        invalid_properties.push('invalid value for "notes", notes cannot be nil.')
+      end
+
       invalid_properties
     end
 
@@ -111,6 +116,7 @@ module TurnkeyClient
     def valid?
       return false if @policy_name.nil?
       return false if @effect.nil?
+      return false if @notes.nil?
       true
     end
 
