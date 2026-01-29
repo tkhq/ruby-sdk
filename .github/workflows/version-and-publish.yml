@@ -1,0 +1,209 @@
+name: Version Packages Create Release Branch and Publish
+
+on:
+  workflow_dispatch: # allows manual invocation
+  push:
+    tags:
+      - "v*.*.*" # triggers on tags like v1.0.0
+
+permissions:
+  contents: write
+  id-token: write # required for RubyGems trusted publishing (OIDC)
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # https://github.com/actions/checkout
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0 # required for git tags and history
+          ref: ${{ github.event.repository.default_branch }}
+
+      # https://github.com/ruby/setup-ruby
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@80740b3b13bf9857e28854481ca95a84e78a2bdf # v1.284.0
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+          working-directory: turnkey_client
+
+      # Check if there are pending changesets
+      - name: Check for pending releases
+        run: |
+          echo "Checking for pending changesets..."
+          git fetch origin main
+          CHANGESET_COUNT=$(find .changesets -maxdepth 1 -name '*.md' ! -name '_*' 2>/dev/null | wc -l)
+          if [ "$CHANGESET_COUNT" -eq 0 ]; then
+            echo "No unreleased changesets found, exiting"
+            exit 1
+          fi
+          echo "Found $CHANGESET_COUNT pending changeset(s), continuing"
+
+      - name: Run rubocop
+        run: |
+          gem install rubocop
+          rubocop
+
+      - name: Validate gem builds
+        working-directory: turnkey_client
+        run: gem build turnkey_client.gemspec
+
+  version-and-rebuild:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0 # required for git tags and history
+          ref: ${{ github.event.repository.default_branch }}
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@80740b3b13bf9857e28854481ca95a84e78a2bdf # v1.284.0
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+          working-directory: turnkey_client
+
+      - name: Configure Git User
+        run: |
+          git config user.name "tkhq-deploy"
+          git config user.email "github@turnkey.engineering"
+
+      - name: Create and switch to release branch
+        run: |
+          git fetch origin
+          git checkout -B release/${{ github.ref_name }} origin/release/${{ github.ref_name }} || \
+          git checkout -B release/${{ github.ref_name }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Process changesets, bump version, and generate changelog
+      - name: Version and prepare release
+        run: |
+          rm -f .changesets/_current_release.json
+          make prepare-release
+
+      - name: Validate gem builds with updated version
+        working-directory: turnkey_client
+        run: |
+          gem build turnkey_client.gemspec
+          rm -f *.gem
+
+      - name: Debug Git Status
+        run: |
+          echo "Git status before commit:"
+          git status --short
+          echo "Listing .changesets directory:"
+          ls -la .changesets || echo ".changesets directory not found"
+
+      - name: Commit versioned changes
+        run: |
+          git add -A
+          git commit -m "chore: release turnkey_client" || echo "No changes to commit"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Push changes to release branch
+        run: |
+          git push -u origin release/${{ github.ref_name }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload release artifacts
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: release-artifacts-${{ github.ref_name }}
+          path: |
+            turnkey_client/**
+            !turnkey_client/vendor
+            !turnkey_client/*.gem
+            turnkey_client_inputs/config.json
+            .changesets/**
+            CHANGELOG.md
+          retention-days: 7
+
+  prepare-release:
+    runs-on: ubuntu-latest
+    needs: version-and-rebuild
+    steps:
+      # https://github.com/actions/checkout
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0 # required for git tags and history
+          ref: release/${{ github.ref_name }}
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@da05d552573ad5aba039eaac05058a918a7bf631 # v2.2.2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: Release ${{ github.ref_name }}
+          generate_release_notes: true
+          draft: true
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  publish:
+    needs: prepare-release
+    runs-on:
+      group: package-deploy
+    environment: production # require manual approval for production deployments
+    permissions:
+      contents: write
+      id-token: write # required for RubyGems trusted publishing (OIDC)
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0 # required for git tags and history
+          ref: release/${{ github.ref_name }}
+
+      - name: Configure Git User
+        run: |
+          git config user.name "tkhq-deploy"
+          git config user.email "github@turnkey.engineering"
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@80740b3b13bf9857e28854481ca95a84e78a2bdf # v1.284.0
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+          working-directory: turnkey_client
+
+      # Download the release artifacts generated by version-and-rebuild
+      - name: Download release artifacts
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: release-artifacts-${{ github.ref_name }}
+          path: .
+
+      # OIDC trusted publishing
+      # Uses the same credentials action as rubygems/release-gem
+      - name: Configure trusted publishing credentials
+        uses: rubygems/configure-rubygems-credentials@bc6dd217f8a4f919d6835fcfefd470ef821f5c44 # v1.0.0
+
+      - name: Build gem
+        working-directory: turnkey_client
+        run: |
+          gem build turnkey_client.gemspec
+          echo "Built gem:"
+          ls -la *.gem
+
+      - name: Publish to RubyGems
+        working-directory: turnkey_client
+        run: |
+          echo "Publishing to RubyGems..."
+          gem push turnkey_client-*.gem || {
+            echo "Publish failed. Check logs above.";
+            exit 1;
+          }
+          echo "Successfully published to RubyGems"
+
+      - name: Wait for release to propagate
+        working-directory: turnkey_client
+        run: gem exec rubygems-await *.gem
