@@ -24,7 +24,6 @@ version:
 .PHONY: changelog
 changelog:
 	ruby tool/changeset_changelog.rb
-
 .PHONY: prepare-release
 prepare-release:
 	ruby tool/changeset_version.rb

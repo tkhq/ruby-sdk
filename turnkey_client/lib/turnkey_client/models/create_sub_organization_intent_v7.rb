@@ -38,6 +38,8 @@ module TurnkeyClient
     # Signed JWT containing a unique id, expiry, verification type, contact
     attr_accessor :verification_token
 
+    attr_accessor :client_signature
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -49,7 +51,8 @@ module TurnkeyClient
         :'disable_email_auth' => :'disableEmailAuth',
         :'disable_sms_auth' => :'disableSmsAuth',
         :'disable_otp_email_auth' => :'disableOtpEmailAuth',
-        :'verification_token' => :'verificationToken'
+        :'verification_token' => :'verificationToken',
+        :'client_signature' => :'clientSignature'
       }
     end
 
@@ -64,7 +67,8 @@ module TurnkeyClient
         :'disable_email_auth' => :'Object',
         :'disable_sms_auth' => :'Object',
         :'disable_otp_email_auth' => :'Object',
-        :'verification_token' => :'Object'
+        :'verification_token' => :'Object',
+        :'client_signature' => :'Object'
       }
     end
 
@@ -75,7 +79,7 @@ module TurnkeyClient
         :'disable_email_auth',
         :'disable_sms_auth',
         :'disable_otp_email_auth',
-        :'verification_token'
+        :'verification_token',
       ])
     end
   
@@ -131,6 +135,10 @@ module TurnkeyClient
       if attributes.key?(:'verification_token')
         self.verification_token = attributes[:'verification_token']
       end
+
+      if attributes.key?(:'client_signature')
+        self.client_signature = attributes[:'client_signature']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -174,7 +182,8 @@ module TurnkeyClient
           disable_email_auth == o.disable_email_auth &&
           disable_sms_auth == o.disable_sms_auth &&
           disable_otp_email_auth == o.disable_otp_email_auth &&
-          verification_token == o.verification_token
+          verification_token == o.verification_token &&
+          client_signature == o.client_signature
     end
 
     # @see the `==` method
@@ -186,7 +195,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [sub_organization_name, root_users, root_quorum_threshold, wallet, disable_email_recovery, disable_email_auth, disable_sms_auth, disable_otp_email_auth, verification_token].hash
+      [sub_organization_name, root_users, root_quorum_threshold, wallet, disable_email_recovery, disable_email_auth, disable_sms_auth, disable_otp_email_auth, verification_token, client_signature].hash
     end
 
     # Builds the object from hash

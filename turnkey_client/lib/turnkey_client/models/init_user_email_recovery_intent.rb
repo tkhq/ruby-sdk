@@ -23,13 +23,25 @@ module TurnkeyClient
 
     attr_accessor :email_customization
 
+    # Optional custom email address from which to send the OTP email
+    attr_accessor :send_from_email_address
+
+    # Optional custom sender name for use with sendFromEmailAddress; if left empty, will default to 'Notifications'
+    attr_accessor :send_from_email_sender_name
+
+    # Optional custom email address to use as reply-to
+    attr_accessor :reply_to_email_address
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'email' => :'email',
         :'target_public_key' => :'targetPublicKey',
         :'expiration_seconds' => :'expirationSeconds',
-        :'email_customization' => :'emailCustomization'
+        :'email_customization' => :'emailCustomization',
+        :'send_from_email_address' => :'sendFromEmailAddress',
+        :'send_from_email_sender_name' => :'sendFromEmailSenderName',
+        :'reply_to_email_address' => :'replyToEmailAddress'
       }
     end
 
@@ -39,7 +51,10 @@ module TurnkeyClient
         :'email' => :'Object',
         :'target_public_key' => :'Object',
         :'expiration_seconds' => :'Object',
-        :'email_customization' => :'Object'
+        :'email_customization' => :'Object',
+        :'send_from_email_address' => :'Object',
+        :'send_from_email_sender_name' => :'Object',
+        :'reply_to_email_address' => :'Object'
       }
     end
 
@@ -47,6 +62,9 @@ module TurnkeyClient
     def self.openapi_nullable
       Set.new([
         :'expiration_seconds',
+        :'send_from_email_address',
+        :'send_from_email_sender_name',
+        :'reply_to_email_address'
       ])
     end
   
@@ -79,6 +97,18 @@ module TurnkeyClient
 
       if attributes.key?(:'email_customization')
         self.email_customization = attributes[:'email_customization']
+      end
+
+      if attributes.key?(:'send_from_email_address')
+        self.send_from_email_address = attributes[:'send_from_email_address']
+      end
+
+      if attributes.key?(:'send_from_email_sender_name')
+        self.send_from_email_sender_name = attributes[:'send_from_email_sender_name']
+      end
+
+      if attributes.key?(:'reply_to_email_address')
+        self.reply_to_email_address = attributes[:'reply_to_email_address']
       end
     end
 
@@ -113,7 +143,10 @@ module TurnkeyClient
           email == o.email &&
           target_public_key == o.target_public_key &&
           expiration_seconds == o.expiration_seconds &&
-          email_customization == o.email_customization
+          email_customization == o.email_customization &&
+          send_from_email_address == o.send_from_email_address &&
+          send_from_email_sender_name == o.send_from_email_sender_name &&
+          reply_to_email_address == o.reply_to_email_address
     end
 
     # @see the `==` method
@@ -125,7 +158,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [email, target_public_key, expiration_seconds, email_customization].hash
+      [email, target_public_key, expiration_seconds, email_customization, send_from_email_address, send_from_email_sender_name, reply_to_email_address].hash
     end
 
     # Builds the object from hash

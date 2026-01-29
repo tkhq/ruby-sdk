@@ -184,6 +184,30 @@ module TurnkeyClient
 
     attr_accessor :oauth2_authenticate_result
 
+    attr_accessor :delete_wallet_accounts_result
+
+    attr_accessor :delete_policies_result
+
+    attr_accessor :eth_send_raw_transaction_result
+
+    attr_accessor :create_fiat_on_ramp_credential_result
+
+    attr_accessor :update_fiat_on_ramp_credential_result
+
+    attr_accessor :delete_fiat_on_ramp_credential_result
+
+    attr_accessor :eth_send_transaction_result
+
+    attr_accessor :upsert_gas_usage_config_result
+
+    attr_accessor :create_tvc_app_result
+
+    attr_accessor :create_tvc_deployment_result
+
+    attr_accessor :create_tvc_manifest_approvals_result
+
+    attr_accessor :sol_send_transaction_result
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -272,7 +296,19 @@ module TurnkeyClient
         :'create_oauth2_credential_result' => :'createOauth2CredentialResult',
         :'update_oauth2_credential_result' => :'updateOauth2CredentialResult',
         :'delete_oauth2_credential_result' => :'deleteOauth2CredentialResult',
-        :'oauth2_authenticate_result' => :'oauth2AuthenticateResult'
+        :'oauth2_authenticate_result' => :'oauth2AuthenticateResult',
+        :'delete_wallet_accounts_result' => :'deleteWalletAccountsResult',
+        :'delete_policies_result' => :'deletePoliciesResult',
+        :'eth_send_raw_transaction_result' => :'ethSendRawTransactionResult',
+        :'create_fiat_on_ramp_credential_result' => :'createFiatOnRampCredentialResult',
+        :'update_fiat_on_ramp_credential_result' => :'updateFiatOnRampCredentialResult',
+        :'delete_fiat_on_ramp_credential_result' => :'deleteFiatOnRampCredentialResult',
+        :'eth_send_transaction_result' => :'ethSendTransactionResult',
+        :'upsert_gas_usage_config_result' => :'upsertGasUsageConfigResult',
+        :'create_tvc_app_result' => :'createTvcAppResult',
+        :'create_tvc_deployment_result' => :'createTvcDeploymentResult',
+        :'create_tvc_manifest_approvals_result' => :'createTvcManifestApprovalsResult',
+        :'sol_send_transaction_result' => :'solSendTransactionResult'
       }
     end
 
@@ -364,7 +400,19 @@ module TurnkeyClient
         :'create_oauth2_credential_result' => :'Object',
         :'update_oauth2_credential_result' => :'Object',
         :'delete_oauth2_credential_result' => :'Object',
-        :'oauth2_authenticate_result' => :'Object'
+        :'oauth2_authenticate_result' => :'Object',
+        :'delete_wallet_accounts_result' => :'Object',
+        :'delete_policies_result' => :'Object',
+        :'eth_send_raw_transaction_result' => :'Object',
+        :'create_fiat_on_ramp_credential_result' => :'Object',
+        :'update_fiat_on_ramp_credential_result' => :'Object',
+        :'delete_fiat_on_ramp_credential_result' => :'Object',
+        :'eth_send_transaction_result' => :'Object',
+        :'upsert_gas_usage_config_result' => :'Object',
+        :'create_tvc_app_result' => :'Object',
+        :'create_tvc_deployment_result' => :'Object',
+        :'create_tvc_manifest_approvals_result' => :'Object',
+        :'sol_send_transaction_result' => :'Object'
       }
     end
 
@@ -732,6 +780,54 @@ module TurnkeyClient
       if attributes.key?(:'oauth2_authenticate_result')
         self.oauth2_authenticate_result = attributes[:'oauth2_authenticate_result']
       end
+
+      if attributes.key?(:'delete_wallet_accounts_result')
+        self.delete_wallet_accounts_result = attributes[:'delete_wallet_accounts_result']
+      end
+
+      if attributes.key?(:'delete_policies_result')
+        self.delete_policies_result = attributes[:'delete_policies_result']
+      end
+
+      if attributes.key?(:'eth_send_raw_transaction_result')
+        self.eth_send_raw_transaction_result = attributes[:'eth_send_raw_transaction_result']
+      end
+
+      if attributes.key?(:'create_fiat_on_ramp_credential_result')
+        self.create_fiat_on_ramp_credential_result = attributes[:'create_fiat_on_ramp_credential_result']
+      end
+
+      if attributes.key?(:'update_fiat_on_ramp_credential_result')
+        self.update_fiat_on_ramp_credential_result = attributes[:'update_fiat_on_ramp_credential_result']
+      end
+
+      if attributes.key?(:'delete_fiat_on_ramp_credential_result')
+        self.delete_fiat_on_ramp_credential_result = attributes[:'delete_fiat_on_ramp_credential_result']
+      end
+
+      if attributes.key?(:'eth_send_transaction_result')
+        self.eth_send_transaction_result = attributes[:'eth_send_transaction_result']
+      end
+
+      if attributes.key?(:'upsert_gas_usage_config_result')
+        self.upsert_gas_usage_config_result = attributes[:'upsert_gas_usage_config_result']
+      end
+
+      if attributes.key?(:'create_tvc_app_result')
+        self.create_tvc_app_result = attributes[:'create_tvc_app_result']
+      end
+
+      if attributes.key?(:'create_tvc_deployment_result')
+        self.create_tvc_deployment_result = attributes[:'create_tvc_deployment_result']
+      end
+
+      if attributes.key?(:'create_tvc_manifest_approvals_result')
+        self.create_tvc_manifest_approvals_result = attributes[:'create_tvc_manifest_approvals_result']
+      end
+
+      if attributes.key?(:'sol_send_transaction_result')
+        self.sol_send_transaction_result = attributes[:'sol_send_transaction_result']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -837,7 +933,19 @@ module TurnkeyClient
           create_oauth2_credential_result == o.create_oauth2_credential_result &&
           update_oauth2_credential_result == o.update_oauth2_credential_result &&
           delete_oauth2_credential_result == o.delete_oauth2_credential_result &&
-          oauth2_authenticate_result == o.oauth2_authenticate_result
+          oauth2_authenticate_result == o.oauth2_authenticate_result &&
+          delete_wallet_accounts_result == o.delete_wallet_accounts_result &&
+          delete_policies_result == o.delete_policies_result &&
+          eth_send_raw_transaction_result == o.eth_send_raw_transaction_result &&
+          create_fiat_on_ramp_credential_result == o.create_fiat_on_ramp_credential_result &&
+          update_fiat_on_ramp_credential_result == o.update_fiat_on_ramp_credential_result &&
+          delete_fiat_on_ramp_credential_result == o.delete_fiat_on_ramp_credential_result &&
+          eth_send_transaction_result == o.eth_send_transaction_result &&
+          upsert_gas_usage_config_result == o.upsert_gas_usage_config_result &&
+          create_tvc_app_result == o.create_tvc_app_result &&
+          create_tvc_deployment_result == o.create_tvc_deployment_result &&
+          create_tvc_manifest_approvals_result == o.create_tvc_manifest_approvals_result &&
+          sol_send_transaction_result == o.sol_send_transaction_result
     end
 
     # @see the `==` method
@@ -849,7 +957,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [create_organization_result, create_authenticators_result, create_users_result, create_private_keys_result, create_invitations_result, accept_invitation_result, sign_raw_payload_result, create_policy_result, disable_private_key_result, delete_users_result, delete_authenticators_result, delete_invitation_result, delete_organization_result, delete_policy_result, create_user_tag_result, delete_user_tags_result, sign_transaction_result, delete_api_keys_result, create_api_keys_result, create_private_key_tag_result, delete_private_key_tags_result, set_payment_method_result, activate_billing_tier_result, delete_payment_method_result, create_api_only_users_result, update_root_quorum_result, update_user_tag_result, update_private_key_tag_result, create_sub_organization_result, update_allowed_origins_result, create_private_keys_result_v2, update_user_result, update_policy_result, create_sub_organization_result_v3, create_wallet_result, create_wallet_accounts_result, init_user_email_recovery_result, recover_user_result, set_organization_feature_result, remove_organization_feature_result, export_private_key_result, export_wallet_result, create_sub_organization_result_v4, email_auth_result, export_wallet_account_result, init_import_wallet_result, import_wallet_result, init_import_private_key_result, import_private_key_result, create_policies_result, sign_raw_payloads_result, create_read_only_session_result, create_oauth_providers_result, delete_oauth_providers_result, create_sub_organization_result_v5, oauth_result, create_read_write_session_result, create_sub_organization_result_v6, delete_private_keys_result, delete_wallets_result, create_read_write_session_result_v2, delete_sub_organization_result, init_otp_auth_result, otp_auth_result, create_sub_organization_result_v7, update_wallet_result, update_policy_result_v2, init_otp_auth_result_v2, init_otp_result, verify_otp_result, otp_login_result, stamp_login_result, oauth_login_result, update_user_name_result, update_user_email_result, update_user_phone_number_result, init_fiat_on_ramp_result, create_smart_contract_interface_result, delete_smart_contract_interface_result, enable_auth_proxy_result, disable_auth_proxy_result, update_auth_proxy_config_result, create_oauth2_credential_result, update_oauth2_credential_result, delete_oauth2_credential_result, oauth2_authenticate_result].hash
+      [create_organization_result, create_authenticators_result, create_users_result, create_private_keys_result, create_invitations_result, accept_invitation_result, sign_raw_payload_result, create_policy_result, disable_private_key_result, delete_users_result, delete_authenticators_result, delete_invitation_result, delete_organization_result, delete_policy_result, create_user_tag_result, delete_user_tags_result, sign_transaction_result, delete_api_keys_result, create_api_keys_result, create_private_key_tag_result, delete_private_key_tags_result, set_payment_method_result, activate_billing_tier_result, delete_payment_method_result, create_api_only_users_result, update_root_quorum_result, update_user_tag_result, update_private_key_tag_result, create_sub_organization_result, update_allowed_origins_result, create_private_keys_result_v2, update_user_result, update_policy_result, create_sub_organization_result_v3, create_wallet_result, create_wallet_accounts_result, init_user_email_recovery_result, recover_user_result, set_organization_feature_result, remove_organization_feature_result, export_private_key_result, export_wallet_result, create_sub_organization_result_v4, email_auth_result, export_wallet_account_result, init_import_wallet_result, import_wallet_result, init_import_private_key_result, import_private_key_result, create_policies_result, sign_raw_payloads_result, create_read_only_session_result, create_oauth_providers_result, delete_oauth_providers_result, create_sub_organization_result_v5, oauth_result, create_read_write_session_result, create_sub_organization_result_v6, delete_private_keys_result, delete_wallets_result, create_read_write_session_result_v2, delete_sub_organization_result, init_otp_auth_result, otp_auth_result, create_sub_organization_result_v7, update_wallet_result, update_policy_result_v2, init_otp_auth_result_v2, init_otp_result, verify_otp_result, otp_login_result, stamp_login_result, oauth_login_result, update_user_name_result, update_user_email_result, update_user_phone_number_result, init_fiat_on_ramp_result, create_smart_contract_interface_result, delete_smart_contract_interface_result, enable_auth_proxy_result, disable_auth_proxy_result, update_auth_proxy_config_result, create_oauth2_credential_result, update_oauth2_credential_result, delete_oauth2_credential_result, oauth2_authenticate_result, delete_wallet_accounts_result, delete_policies_result, eth_send_raw_transaction_result, create_fiat_on_ramp_credential_result, update_fiat_on_ramp_credential_result, delete_fiat_on_ramp_credential_result, eth_send_transaction_result, upsert_gas_usage_config_result, create_tvc_app_result, create_tvc_deployment_result, create_tvc_manifest_approvals_result, sol_send_transaction_result].hash
     end
 
     # Builds the object from hash

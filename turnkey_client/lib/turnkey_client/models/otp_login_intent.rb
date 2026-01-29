@@ -24,7 +24,6 @@ module TurnkeyClient
     # Invalidate all other previously generated Login API keys
     attr_accessor :invalidate_existing
 
-    # Optional signature associated with the public key passed into the verification step. This must be a hex-encoded ECDSA signature over the verification token. Only required if a public key was provided during the verification step.
     attr_accessor :client_signature
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -54,7 +53,6 @@ module TurnkeyClient
       Set.new([
         :'expiration_seconds',
         :'invalidate_existing',
-        :'client_signature'
       ])
     end
   

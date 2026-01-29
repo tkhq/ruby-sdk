@@ -51,6 +51,12 @@ module TurnkeyClient
     # Desired OTP code length (6–9).
     attr_accessor :otp_length
 
+    # Custom 'from' email sender for auth-related emails.
+    attr_accessor :send_from_email_sender_name
+
+    # Verification token required for get account with PII (email/phone number). Default false.
+    attr_accessor :verification_token_required_for_get_account_pii
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -67,7 +73,9 @@ module TurnkeyClient
         :'verification_token_expiration_seconds' => :'verificationTokenExpirationSeconds',
         :'session_expiration_seconds' => :'sessionExpirationSeconds',
         :'otp_alphanumeric' => :'otpAlphanumeric',
-        :'otp_length' => :'otpLength'
+        :'otp_length' => :'otpLength',
+        :'send_from_email_sender_name' => :'sendFromEmailSenderName',
+        :'verification_token_required_for_get_account_pii' => :'verificationTokenRequiredForGetAccountPii'
       }
     end
 
@@ -87,7 +95,9 @@ module TurnkeyClient
         :'verification_token_expiration_seconds' => :'Object',
         :'session_expiration_seconds' => :'Object',
         :'otp_alphanumeric' => :'Object',
-        :'otp_length' => :'Object'
+        :'otp_length' => :'Object',
+        :'send_from_email_sender_name' => :'Object',
+        :'verification_token_required_for_get_account_pii' => :'Object'
       }
     end
 
@@ -102,7 +112,9 @@ module TurnkeyClient
         :'verification_token_expiration_seconds',
         :'session_expiration_seconds',
         :'otp_alphanumeric',
-        :'otp_length'
+        :'otp_length',
+        :'send_from_email_sender_name',
+        :'verification_token_required_for_get_account_pii'
       ])
     end
   
@@ -180,6 +192,14 @@ module TurnkeyClient
       if attributes.key?(:'otp_length')
         self.otp_length = attributes[:'otp_length']
       end
+
+      if attributes.key?(:'send_from_email_sender_name')
+        self.send_from_email_sender_name = attributes[:'send_from_email_sender_name']
+      end
+
+      if attributes.key?(:'verification_token_required_for_get_account_pii')
+        self.verification_token_required_for_get_account_pii = attributes[:'verification_token_required_for_get_account_pii']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -213,7 +233,9 @@ module TurnkeyClient
           verification_token_expiration_seconds == o.verification_token_expiration_seconds &&
           session_expiration_seconds == o.session_expiration_seconds &&
           otp_alphanumeric == o.otp_alphanumeric &&
-          otp_length == o.otp_length
+          otp_length == o.otp_length &&
+          send_from_email_sender_name == o.send_from_email_sender_name &&
+          verification_token_required_for_get_account_pii == o.verification_token_required_for_get_account_pii
     end
 
     # @see the `==` method
@@ -225,7 +247,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [allowed_origins, allowed_auth_methods, send_from_email_address, reply_to_email_address, email_auth_template_id, otp_template_id, email_customization_params, sms_customization_params, wallet_kit_settings, otp_expiration_seconds, verification_token_expiration_seconds, session_expiration_seconds, otp_alphanumeric, otp_length].hash
+      [allowed_origins, allowed_auth_methods, send_from_email_address, reply_to_email_address, email_auth_template_id, otp_template_id, email_customization_params, sms_customization_params, wallet_kit_settings, otp_expiration_seconds, verification_token_expiration_seconds, session_expiration_seconds, otp_alphanumeric, otp_length, send_from_email_sender_name, verification_token_required_for_get_account_pii].hash
     end
 
     # Builds the object from hash

@@ -18,11 +18,15 @@ module TurnkeyClient
     # A list of wallet Accounts.
     attr_accessor :accounts
 
+    # Indicates if the wallet accounts should be persisted. This is helpful if you'd like to see the addresses of different derivation paths without actually creating the accounts. Defaults to true.
+    attr_accessor :persist
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'wallet_id' => :'walletId',
-        :'accounts' => :'accounts'
+        :'accounts' => :'accounts',
+        :'persist' => :'persist'
       }
     end
 
@@ -30,13 +34,15 @@ module TurnkeyClient
     def self.openapi_types
       {
         :'wallet_id' => :'Object',
-        :'accounts' => :'Object'
+        :'accounts' => :'Object',
+        :'persist' => :'Object'
       }
     end
 
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'persist'
       ])
     end
   
@@ -63,6 +69,10 @@ module TurnkeyClient
         if (value = attributes[:'accounts']).is_a?(Array)
           self.accounts = value
         end
+      end
+
+      if attributes.key?(:'persist')
+        self.persist = attributes[:'persist']
       end
     end
 
@@ -95,7 +105,8 @@ module TurnkeyClient
       return true if self.equal?(o)
       self.class == o.class &&
           wallet_id == o.wallet_id &&
-          accounts == o.accounts
+          accounts == o.accounts &&
+          persist == o.persist
     end
 
     # @see the `==` method
@@ -107,7 +118,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [wallet_id, accounts].hash
+      [wallet_id, accounts, persist].hash
     end
 
     # Builds the object from hash

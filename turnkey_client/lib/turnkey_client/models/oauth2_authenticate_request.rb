@@ -22,6 +22,8 @@ module TurnkeyClient
 
     attr_accessor :parameters
 
+    attr_accessor :generate_app_proofs
+
     class EnumAttributeValidator
       attr_reader :datatype
       attr_reader :allowable_values
@@ -50,7 +52,8 @@ module TurnkeyClient
         :'type' => :'type',
         :'timestamp_ms' => :'timestampMs',
         :'organization_id' => :'organizationId',
-        :'parameters' => :'parameters'
+        :'parameters' => :'parameters',
+        :'generate_app_proofs' => :'generateAppProofs'
       }
     end
 
@@ -60,13 +63,15 @@ module TurnkeyClient
         :'type' => :'Object',
         :'timestamp_ms' => :'Object',
         :'organization_id' => :'Object',
-        :'parameters' => :'Object'
+        :'parameters' => :'Object',
+        :'generate_app_proofs' => :'Object'
       }
     end
 
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'generate_app_proofs'
       ])
     end
   
@@ -99,6 +104,10 @@ module TurnkeyClient
 
       if attributes.key?(:'parameters')
         self.parameters = attributes[:'parameters']
+      end
+
+      if attributes.key?(:'generate_app_proofs')
+        self.generate_app_proofs = attributes[:'generate_app_proofs']
       end
     end
 
@@ -155,7 +164,8 @@ module TurnkeyClient
           type == o.type &&
           timestamp_ms == o.timestamp_ms &&
           organization_id == o.organization_id &&
-          parameters == o.parameters
+          parameters == o.parameters &&
+          generate_app_proofs == o.generate_app_proofs
     end
 
     # @see the `==` method
@@ -167,7 +177,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [type, timestamp_ms, organization_id, parameters].hash
+      [type, timestamp_ms, organization_id, parameters, generate_app_proofs].hash
     end
 
     # Builds the object from hash

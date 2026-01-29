@@ -15,6 +15,180 @@ module TurnkeyClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
+    # Create a Fiat On Ramp Credential
+    # Create a fiat on ramp provider credential
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [ActivityResponse]
+    def create_fiat_on_ramp_credential(body, opts = {})
+      data, _status_code, _headers = create_fiat_on_ramp_credential_with_http_info(body, opts)
+      data
+    end
+
+    # Create a Fiat On Ramp Credential
+    # Create a fiat on ramp provider credential
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
+    def create_fiat_on_ramp_credential_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: OnRampApi.create_fiat_on_ramp_credential ...'
+      end
+      # verify the required parameter 'body' is set
+      if @api_client.config.client_side_validation && body.nil?
+        fail ArgumentError, "Missing the required parameter 'body' when calling OnRampApi.create_fiat_on_ramp_credential"
+      end
+      # resource path
+      local_var_path = '/public/v1/submit/create_fiat_on_ramp_credential'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:body] || @api_client.object_to_http_body(body) 
+
+      return_type = opts[:return_type] || 'ActivityResponse' 
+
+      auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type)
+
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OnRampApi#create_fiat_on_ramp_credential\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+    # Delete a Fiat On Ramp Credential
+    # Delete a fiat on ramp provider credential
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [ActivityResponse]
+    def delete_fiat_on_ramp_credential(body, opts = {})
+      data, _status_code, _headers = delete_fiat_on_ramp_credential_with_http_info(body, opts)
+      data
+    end
+
+    # Delete a Fiat On Ramp Credential
+    # Delete a fiat on ramp provider credential
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
+    def delete_fiat_on_ramp_credential_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: OnRampApi.delete_fiat_on_ramp_credential ...'
+      end
+      # verify the required parameter 'body' is set
+      if @api_client.config.client_side_validation && body.nil?
+        fail ArgumentError, "Missing the required parameter 'body' when calling OnRampApi.delete_fiat_on_ramp_credential"
+      end
+      # resource path
+      local_var_path = '/public/v1/submit/delete_fiat_on_ramp_credential'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:body] || @api_client.object_to_http_body(body) 
+
+      return_type = opts[:return_type] || 'ActivityResponse' 
+
+      auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type)
+
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OnRampApi#delete_fiat_on_ramp_credential\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+    # Get On Ramp transaction status
+    # Get the status of an on ramp transaction.
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [GetOnRampTransactionStatusResponse]
+    def get_on_ramp_transaction_status(body, opts = {})
+      data, _status_code, _headers = get_on_ramp_transaction_status_with_http_info(body, opts)
+      data
+    end
+
+    # Get On Ramp transaction status
+    # Get the status of an on ramp transaction.
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(GetOnRampTransactionStatusResponse, Integer, Hash)>] GetOnRampTransactionStatusResponse data, response status code and response headers
+    def get_on_ramp_transaction_status_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: OnRampApi.get_on_ramp_transaction_status ...'
+      end
+      # verify the required parameter 'body' is set
+      if @api_client.config.client_side_validation && body.nil?
+        fail ArgumentError, "Missing the required parameter 'body' when calling OnRampApi.get_on_ramp_transaction_status"
+      end
+      # resource path
+      local_var_path = '/public/v1/query/get_onramp_transaction_status'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:body] || @api_client.object_to_http_body(body) 
+
+      return_type = opts[:return_type] || 'GetOnRampTransactionStatusResponse' 
+
+      auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type)
+
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OnRampApi#get_on_ramp_transaction_status\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
     # Init fiat on ramp
     # Initiate a fiat on ramp flow.
     # @param body 
@@ -70,6 +244,122 @@ module TurnkeyClient
 
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: OnRampApi#init_fiat_on_ramp\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+    # List Fiat On Ramp Credentials
+    # List all fiat on ramp provider credentials within an organization.
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [ListFiatOnRampCredentialsResponse]
+    def list_fiat_on_ramp_credentials(body, opts = {})
+      data, _status_code, _headers = list_fiat_on_ramp_credentials_with_http_info(body, opts)
+      data
+    end
+
+    # List Fiat On Ramp Credentials
+    # List all fiat on ramp provider credentials within an organization.
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ListFiatOnRampCredentialsResponse, Integer, Hash)>] ListFiatOnRampCredentialsResponse data, response status code and response headers
+    def list_fiat_on_ramp_credentials_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: OnRampApi.list_fiat_on_ramp_credentials ...'
+      end
+      # verify the required parameter 'body' is set
+      if @api_client.config.client_side_validation && body.nil?
+        fail ArgumentError, "Missing the required parameter 'body' when calling OnRampApi.list_fiat_on_ramp_credentials"
+      end
+      # resource path
+      local_var_path = '/public/v1/query/list_fiat_on_ramp_credentials'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:body] || @api_client.object_to_http_body(body) 
+
+      return_type = opts[:return_type] || 'ListFiatOnRampCredentialsResponse' 
+
+      auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type)
+
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OnRampApi#list_fiat_on_ramp_credentials\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+    # Update a Fiat On Ramp Credential
+    # Update a fiat on ramp provider credential
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [ActivityResponse]
+    def update_fiat_on_ramp_credential(body, opts = {})
+      data, _status_code, _headers = update_fiat_on_ramp_credential_with_http_info(body, opts)
+      data
+    end
+
+    # Update a Fiat On Ramp Credential
+    # Update a fiat on ramp provider credential
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
+    def update_fiat_on_ramp_credential_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: OnRampApi.update_fiat_on_ramp_credential ...'
+      end
+      # verify the required parameter 'body' is set
+      if @api_client.config.client_side_validation && body.nil?
+        fail ArgumentError, "Missing the required parameter 'body' when calling OnRampApi.update_fiat_on_ramp_credential"
+      end
+      # resource path
+      local_var_path = '/public/v1/submit/update_fiat_on_ramp_credential'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:body] || @api_client.object_to_http_body(body) 
+
+      return_type = opts[:return_type] || 'ActivityResponse' 
+
+      auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type)
+
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OnRampApi#update_fiat_on_ramp_credential\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
