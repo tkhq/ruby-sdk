@@ -12,3 +12,20 @@ turnkey_client: turnkey_client_inputs/public_api.swagger.json turnkey_client_inp
 
 clean:
 	rm -rf turnkey_client
+
+.PHONY: changeset
+changeset:
+	ruby tool/changeset.rb
+
+.PHONY: version
+version:
+	ruby tool/changeset_version.rb
+
+.PHONY: changelog
+changelog:
+	ruby tool/changeset_changelog.rb
+
+.PHONY: prepare-release
+prepare-release:
+	ruby tool/changeset_version.rb
+	ruby tool/changeset_changelog.rb
