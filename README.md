@@ -57,7 +57,6 @@ TurnkeyClient::SessionsApi.new(TURNKEY_CLIENT).get_whoami({ organization_id: "yo
 
 We use a swagger spec and [Swagger Codegen](https://github.com/swagger-api/swagger-codegen) to generate `turnkey_client`. To update this gem:
 * Update the swagger spec in [`turnkey_client_inputs`](./turnkey_client_inputs/)
-* Bump `gemVersion` in [`config.json`](./turnkey_client_inputs/config.json)
 * Run `make`
 
 ## Updating codegen templates
