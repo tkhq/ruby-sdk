@@ -22,11 +22,19 @@ def main
   end
 
   current_version = read_current_version
-  bumps = changesets.map(&:bump)
-  bump = max_bump(bumps)
-  new_version = next_version(current_version, bump)
+  override = ARGV[0]
 
-  puts "Applying version bump: #{current_version} -> #{new_version} (#{bump})"
+  if override
+    parse_version(override) # validate format
+    new_version = override
+    bump = 'manual'
+    puts "Manual version override: #{current_version} -> #{new_version}"
+  else
+    bumps = changesets.map(&:bump)
+    bump = max_bump(bumps)
+    new_version = next_version(current_version, bump)
+    puts "Applying version bump: #{current_version} -> #{new_version} (#{bump})"
+  end
 
   write_version_rb(new_version)
   puts "  Updated #{VERSION_FILE}"
