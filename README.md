@@ -106,10 +106,30 @@ $ make changeset
 
 ## Releasing on Rubygems.org
 
-To build and release:
+### CI Workflow Release:
+
+- *Coming soon*
+
+
+### Manual Release:
+
+1. Bump the version & generate a changelog:
+
+```sh
+$ make prepare-release
+```
+
+- To version manually:
+```sh
+$ make prepare-release v=x.x.x
+```
+
+2. To build and release:
 
 ```sh
 $ cd turnkey_client
 $ gem build turnkey_client.gemspec
 $ gem push turnkey_client-x.y.z.gem 
 ```
+
+

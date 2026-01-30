@@ -19,12 +19,12 @@ changeset:
 
 .PHONY: version
 version:
-	ruby tool/changeset_version.rb
+	ruby tool/changeset_version.rb $(v)
 
 .PHONY: changelog
 changelog:
 	ruby tool/changeset_changelog.rb
 .PHONY: prepare-release
 prepare-release:
-	ruby tool/changeset_version.rb
+	ruby tool/changeset_version.rb $(v)
 	ruby tool/changeset_changelog.rb
