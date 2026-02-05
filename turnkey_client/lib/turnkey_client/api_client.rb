@@ -38,6 +38,7 @@ module TurnkeyClient
       @default_headers = {
         'Content-Type' => 'application/json',
         'User-Agent' => @user_agent
+        'X-Client-Version' => "turnkey-ruby/#{VERSION}"
       }
 
       if config.api_public_key.nil?
