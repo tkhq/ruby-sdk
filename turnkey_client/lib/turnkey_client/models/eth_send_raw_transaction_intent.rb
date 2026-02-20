@@ -106,7 +106,7 @@ module TurnkeyClient
     def valid?
       return false if @signed_transaction.nil?
       return false if @caip2.nil?
-      caip2_validator = EnumAttributeValidator.new('Object', ['eip155:1', 'eip155:11155111', 'eip155:8453', 'eip155:84532'])
+      caip2_validator = EnumAttributeValidator.new('Object', ['eip155:1', 'eip155:11155111', 'eip155:8453', 'eip155:84532', 'eip155:137', 'eip155:80002'])
       return false unless caip2_validator.valid?(@caip2)
       true
     end
@@ -114,7 +114,7 @@ module TurnkeyClient
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] caip2 Object to be assigned
     def caip2=(caip2)
-      validator = EnumAttributeValidator.new('Object', ['eip155:1', 'eip155:11155111', 'eip155:8453', 'eip155:84532'])
+      validator = EnumAttributeValidator.new('Object', ['eip155:1', 'eip155:11155111', 'eip155:8453', 'eip155:84532', 'eip155:137', 'eip155:80002'])
       unless validator.valid?(caip2)
         fail ArgumentError, "invalid value for \"caip2\", must be one of #{validator.allowable_values}."
       end

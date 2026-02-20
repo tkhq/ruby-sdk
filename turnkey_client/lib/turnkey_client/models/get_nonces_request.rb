@@ -18,7 +18,7 @@ module TurnkeyClient
     # The Ethereum address to query nonces for.
     attr_accessor :address
 
-    # The network identifier in CAIP-2 format (e.g., 'eip155:1' for Ethereum mainnet).
+    # CAIP-2 chain ID (e.g., 'eip155:1' for Ethereum mainnet).
     attr_accessor :caip2
 
     # Whether to fetch the standard on-chain nonce.
@@ -26,6 +26,28 @@ module TurnkeyClient
 
     # Whether to fetch the gas station nonce used for sponsored transactions.
     attr_accessor :gas_station_nonce
+
+    class EnumAttributeValidator
+      attr_reader :datatype
+      attr_reader :allowable_values
+
+      def initialize(datatype, allowable_values)
+        @allowable_values = allowable_values.map do |value|
+          case datatype.to_s
+          when /Integer/i
+            value.to_i
+          when /Float/i
+            value.to_f
+          else
+            value
+          end
+        end
+      end
+
+      def valid?(value)
+        !value || allowable_values.include?(value)
+      end
+    end
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -116,7 +138,19 @@ module TurnkeyClient
       return false if @organization_id.nil?
       return false if @address.nil?
       return false if @caip2.nil?
+      caip2_validator = EnumAttributeValidator.new('Object', ['eip155:1', 'eip155:11155111', 'eip155:8453', 'eip155:84532', 'eip155:137', 'eip155:80002'])
+      return false unless caip2_validator.valid?(@caip2)
       true
+    end
+
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] caip2 Object to be assigned
+    def caip2=(caip2)
+      validator = EnumAttributeValidator.new('Object', ['eip155:1', 'eip155:11155111', 'eip155:8453', 'eip155:84532', 'eip155:137', 'eip155:80002'])
+      unless validator.valid?(caip2)
+        fail ArgumentError, "invalid value for \"caip2\", must be one of #{validator.allowable_values}."
+      end
+      @caip2 = caip2
     end
 
     # Checks equality by comparing each attribute.
