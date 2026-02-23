@@ -15,8 +15,8 @@ module TurnkeyClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
-    # Submit a transaction intent for broadcasting.
-    # Submit a transaction intent describing a transaction you would like to broadcast.
+    # Broadcast EVM transaction
+    # Submit a transaction intent describing an EVM transaction you would like to broadcast.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -25,8 +25,8 @@ module TurnkeyClient
       data
     end
 
-    # Submit a transaction intent for broadcasting.
-    # Submit a transaction intent describing a transaction you would like to broadcast.
+    # Broadcast EVM transaction
+    # Submit a transaction intent describing an EVM transaction you would like to broadcast.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
@@ -73,7 +73,7 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Get gas usage and limits.
+    # Get gas usage
     # Get gas usage and gas limits for either the parent organization or a sub-organization.
     # @param body 
     # @param [Hash] opts the optional parameters
@@ -83,7 +83,7 @@ module TurnkeyClient
       data
     end
 
-    # Get gas usage and limits.
+    # Get gas usage
     # Get gas usage and gas limits for either the parent organization or a sub-organization.
     # @param body 
     # @param [Hash] opts the optional parameters
@@ -131,7 +131,7 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Get nonces for an address.
+    # Get nonces
     # Get nonce values for an address on a given network. Can fetch the standard on-chain nonce and/or the gas station nonce used for sponsored transactions.
     # @param body 
     # @param [Hash] opts the optional parameters
@@ -141,7 +141,7 @@ module TurnkeyClient
       data
     end
 
-    # Get nonces for an address.
+    # Get nonces
     # Get nonce values for an address on a given network. Can fetch the standard on-chain nonce and/or the gas station nonce used for sponsored transactions.
     # @param body 
     # @param [Hash] opts the optional parameters
@@ -189,8 +189,8 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
-    # Submit a transaction intent for broadcasting.
-    # Submit a transaction intent describing a transaction you would like to broadcast.
+    # Broadcast SVM transaction
+    # Submit a transaction intent describing an SVM transaction you would like to broadcast.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ActivityResponse]
@@ -199,8 +199,8 @@ module TurnkeyClient
       data
     end
 
-    # Submit a transaction intent for broadcasting.
-    # Submit a transaction intent describing a transaction you would like to broadcast.
+    # Broadcast SVM transaction
+    # Submit a transaction intent describing an SVM transaction you would like to broadcast.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers

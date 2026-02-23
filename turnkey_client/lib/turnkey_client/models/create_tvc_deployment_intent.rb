@@ -42,6 +42,12 @@ module TurnkeyClient
     # Optional nonce to ensure uniqueness of the deployment manifest. If not provided, it defaults to the current Unix timestamp in seconds.
     attr_accessor :nonce
 
+    # Optional encrypted pull secret to authorize Turnkey to pull the pivot container image. If your image is public, leave this empty.
+    attr_accessor :pivot_container_encrypted_pull_secret
+
+    # Optional encrypted pull secret to authorize Turnkey to pull the host container image. If your image is public, leave this empty.
+    attr_accessor :host_container_encrypted_pull_secret
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -54,7 +60,9 @@ module TurnkeyClient
         :'host_container_image_url' => :'hostContainerImageUrl',
         :'host_path' => :'hostPath',
         :'host_args' => :'hostArgs',
-        :'nonce' => :'nonce'
+        :'nonce' => :'nonce',
+        :'pivot_container_encrypted_pull_secret' => :'pivotContainerEncryptedPullSecret',
+        :'host_container_encrypted_pull_secret' => :'hostContainerEncryptedPullSecret'
       }
     end
 
@@ -70,14 +78,18 @@ module TurnkeyClient
         :'host_container_image_url' => :'Object',
         :'host_path' => :'Object',
         :'host_args' => :'Object',
-        :'nonce' => :'Object'
+        :'nonce' => :'Object',
+        :'pivot_container_encrypted_pull_secret' => :'Object',
+        :'host_container_encrypted_pull_secret' => :'Object'
       }
     end
 
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
-        :'nonce'
+        :'nonce',
+        :'pivot_container_encrypted_pull_secret',
+        :'host_container_encrypted_pull_secret'
       ])
     end
   
@@ -138,6 +150,14 @@ module TurnkeyClient
 
       if attributes.key?(:'nonce')
         self.nonce = attributes[:'nonce']
+      end
+
+      if attributes.key?(:'pivot_container_encrypted_pull_secret')
+        self.pivot_container_encrypted_pull_secret = attributes[:'pivot_container_encrypted_pull_secret']
+      end
+
+      if attributes.key?(:'host_container_encrypted_pull_secret')
+        self.host_container_encrypted_pull_secret = attributes[:'host_container_encrypted_pull_secret']
       end
     end
 
@@ -213,7 +233,9 @@ module TurnkeyClient
           host_container_image_url == o.host_container_image_url &&
           host_path == o.host_path &&
           host_args == o.host_args &&
-          nonce == o.nonce
+          nonce == o.nonce &&
+          pivot_container_encrypted_pull_secret == o.pivot_container_encrypted_pull_secret &&
+          host_container_encrypted_pull_secret == o.host_container_encrypted_pull_secret
     end
 
     # @see the `==` method
@@ -225,7 +247,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [app_id, qos_version, pivot_container_image_url, pivot_path, pivot_args, expected_pivot_digest, host_container_image_url, host_path, host_args, nonce].hash
+      [app_id, qos_version, pivot_container_image_url, pivot_path, pivot_args, expected_pivot_digest, host_container_image_url, host_path, host_args, nonce, pivot_container_encrypted_pull_secret, host_container_encrypted_pull_secret].hash
     end
 
     # Builds the object from hash

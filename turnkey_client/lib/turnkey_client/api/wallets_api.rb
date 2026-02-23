@@ -537,6 +537,64 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
+    # Get balances
+    # Get balances of supported assets for an address on the specified network. Only non-zero balances are returned. This feature is in beta - please contact support for access.
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [GetWalletAddressBalancesResponse]
+    def get_wallet_address_balances(body, opts = {})
+      data, _status_code, _headers = get_wallet_address_balances_with_http_info(body, opts)
+      data
+    end
+
+    # Get balances
+    # Get balances of supported assets for an address on the specified network. Only non-zero balances are returned. This feature is in beta - please contact support for access.
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(GetWalletAddressBalancesResponse, Integer, Hash)>] GetWalletAddressBalancesResponse data, response status code and response headers
+    def get_wallet_address_balances_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: WalletsApi.get_wallet_address_balances ...'
+      end
+      # verify the required parameter 'body' is set
+      if @api_client.config.client_side_validation && body.nil?
+        fail ArgumentError, "Missing the required parameter 'body' when calling WalletsApi.get_wallet_address_balances"
+      end
+      # resource path
+      local_var_path = '/public/v1/query/get_wallet_address_balances'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:body] || @api_client.object_to_http_body(body) 
+
+      return_type = opts[:return_type] || 'GetWalletAddressBalancesResponse' 
+
+      auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type)
+
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WalletsApi#get_wallet_address_balances\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
     # List wallets
     # List all wallets within an organization.
     # @param body 
@@ -708,6 +766,64 @@ module TurnkeyClient
 
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: WalletsApi#init_import_wallet\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+    # List supported assets
+    # List supported assets for the specified network. This feature is in beta - please contact support for access.
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [ListSupportedAssetsResponse]
+    def list_supported_assets(body, opts = {})
+      data, _status_code, _headers = list_supported_assets_with_http_info(body, opts)
+      data
+    end
+
+    # List supported assets
+    # List supported assets for the specified network. This feature is in beta - please contact support for access.
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ListSupportedAssetsResponse, Integer, Hash)>] ListSupportedAssetsResponse data, response status code and response headers
+    def list_supported_assets_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: WalletsApi.list_supported_assets ...'
+      end
+      # verify the required parameter 'body' is set
+      if @api_client.config.client_side_validation && body.nil?
+        fail ArgumentError, "Missing the required parameter 'body' when calling WalletsApi.list_supported_assets"
+      end
+      # resource path
+      local_var_path = '/public/v1/query/list_supported_assets'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:body] || @api_client.object_to_http_body(body) 
+
+      return_type = opts[:return_type] || 'ListSupportedAssetsResponse' 
+
+      auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type)
+
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WalletsApi#list_supported_assets\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
