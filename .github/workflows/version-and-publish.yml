@@ -40,10 +40,11 @@ jobs:
           bundler-cache: true
           working-directory: turnkey_client
 
+      - name: Install rubocop
+        run: gem install rubocop
+
       - name: Run rubocop
-        run: |
-          gem install rubocop
-          rubocop
+        run: rubocop
 
       - name: Validate gem builds
         working-directory: turnkey_client
