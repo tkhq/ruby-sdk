@@ -246,6 +246,48 @@ module TurnkeyClient
 
     attr_accessor :sol_send_transaction_intent
 
+    attr_accessor :init_otp_intent_v3
+
+    attr_accessor :verify_otp_intent_v2
+
+    attr_accessor :otp_login_intent_v2
+
+    attr_accessor :update_organization_name_intent
+
+    attr_accessor :create_sub_organization_intent_v8
+
+    attr_accessor :create_oauth_providers_intent_v2
+
+    attr_accessor :create_users_intent_v4
+
+    attr_accessor :create_webhook_endpoint_intent
+
+    attr_accessor :update_webhook_endpoint_intent
+
+    attr_accessor :delete_webhook_endpoint_intent
+
+    attr_accessor :set_ip_allowlist_intent
+
+    attr_accessor :remove_ip_allowlist_intent
+
+    attr_accessor :update_tvc_app_live_deployment_intent
+
+    attr_accessor :delete_tvc_deployment_intent
+
+    attr_accessor :delete_tvc_app_and_deployments_intent
+
+    attr_accessor :restore_tvc_deployment_intent
+
+    attr_accessor :spark_sign_frost_intent
+
+    attr_accessor :spark_prepare_transfer_intent
+
+    attr_accessor :spark_claim_transfer_intent
+
+    attr_accessor :spark_prepare_lightning_receive_intent
+
+    attr_accessor :post_tvc_quorum_key_share_intent
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -365,7 +407,28 @@ module TurnkeyClient
         :'create_tvc_app_intent' => :'createTvcAppIntent',
         :'create_tvc_deployment_intent' => :'createTvcDeploymentIntent',
         :'create_tvc_manifest_approvals_intent' => :'createTvcManifestApprovalsIntent',
-        :'sol_send_transaction_intent' => :'solSendTransactionIntent'
+        :'sol_send_transaction_intent' => :'solSendTransactionIntent',
+        :'init_otp_intent_v3' => :'initOtpIntentV3',
+        :'verify_otp_intent_v2' => :'verifyOtpIntentV2',
+        :'otp_login_intent_v2' => :'otpLoginIntentV2',
+        :'update_organization_name_intent' => :'updateOrganizationNameIntent',
+        :'create_sub_organization_intent_v8' => :'createSubOrganizationIntentV8',
+        :'create_oauth_providers_intent_v2' => :'createOauthProvidersIntentV2',
+        :'create_users_intent_v4' => :'createUsersIntentV4',
+        :'create_webhook_endpoint_intent' => :'createWebhookEndpointIntent',
+        :'update_webhook_endpoint_intent' => :'updateWebhookEndpointIntent',
+        :'delete_webhook_endpoint_intent' => :'deleteWebhookEndpointIntent',
+        :'set_ip_allowlist_intent' => :'setIpAllowlistIntent',
+        :'remove_ip_allowlist_intent' => :'removeIpAllowlistIntent',
+        :'update_tvc_app_live_deployment_intent' => :'updateTvcAppLiveDeploymentIntent',
+        :'delete_tvc_deployment_intent' => :'deleteTvcDeploymentIntent',
+        :'delete_tvc_app_and_deployments_intent' => :'deleteTvcAppAndDeploymentsIntent',
+        :'restore_tvc_deployment_intent' => :'restoreTvcDeploymentIntent',
+        :'spark_sign_frost_intent' => :'sparkSignFrostIntent',
+        :'spark_prepare_transfer_intent' => :'sparkPrepareTransferIntent',
+        :'spark_claim_transfer_intent' => :'sparkClaimTransferIntent',
+        :'spark_prepare_lightning_receive_intent' => :'sparkPrepareLightningReceiveIntent',
+        :'post_tvc_quorum_key_share_intent' => :'postTvcQuorumKeyShareIntent'
       }
     end
 
@@ -488,7 +551,28 @@ module TurnkeyClient
         :'create_tvc_app_intent' => :'Object',
         :'create_tvc_deployment_intent' => :'Object',
         :'create_tvc_manifest_approvals_intent' => :'Object',
-        :'sol_send_transaction_intent' => :'Object'
+        :'sol_send_transaction_intent' => :'Object',
+        :'init_otp_intent_v3' => :'Object',
+        :'verify_otp_intent_v2' => :'Object',
+        :'otp_login_intent_v2' => :'Object',
+        :'update_organization_name_intent' => :'Object',
+        :'create_sub_organization_intent_v8' => :'Object',
+        :'create_oauth_providers_intent_v2' => :'Object',
+        :'create_users_intent_v4' => :'Object',
+        :'create_webhook_endpoint_intent' => :'Object',
+        :'update_webhook_endpoint_intent' => :'Object',
+        :'delete_webhook_endpoint_intent' => :'Object',
+        :'set_ip_allowlist_intent' => :'Object',
+        :'remove_ip_allowlist_intent' => :'Object',
+        :'update_tvc_app_live_deployment_intent' => :'Object',
+        :'delete_tvc_deployment_intent' => :'Object',
+        :'delete_tvc_app_and_deployments_intent' => :'Object',
+        :'restore_tvc_deployment_intent' => :'Object',
+        :'spark_sign_frost_intent' => :'Object',
+        :'spark_prepare_transfer_intent' => :'Object',
+        :'spark_claim_transfer_intent' => :'Object',
+        :'spark_prepare_lightning_receive_intent' => :'Object',
+        :'post_tvc_quorum_key_share_intent' => :'Object'
       }
     end
 
@@ -980,6 +1064,90 @@ module TurnkeyClient
       if attributes.key?(:'sol_send_transaction_intent')
         self.sol_send_transaction_intent = attributes[:'sol_send_transaction_intent']
       end
+
+      if attributes.key?(:'init_otp_intent_v3')
+        self.init_otp_intent_v3 = attributes[:'init_otp_intent_v3']
+      end
+
+      if attributes.key?(:'verify_otp_intent_v2')
+        self.verify_otp_intent_v2 = attributes[:'verify_otp_intent_v2']
+      end
+
+      if attributes.key?(:'otp_login_intent_v2')
+        self.otp_login_intent_v2 = attributes[:'otp_login_intent_v2']
+      end
+
+      if attributes.key?(:'update_organization_name_intent')
+        self.update_organization_name_intent = attributes[:'update_organization_name_intent']
+      end
+
+      if attributes.key?(:'create_sub_organization_intent_v8')
+        self.create_sub_organization_intent_v8 = attributes[:'create_sub_organization_intent_v8']
+      end
+
+      if attributes.key?(:'create_oauth_providers_intent_v2')
+        self.create_oauth_providers_intent_v2 = attributes[:'create_oauth_providers_intent_v2']
+      end
+
+      if attributes.key?(:'create_users_intent_v4')
+        self.create_users_intent_v4 = attributes[:'create_users_intent_v4']
+      end
+
+      if attributes.key?(:'create_webhook_endpoint_intent')
+        self.create_webhook_endpoint_intent = attributes[:'create_webhook_endpoint_intent']
+      end
+
+      if attributes.key?(:'update_webhook_endpoint_intent')
+        self.update_webhook_endpoint_intent = attributes[:'update_webhook_endpoint_intent']
+      end
+
+      if attributes.key?(:'delete_webhook_endpoint_intent')
+        self.delete_webhook_endpoint_intent = attributes[:'delete_webhook_endpoint_intent']
+      end
+
+      if attributes.key?(:'set_ip_allowlist_intent')
+        self.set_ip_allowlist_intent = attributes[:'set_ip_allowlist_intent']
+      end
+
+      if attributes.key?(:'remove_ip_allowlist_intent')
+        self.remove_ip_allowlist_intent = attributes[:'remove_ip_allowlist_intent']
+      end
+
+      if attributes.key?(:'update_tvc_app_live_deployment_intent')
+        self.update_tvc_app_live_deployment_intent = attributes[:'update_tvc_app_live_deployment_intent']
+      end
+
+      if attributes.key?(:'delete_tvc_deployment_intent')
+        self.delete_tvc_deployment_intent = attributes[:'delete_tvc_deployment_intent']
+      end
+
+      if attributes.key?(:'delete_tvc_app_and_deployments_intent')
+        self.delete_tvc_app_and_deployments_intent = attributes[:'delete_tvc_app_and_deployments_intent']
+      end
+
+      if attributes.key?(:'restore_tvc_deployment_intent')
+        self.restore_tvc_deployment_intent = attributes[:'restore_tvc_deployment_intent']
+      end
+
+      if attributes.key?(:'spark_sign_frost_intent')
+        self.spark_sign_frost_intent = attributes[:'spark_sign_frost_intent']
+      end
+
+      if attributes.key?(:'spark_prepare_transfer_intent')
+        self.spark_prepare_transfer_intent = attributes[:'spark_prepare_transfer_intent']
+      end
+
+      if attributes.key?(:'spark_claim_transfer_intent')
+        self.spark_claim_transfer_intent = attributes[:'spark_claim_transfer_intent']
+      end
+
+      if attributes.key?(:'spark_prepare_lightning_receive_intent')
+        self.spark_prepare_lightning_receive_intent = attributes[:'spark_prepare_lightning_receive_intent']
+      end
+
+      if attributes.key?(:'post_tvc_quorum_key_share_intent')
+        self.post_tvc_quorum_key_share_intent = attributes[:'post_tvc_quorum_key_share_intent']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -1116,7 +1284,28 @@ module TurnkeyClient
           create_tvc_app_intent == o.create_tvc_app_intent &&
           create_tvc_deployment_intent == o.create_tvc_deployment_intent &&
           create_tvc_manifest_approvals_intent == o.create_tvc_manifest_approvals_intent &&
-          sol_send_transaction_intent == o.sol_send_transaction_intent
+          sol_send_transaction_intent == o.sol_send_transaction_intent &&
+          init_otp_intent_v3 == o.init_otp_intent_v3 &&
+          verify_otp_intent_v2 == o.verify_otp_intent_v2 &&
+          otp_login_intent_v2 == o.otp_login_intent_v2 &&
+          update_organization_name_intent == o.update_organization_name_intent &&
+          create_sub_organization_intent_v8 == o.create_sub_organization_intent_v8 &&
+          create_oauth_providers_intent_v2 == o.create_oauth_providers_intent_v2 &&
+          create_users_intent_v4 == o.create_users_intent_v4 &&
+          create_webhook_endpoint_intent == o.create_webhook_endpoint_intent &&
+          update_webhook_endpoint_intent == o.update_webhook_endpoint_intent &&
+          delete_webhook_endpoint_intent == o.delete_webhook_endpoint_intent &&
+          set_ip_allowlist_intent == o.set_ip_allowlist_intent &&
+          remove_ip_allowlist_intent == o.remove_ip_allowlist_intent &&
+          update_tvc_app_live_deployment_intent == o.update_tvc_app_live_deployment_intent &&
+          delete_tvc_deployment_intent == o.delete_tvc_deployment_intent &&
+          delete_tvc_app_and_deployments_intent == o.delete_tvc_app_and_deployments_intent &&
+          restore_tvc_deployment_intent == o.restore_tvc_deployment_intent &&
+          spark_sign_frost_intent == o.spark_sign_frost_intent &&
+          spark_prepare_transfer_intent == o.spark_prepare_transfer_intent &&
+          spark_claim_transfer_intent == o.spark_claim_transfer_intent &&
+          spark_prepare_lightning_receive_intent == o.spark_prepare_lightning_receive_intent &&
+          post_tvc_quorum_key_share_intent == o.post_tvc_quorum_key_share_intent
     end
 
     # @see the `==` method
@@ -1128,7 +1317,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [create_organization_intent, create_authenticators_intent, create_users_intent, create_private_keys_intent, sign_raw_payload_intent, create_invitations_intent, accept_invitation_intent, create_policy_intent, disable_private_key_intent, delete_users_intent, delete_authenticators_intent, delete_invitation_intent, delete_organization_intent, delete_policy_intent, create_user_tag_intent, delete_user_tags_intent, sign_transaction_intent, create_api_keys_intent, delete_api_keys_intent, approve_activity_intent, reject_activity_intent, create_private_key_tag_intent, delete_private_key_tags_intent, create_policy_intent_v2, set_payment_method_intent, activate_billing_tier_intent, delete_payment_method_intent, create_policy_intent_v3, create_api_only_users_intent, update_root_quorum_intent, update_user_tag_intent, update_private_key_tag_intent, create_authenticators_intent_v2, accept_invitation_intent_v2, create_organization_intent_v2, create_users_intent_v2, create_sub_organization_intent, create_sub_organization_intent_v2, update_allowed_origins_intent, create_private_keys_intent_v2, update_user_intent, update_policy_intent, set_payment_method_intent_v2, create_sub_organization_intent_v3, create_wallet_intent, create_wallet_accounts_intent, init_user_email_recovery_intent, recover_user_intent, set_organization_feature_intent, remove_organization_feature_intent, sign_raw_payload_intent_v2, sign_transaction_intent_v2, export_private_key_intent, export_wallet_intent, create_sub_organization_intent_v4, email_auth_intent, export_wallet_account_intent, init_import_wallet_intent, import_wallet_intent, init_import_private_key_intent, import_private_key_intent, create_policies_intent, sign_raw_payloads_intent, create_read_only_session_intent, create_oauth_providers_intent, delete_oauth_providers_intent, create_sub_organization_intent_v5, oauth_intent, create_api_keys_intent_v2, create_read_write_session_intent, email_auth_intent_v2, create_sub_organization_intent_v6, delete_private_keys_intent, delete_wallets_intent, create_read_write_session_intent_v2, delete_sub_organization_intent, init_otp_auth_intent, otp_auth_intent, create_sub_organization_intent_v7, update_wallet_intent, update_policy_intent_v2, create_users_intent_v3, init_otp_auth_intent_v2, init_otp_intent, verify_otp_intent, otp_login_intent, stamp_login_intent, oauth_login_intent, update_user_name_intent, update_user_email_intent, update_user_phone_number_intent, init_fiat_on_ramp_intent, create_smart_contract_interface_intent, delete_smart_contract_interface_intent, enable_auth_proxy_intent, disable_auth_proxy_intent, update_auth_proxy_config_intent, create_oauth2_credential_intent, update_oauth2_credential_intent, delete_oauth2_credential_intent, oauth2_authenticate_intent, delete_wallet_accounts_intent, delete_policies_intent, eth_send_raw_transaction_intent, eth_send_transaction_intent, create_fiat_on_ramp_credential_intent, update_fiat_on_ramp_credential_intent, delete_fiat_on_ramp_credential_intent, email_auth_intent_v3, init_user_email_recovery_intent_v2, init_otp_intent_v2, init_otp_auth_intent_v3, upsert_gas_usage_config_intent, create_tvc_app_intent, create_tvc_deployment_intent, create_tvc_manifest_approvals_intent, sol_send_transaction_intent].hash
+      [create_organization_intent, create_authenticators_intent, create_users_intent, create_private_keys_intent, sign_raw_payload_intent, create_invitations_intent, accept_invitation_intent, create_policy_intent, disable_private_key_intent, delete_users_intent, delete_authenticators_intent, delete_invitation_intent, delete_organization_intent, delete_policy_intent, create_user_tag_intent, delete_user_tags_intent, sign_transaction_intent, create_api_keys_intent, delete_api_keys_intent, approve_activity_intent, reject_activity_intent, create_private_key_tag_intent, delete_private_key_tags_intent, create_policy_intent_v2, set_payment_method_intent, activate_billing_tier_intent, delete_payment_method_intent, create_policy_intent_v3, create_api_only_users_intent, update_root_quorum_intent, update_user_tag_intent, update_private_key_tag_intent, create_authenticators_intent_v2, accept_invitation_intent_v2, create_organization_intent_v2, create_users_intent_v2, create_sub_organization_intent, create_sub_organization_intent_v2, update_allowed_origins_intent, create_private_keys_intent_v2, update_user_intent, update_policy_intent, set_payment_method_intent_v2, create_sub_organization_intent_v3, create_wallet_intent, create_wallet_accounts_intent, init_user_email_recovery_intent, recover_user_intent, set_organization_feature_intent, remove_organization_feature_intent, sign_raw_payload_intent_v2, sign_transaction_intent_v2, export_private_key_intent, export_wallet_intent, create_sub_organization_intent_v4, email_auth_intent, export_wallet_account_intent, init_import_wallet_intent, import_wallet_intent, init_import_private_key_intent, import_private_key_intent, create_policies_intent, sign_raw_payloads_intent, create_read_only_session_intent, create_oauth_providers_intent, delete_oauth_providers_intent, create_sub_organization_intent_v5, oauth_intent, create_api_keys_intent_v2, create_read_write_session_intent, email_auth_intent_v2, create_sub_organization_intent_v6, delete_private_keys_intent, delete_wallets_intent, create_read_write_session_intent_v2, delete_sub_organization_intent, init_otp_auth_intent, otp_auth_intent, create_sub_organization_intent_v7, update_wallet_intent, update_policy_intent_v2, create_users_intent_v3, init_otp_auth_intent_v2, init_otp_intent, verify_otp_intent, otp_login_intent, stamp_login_intent, oauth_login_intent, update_user_name_intent, update_user_email_intent, update_user_phone_number_intent, init_fiat_on_ramp_intent, create_smart_contract_interface_intent, delete_smart_contract_interface_intent, enable_auth_proxy_intent, disable_auth_proxy_intent, update_auth_proxy_config_intent, create_oauth2_credential_intent, update_oauth2_credential_intent, delete_oauth2_credential_intent, oauth2_authenticate_intent, delete_wallet_accounts_intent, delete_policies_intent, eth_send_raw_transaction_intent, eth_send_transaction_intent, create_fiat_on_ramp_credential_intent, update_fiat_on_ramp_credential_intent, delete_fiat_on_ramp_credential_intent, email_auth_intent_v3, init_user_email_recovery_intent_v2, init_otp_intent_v2, init_otp_auth_intent_v3, upsert_gas_usage_config_intent, create_tvc_app_intent, create_tvc_deployment_intent, create_tvc_manifest_approvals_intent, sol_send_transaction_intent, init_otp_intent_v3, verify_otp_intent_v2, otp_login_intent_v2, update_organization_name_intent, create_sub_organization_intent_v8, create_oauth_providers_intent_v2, create_users_intent_v4, create_webhook_endpoint_intent, update_webhook_endpoint_intent, delete_webhook_endpoint_intent, set_ip_allowlist_intent, remove_ip_allowlist_intent, update_tvc_app_live_deployment_intent, delete_tvc_deployment_intent, delete_tvc_app_and_deployments_intent, restore_tvc_deployment_intent, spark_sign_frost_intent, spark_prepare_transfer_intent, spark_claim_transfer_intent, spark_prepare_lightning_receive_intent, post_tvc_quorum_key_share_intent].hash
     end
 
     # Builds the object from hash

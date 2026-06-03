@@ -18,11 +18,13 @@ module TurnkeyClient
     # Gas sponsorship USD limit for sub-organizations under the billing organization.
     attr_accessor :sub_org_window_limit_usd
 
-    # Rolling sponsorship window duration, expressed in minutes.
+    # Rolling sponsorship window duration, expressed in minutes. This value can't exceed 30 days (43200 minutes).
     attr_accessor :window_duration_minutes
 
     # Whether gas sponsorship is enabled for the organization.
     attr_accessor :enabled
+
+    attr_accessor :solana_config
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -30,7 +32,8 @@ module TurnkeyClient
         :'org_window_limit_usd' => :'orgWindowLimitUsd',
         :'sub_org_window_limit_usd' => :'subOrgWindowLimitUsd',
         :'window_duration_minutes' => :'windowDurationMinutes',
-        :'enabled' => :'enabled'
+        :'enabled' => :'enabled',
+        :'solana_config' => :'solanaConfig'
       }
     end
 
@@ -40,14 +43,15 @@ module TurnkeyClient
         :'org_window_limit_usd' => :'Object',
         :'sub_org_window_limit_usd' => :'Object',
         :'window_duration_minutes' => :'Object',
-        :'enabled' => :'Object'
+        :'enabled' => :'Object',
+        :'solana_config' => :'Object'
       }
     end
 
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
-        :'enabled'
+        :'enabled',
       ])
     end
   
@@ -80,6 +84,10 @@ module TurnkeyClient
 
       if attributes.key?(:'enabled')
         self.enabled = attributes[:'enabled']
+      end
+
+      if attributes.key?(:'solana_config')
+        self.solana_config = attributes[:'solana_config']
       end
     end
 
@@ -119,7 +127,8 @@ module TurnkeyClient
           org_window_limit_usd == o.org_window_limit_usd &&
           sub_org_window_limit_usd == o.sub_org_window_limit_usd &&
           window_duration_minutes == o.window_duration_minutes &&
-          enabled == o.enabled
+          enabled == o.enabled &&
+          solana_config == o.solana_config
     end
 
     # @see the `==` method
@@ -131,7 +140,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [org_window_limit_usd, sub_org_window_limit_usd, window_duration_minutes, enabled].hash
+      [org_window_limit_usd, sub_org_window_limit_usd, window_duration_minutes, enabled, solana_config].hash
     end
 
     # Builds the object from hash

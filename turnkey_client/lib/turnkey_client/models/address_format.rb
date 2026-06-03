@@ -48,6 +48,8 @@ module TurnkeyClient
     TON_V4_R2 = 'ADDRESS_FORMAT_TON_V4R2'.freeze
     TON_V5_R1 = 'ADDRESS_FORMAT_TON_V5R1'.freeze
     XRP = 'ADDRESS_FORMAT_XRP'.freeze
+    SPARK_MAINNET = 'ADDRESS_FORMAT_SPARK_MAINNET'.freeze
+    SPARK_REGTEST = 'ADDRESS_FORMAT_SPARK_REGTEST'.freeze
 
     # Builds the enum from string
     # @param [String] The enum value in the form of the string

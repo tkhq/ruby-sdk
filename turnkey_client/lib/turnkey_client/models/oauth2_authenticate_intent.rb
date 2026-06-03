@@ -24,7 +24,7 @@ module TurnkeyClient
     # The code verifier used by OAuth 2.0 PKCE providers
     attr_accessor :code_verifier
 
-    # An optional nonce used by the client to prevent replay/substitution of an ID token
+    # A nonce value set to sha256(publicKey), used to bind the OIDC token to a specific public key
     attr_accessor :nonce
 
     # An optional P256 public key to which, if provided, the bearer token will be encrypted and returned via the `encrypted_bearer_token` claim of the OIDC Token
@@ -57,7 +57,6 @@ module TurnkeyClient
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
-        :'nonce',
         :'bearer_token_target_public_key'
       ])
     end
@@ -122,6 +121,10 @@ module TurnkeyClient
         invalid_properties.push('invalid value for "code_verifier", code_verifier cannot be nil.')
       end
 
+      if @nonce.nil?
+        invalid_properties.push('invalid value for "nonce", nonce cannot be nil.')
+      end
+
       invalid_properties
     end
 
@@ -132,6 +135,7 @@ module TurnkeyClient
       return false if @auth_code.nil?
       return false if @redirect_uri.nil?
       return false if @code_verifier.nil?
+      return false if @nonce.nil?
       true
     end
 

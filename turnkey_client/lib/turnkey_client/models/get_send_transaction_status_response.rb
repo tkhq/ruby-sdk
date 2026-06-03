@@ -17,6 +17,8 @@ module TurnkeyClient
 
     attr_accessor :eth
 
+    attr_accessor :solana
+
     # The error encountered when broadcasting or confirming the transaction, if any.
     attr_accessor :tx_error
 
@@ -27,6 +29,7 @@ module TurnkeyClient
       {
         :'tx_status' => :'txStatus',
         :'eth' => :'eth',
+        :'solana' => :'solana',
         :'tx_error' => :'txError',
         :'error' => :'error'
       }
@@ -37,6 +40,7 @@ module TurnkeyClient
       {
         :'tx_status' => :'Object',
         :'eth' => :'Object',
+        :'solana' => :'Object',
         :'tx_error' => :'Object',
         :'error' => :'Object'
       }
@@ -70,6 +74,10 @@ module TurnkeyClient
 
       if attributes.key?(:'eth')
         self.eth = attributes[:'eth']
+      end
+
+      if attributes.key?(:'solana')
+        self.solana = attributes[:'solana']
       end
 
       if attributes.key?(:'tx_error')
@@ -106,6 +114,7 @@ module TurnkeyClient
       self.class == o.class &&
           tx_status == o.tx_status &&
           eth == o.eth &&
+          solana == o.solana &&
           tx_error == o.tx_error &&
           error == o.error
     end
@@ -119,7 +128,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [tx_status, eth, tx_error, error].hash
+      [tx_status, eth, solana, tx_error, error].hash
     end
 
     # Builds the object from hash

@@ -138,7 +138,7 @@ module TurnkeyClient
     # @return true if the model is valid
     def valid?
       return false if @type.nil?
-      type_validator = EnumAttributeValidator.new('Object', ['ACTIVITY_TYPE_OTP_LOGIN'])
+      type_validator = EnumAttributeValidator.new('Object', ['ACTIVITY_TYPE_OTP_LOGIN_V2'])
       return false unless type_validator.valid?(@type)
       return false if @timestamp_ms.nil?
       return false if @organization_id.nil?
@@ -149,7 +149,7 @@ module TurnkeyClient
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] type Object to be assigned
     def type=(type)
-      validator = EnumAttributeValidator.new('Object', ['ACTIVITY_TYPE_OTP_LOGIN'])
+      validator = EnumAttributeValidator.new('Object', ['ACTIVITY_TYPE_OTP_LOGIN_V2'])
       unless validator.valid?(type)
         fail ArgumentError, "invalid value for \"type\", must be one of #{validator.allowable_values}."
       end

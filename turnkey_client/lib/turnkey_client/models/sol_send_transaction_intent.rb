@@ -21,7 +21,7 @@ module TurnkeyClient
     # Whether to sponsor this transaction via Gas Station.
     attr_accessor :sponsor
 
-    # CAIP-2 chain ID (e.g., 'solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp' for Solana mainnet).
+    # CAIP-2 chain ID (e.g., 'solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp' for Solana mainnet). Human-readable Solana aliases ('solana:mainnet', 'solana:devnet') are also accepted and normalized to canonical CAIP-2 values.
     attr_accessor :caip2
 
     # user-provided blockhash for replay protection / deadline control. If omitted and sponsor=true, we fetch a fresh blockhash during execution
@@ -140,7 +140,7 @@ module TurnkeyClient
       return false if @unsigned_transaction.nil?
       return false if @sign_with.nil?
       return false if @caip2.nil?
-      caip2_validator = EnumAttributeValidator.new('Object', ['solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp', 'solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG', 'solana:4uhcVJyU9pJkvQyS88uRDiswHXSCkY3zQawwpjk2NsNY'])
+      caip2_validator = EnumAttributeValidator.new('Object', ['solana:mainnet', 'solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp', 'solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d', 'solana:devnet', 'solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1', 'solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG'])
       return false unless caip2_validator.valid?(@caip2)
       true
     end
@@ -148,7 +148,7 @@ module TurnkeyClient
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] caip2 Object to be assigned
     def caip2=(caip2)
-      validator = EnumAttributeValidator.new('Object', ['solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp', 'solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG', 'solana:4uhcVJyU9pJkvQyS88uRDiswHXSCkY3zQawwpjk2NsNY'])
+      validator = EnumAttributeValidator.new('Object', ['solana:mainnet', 'solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp', 'solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d', 'solana:devnet', 'solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1', 'solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG'])
       unless validator.valid?(caip2)
         fail ArgumentError, "invalid value for \"caip2\", must be one of #{validator.allowable_values}."
       end

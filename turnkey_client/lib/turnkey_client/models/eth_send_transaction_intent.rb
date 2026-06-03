@@ -42,6 +42,9 @@ module TurnkeyClient
     # Maximum priority fee (tip) per gas unit in wei. Required for non-sponsored (EIP-1559) transactions. Not used for sponsored transactions.
     attr_accessor :max_priority_fee_per_gas
 
+    # Unix timestamp in seconds for EIP-712 execution deadline. Only used when sponsor=true.
+    attr_accessor :deadline
+
     # The gas station delegate contract nonce. Only used when sponsor=true. Include this if you want maximal security posture.
     attr_accessor :gas_station_nonce
 
@@ -80,6 +83,7 @@ module TurnkeyClient
         :'gas_limit' => :'gasLimit',
         :'max_fee_per_gas' => :'maxFeePerGas',
         :'max_priority_fee_per_gas' => :'maxPriorityFeePerGas',
+        :'deadline' => :'deadline',
         :'gas_station_nonce' => :'gasStationNonce'
       }
     end
@@ -97,6 +101,7 @@ module TurnkeyClient
         :'gas_limit' => :'Object',
         :'max_fee_per_gas' => :'Object',
         :'max_priority_fee_per_gas' => :'Object',
+        :'deadline' => :'Object',
         :'gas_station_nonce' => :'Object'
       }
     end
@@ -111,6 +116,7 @@ module TurnkeyClient
         :'gas_limit',
         :'max_fee_per_gas',
         :'max_priority_fee_per_gas',
+        :'deadline',
         :'gas_station_nonce'
       ])
     end
@@ -168,6 +174,10 @@ module TurnkeyClient
 
       if attributes.key?(:'max_priority_fee_per_gas')
         self.max_priority_fee_per_gas = attributes[:'max_priority_fee_per_gas']
+      end
+
+      if attributes.key?(:'deadline')
+        self.deadline = attributes[:'deadline']
       end
 
       if attributes.key?(:'gas_station_nonce')
@@ -230,6 +240,7 @@ module TurnkeyClient
           gas_limit == o.gas_limit &&
           max_fee_per_gas == o.max_fee_per_gas &&
           max_priority_fee_per_gas == o.max_priority_fee_per_gas &&
+          deadline == o.deadline &&
           gas_station_nonce == o.gas_station_nonce
     end
 
@@ -242,7 +253,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [from, sponsor, caip2, to, value, data, nonce, gas_limit, max_fee_per_gas, max_priority_fee_per_gas, gas_station_nonce].hash
+      [from, sponsor, caip2, to, value, data, nonce, gas_limit, max_fee_per_gas, max_priority_fee_per_gas, deadline, gas_station_nonce].hash
     end
 
     # Builds the object from hash

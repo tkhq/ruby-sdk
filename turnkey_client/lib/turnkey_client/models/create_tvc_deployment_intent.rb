@@ -30,23 +30,22 @@ module TurnkeyClient
     # Digest of the pivot binary in the pivot container. This value will be inserted in the QOS manifest to ensure application integrity.
     attr_accessor :expected_pivot_digest
 
-    # URL of the container containing the host binary
-    attr_accessor :host_container_image_url
-
-    # Location of the binary inside the host container
-    attr_accessor :host_path
-
-    # Arguments to pass to the host binary at startup. Encoded as a list of strings, for example [\"--foo\", \"bar\"]
-    attr_accessor :host_args
-
     # Optional nonce to ensure uniqueness of the deployment manifest. If not provided, it defaults to the current Unix timestamp in seconds.
     attr_accessor :nonce
 
     # Optional encrypted pull secret to authorize Turnkey to pull the pivot container image. If your image is public, leave this empty.
     attr_accessor :pivot_container_encrypted_pull_secret
 
-    # Optional encrypted pull secret to authorize Turnkey to pull the host container image. If your image is public, leave this empty.
-    attr_accessor :host_container_encrypted_pull_secret
+    # Optional flag to indicate whether to deploy the TVC app in debug mode, which includes additional logging and debugging tools. Default is false.
+    attr_accessor :debug_mode
+
+    attr_accessor :health_check_type
+
+    # Port to use for health checks.
+    attr_accessor :health_check_port
+
+    # Port to use for public ingress.
+    attr_accessor :public_ingress_port
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -57,12 +56,12 @@ module TurnkeyClient
         :'pivot_path' => :'pivotPath',
         :'pivot_args' => :'pivotArgs',
         :'expected_pivot_digest' => :'expectedPivotDigest',
-        :'host_container_image_url' => :'hostContainerImageUrl',
-        :'host_path' => :'hostPath',
-        :'host_args' => :'hostArgs',
         :'nonce' => :'nonce',
         :'pivot_container_encrypted_pull_secret' => :'pivotContainerEncryptedPullSecret',
-        :'host_container_encrypted_pull_secret' => :'hostContainerEncryptedPullSecret'
+        :'debug_mode' => :'debugMode',
+        :'health_check_type' => :'healthCheckType',
+        :'health_check_port' => :'healthCheckPort',
+        :'public_ingress_port' => :'publicIngressPort'
       }
     end
 
@@ -75,12 +74,12 @@ module TurnkeyClient
         :'pivot_path' => :'Object',
         :'pivot_args' => :'Object',
         :'expected_pivot_digest' => :'Object',
-        :'host_container_image_url' => :'Object',
-        :'host_path' => :'Object',
-        :'host_args' => :'Object',
         :'nonce' => :'Object',
         :'pivot_container_encrypted_pull_secret' => :'Object',
-        :'host_container_encrypted_pull_secret' => :'Object'
+        :'debug_mode' => :'Object',
+        :'health_check_type' => :'Object',
+        :'health_check_port' => :'Object',
+        :'public_ingress_port' => :'Object'
       }
     end
 
@@ -89,7 +88,7 @@ module TurnkeyClient
       Set.new([
         :'nonce',
         :'pivot_container_encrypted_pull_secret',
-        :'host_container_encrypted_pull_secret'
+        :'debug_mode',
       ])
     end
   
@@ -134,20 +133,6 @@ module TurnkeyClient
         self.expected_pivot_digest = attributes[:'expected_pivot_digest']
       end
 
-      if attributes.key?(:'host_container_image_url')
-        self.host_container_image_url = attributes[:'host_container_image_url']
-      end
-
-      if attributes.key?(:'host_path')
-        self.host_path = attributes[:'host_path']
-      end
-
-      if attributes.key?(:'host_args')
-        if (value = attributes[:'host_args']).is_a?(Array)
-          self.host_args = value
-        end
-      end
-
       if attributes.key?(:'nonce')
         self.nonce = attributes[:'nonce']
       end
@@ -156,8 +141,20 @@ module TurnkeyClient
         self.pivot_container_encrypted_pull_secret = attributes[:'pivot_container_encrypted_pull_secret']
       end
 
-      if attributes.key?(:'host_container_encrypted_pull_secret')
-        self.host_container_encrypted_pull_secret = attributes[:'host_container_encrypted_pull_secret']
+      if attributes.key?(:'debug_mode')
+        self.debug_mode = attributes[:'debug_mode']
+      end
+
+      if attributes.key?(:'health_check_type')
+        self.health_check_type = attributes[:'health_check_type']
+      end
+
+      if attributes.key?(:'health_check_port')
+        self.health_check_port = attributes[:'health_check_port']
+      end
+
+      if attributes.key?(:'public_ingress_port')
+        self.public_ingress_port = attributes[:'public_ingress_port']
       end
     end
 
@@ -189,16 +186,16 @@ module TurnkeyClient
         invalid_properties.push('invalid value for "expected_pivot_digest", expected_pivot_digest cannot be nil.')
       end
 
-      if @host_container_image_url.nil?
-        invalid_properties.push('invalid value for "host_container_image_url", host_container_image_url cannot be nil.')
+      if @health_check_type.nil?
+        invalid_properties.push('invalid value for "health_check_type", health_check_type cannot be nil.')
       end
 
-      if @host_path.nil?
-        invalid_properties.push('invalid value for "host_path", host_path cannot be nil.')
+      if @health_check_port.nil?
+        invalid_properties.push('invalid value for "health_check_port", health_check_port cannot be nil.')
       end
 
-      if @host_args.nil?
-        invalid_properties.push('invalid value for "host_args", host_args cannot be nil.')
+      if @public_ingress_port.nil?
+        invalid_properties.push('invalid value for "public_ingress_port", public_ingress_port cannot be nil.')
       end
 
       invalid_properties
@@ -213,9 +210,9 @@ module TurnkeyClient
       return false if @pivot_path.nil?
       return false if @pivot_args.nil?
       return false if @expected_pivot_digest.nil?
-      return false if @host_container_image_url.nil?
-      return false if @host_path.nil?
-      return false if @host_args.nil?
+      return false if @health_check_type.nil?
+      return false if @health_check_port.nil?
+      return false if @public_ingress_port.nil?
       true
     end
 
@@ -230,12 +227,12 @@ module TurnkeyClient
           pivot_path == o.pivot_path &&
           pivot_args == o.pivot_args &&
           expected_pivot_digest == o.expected_pivot_digest &&
-          host_container_image_url == o.host_container_image_url &&
-          host_path == o.host_path &&
-          host_args == o.host_args &&
           nonce == o.nonce &&
           pivot_container_encrypted_pull_secret == o.pivot_container_encrypted_pull_secret &&
-          host_container_encrypted_pull_secret == o.host_container_encrypted_pull_secret
+          debug_mode == o.debug_mode &&
+          health_check_type == o.health_check_type &&
+          health_check_port == o.health_check_port &&
+          public_ingress_port == o.public_ingress_port
     end
 
     # @see the `==` method
@@ -247,7 +244,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [app_id, qos_version, pivot_container_image_url, pivot_path, pivot_args, expected_pivot_digest, host_container_image_url, host_path, host_args, nonce, pivot_container_encrypted_pull_secret, host_container_encrypted_pull_secret].hash
+      [app_id, qos_version, pivot_container_image_url, pivot_path, pivot_args, expected_pivot_digest, nonce, pivot_container_encrypted_pull_secret, debug_mode, health_check_type, health_check_port, public_ingress_port].hash
     end
 
     # Builds the object from hash
