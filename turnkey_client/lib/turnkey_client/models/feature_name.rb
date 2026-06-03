@@ -20,6 +20,7 @@ module TurnkeyClient
     SMS_AUTH = 'FEATURE_NAME_SMS_AUTH'.freeze
     OTP_EMAIL_AUTH = 'FEATURE_NAME_OTP_EMAIL_AUTH'.freeze
     AUTH_PROXY = 'FEATURE_NAME_AUTH_PROXY'.freeze
+    SOLANA_RENT_PREFUND_ENABLED = 'FEATURE_NAME_SOLANA_RENT_PREFUND_ENABLED'.freeze
 
     # Builds the enum from string
     # @param [String] The enum value in the form of the string

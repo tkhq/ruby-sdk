@@ -202,6 +202,13 @@ module TurnkeyClient
             key: 'X-Stamp',
             value: api_key_with_prefix('X-Stamp')
           },
+        'AttestedAuth' =>
+          {
+            type: 'api_key',
+            in: 'header',
+            key: 'X-Stamp-Attested',
+            value: api_key_with_prefix('X-Stamp-Attested')
+          },
         'AuthenticatorAuth' =>
           {
             type: 'api_key',

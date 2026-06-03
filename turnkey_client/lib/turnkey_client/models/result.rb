@@ -208,6 +208,42 @@ module TurnkeyClient
 
     attr_accessor :sol_send_transaction_result
 
+    attr_accessor :init_otp_result_v2
+
+    attr_accessor :update_organization_name_result
+
+    attr_accessor :create_sub_organization_result_v8
+
+    attr_accessor :create_oauth_providers_result_v2
+
+    attr_accessor :create_webhook_endpoint_result
+
+    attr_accessor :update_webhook_endpoint_result
+
+    attr_accessor :delete_webhook_endpoint_result
+
+    attr_accessor :set_ip_allowlist_result
+
+    attr_accessor :remove_ip_allowlist_result
+
+    attr_accessor :update_tvc_app_live_deployment_result
+
+    attr_accessor :delete_tvc_deployment_result
+
+    attr_accessor :delete_tvc_app_and_deployments_result
+
+    attr_accessor :restore_tvc_deployment_result
+
+    attr_accessor :spark_sign_frost_result
+
+    attr_accessor :spark_prepare_transfer_result
+
+    attr_accessor :spark_claim_transfer_result
+
+    attr_accessor :spark_prepare_lightning_receive_result
+
+    attr_accessor :post_tvc_quorum_key_share_result
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -308,7 +344,25 @@ module TurnkeyClient
         :'create_tvc_app_result' => :'createTvcAppResult',
         :'create_tvc_deployment_result' => :'createTvcDeploymentResult',
         :'create_tvc_manifest_approvals_result' => :'createTvcManifestApprovalsResult',
-        :'sol_send_transaction_result' => :'solSendTransactionResult'
+        :'sol_send_transaction_result' => :'solSendTransactionResult',
+        :'init_otp_result_v2' => :'initOtpResultV2',
+        :'update_organization_name_result' => :'updateOrganizationNameResult',
+        :'create_sub_organization_result_v8' => :'createSubOrganizationResultV8',
+        :'create_oauth_providers_result_v2' => :'createOauthProvidersResultV2',
+        :'create_webhook_endpoint_result' => :'createWebhookEndpointResult',
+        :'update_webhook_endpoint_result' => :'updateWebhookEndpointResult',
+        :'delete_webhook_endpoint_result' => :'deleteWebhookEndpointResult',
+        :'set_ip_allowlist_result' => :'setIpAllowlistResult',
+        :'remove_ip_allowlist_result' => :'removeIpAllowlistResult',
+        :'update_tvc_app_live_deployment_result' => :'updateTvcAppLiveDeploymentResult',
+        :'delete_tvc_deployment_result' => :'deleteTvcDeploymentResult',
+        :'delete_tvc_app_and_deployments_result' => :'deleteTvcAppAndDeploymentsResult',
+        :'restore_tvc_deployment_result' => :'restoreTvcDeploymentResult',
+        :'spark_sign_frost_result' => :'sparkSignFrostResult',
+        :'spark_prepare_transfer_result' => :'sparkPrepareTransferResult',
+        :'spark_claim_transfer_result' => :'sparkClaimTransferResult',
+        :'spark_prepare_lightning_receive_result' => :'sparkPrepareLightningReceiveResult',
+        :'post_tvc_quorum_key_share_result' => :'postTvcQuorumKeyShareResult'
       }
     end
 
@@ -412,7 +466,25 @@ module TurnkeyClient
         :'create_tvc_app_result' => :'Object',
         :'create_tvc_deployment_result' => :'Object',
         :'create_tvc_manifest_approvals_result' => :'Object',
-        :'sol_send_transaction_result' => :'Object'
+        :'sol_send_transaction_result' => :'Object',
+        :'init_otp_result_v2' => :'Object',
+        :'update_organization_name_result' => :'Object',
+        :'create_sub_organization_result_v8' => :'Object',
+        :'create_oauth_providers_result_v2' => :'Object',
+        :'create_webhook_endpoint_result' => :'Object',
+        :'update_webhook_endpoint_result' => :'Object',
+        :'delete_webhook_endpoint_result' => :'Object',
+        :'set_ip_allowlist_result' => :'Object',
+        :'remove_ip_allowlist_result' => :'Object',
+        :'update_tvc_app_live_deployment_result' => :'Object',
+        :'delete_tvc_deployment_result' => :'Object',
+        :'delete_tvc_app_and_deployments_result' => :'Object',
+        :'restore_tvc_deployment_result' => :'Object',
+        :'spark_sign_frost_result' => :'Object',
+        :'spark_prepare_transfer_result' => :'Object',
+        :'spark_claim_transfer_result' => :'Object',
+        :'spark_prepare_lightning_receive_result' => :'Object',
+        :'post_tvc_quorum_key_share_result' => :'Object'
       }
     end
 
@@ -828,6 +900,78 @@ module TurnkeyClient
       if attributes.key?(:'sol_send_transaction_result')
         self.sol_send_transaction_result = attributes[:'sol_send_transaction_result']
       end
+
+      if attributes.key?(:'init_otp_result_v2')
+        self.init_otp_result_v2 = attributes[:'init_otp_result_v2']
+      end
+
+      if attributes.key?(:'update_organization_name_result')
+        self.update_organization_name_result = attributes[:'update_organization_name_result']
+      end
+
+      if attributes.key?(:'create_sub_organization_result_v8')
+        self.create_sub_organization_result_v8 = attributes[:'create_sub_organization_result_v8']
+      end
+
+      if attributes.key?(:'create_oauth_providers_result_v2')
+        self.create_oauth_providers_result_v2 = attributes[:'create_oauth_providers_result_v2']
+      end
+
+      if attributes.key?(:'create_webhook_endpoint_result')
+        self.create_webhook_endpoint_result = attributes[:'create_webhook_endpoint_result']
+      end
+
+      if attributes.key?(:'update_webhook_endpoint_result')
+        self.update_webhook_endpoint_result = attributes[:'update_webhook_endpoint_result']
+      end
+
+      if attributes.key?(:'delete_webhook_endpoint_result')
+        self.delete_webhook_endpoint_result = attributes[:'delete_webhook_endpoint_result']
+      end
+
+      if attributes.key?(:'set_ip_allowlist_result')
+        self.set_ip_allowlist_result = attributes[:'set_ip_allowlist_result']
+      end
+
+      if attributes.key?(:'remove_ip_allowlist_result')
+        self.remove_ip_allowlist_result = attributes[:'remove_ip_allowlist_result']
+      end
+
+      if attributes.key?(:'update_tvc_app_live_deployment_result')
+        self.update_tvc_app_live_deployment_result = attributes[:'update_tvc_app_live_deployment_result']
+      end
+
+      if attributes.key?(:'delete_tvc_deployment_result')
+        self.delete_tvc_deployment_result = attributes[:'delete_tvc_deployment_result']
+      end
+
+      if attributes.key?(:'delete_tvc_app_and_deployments_result')
+        self.delete_tvc_app_and_deployments_result = attributes[:'delete_tvc_app_and_deployments_result']
+      end
+
+      if attributes.key?(:'restore_tvc_deployment_result')
+        self.restore_tvc_deployment_result = attributes[:'restore_tvc_deployment_result']
+      end
+
+      if attributes.key?(:'spark_sign_frost_result')
+        self.spark_sign_frost_result = attributes[:'spark_sign_frost_result']
+      end
+
+      if attributes.key?(:'spark_prepare_transfer_result')
+        self.spark_prepare_transfer_result = attributes[:'spark_prepare_transfer_result']
+      end
+
+      if attributes.key?(:'spark_claim_transfer_result')
+        self.spark_claim_transfer_result = attributes[:'spark_claim_transfer_result']
+      end
+
+      if attributes.key?(:'spark_prepare_lightning_receive_result')
+        self.spark_prepare_lightning_receive_result = attributes[:'spark_prepare_lightning_receive_result']
+      end
+
+      if attributes.key?(:'post_tvc_quorum_key_share_result')
+        self.post_tvc_quorum_key_share_result = attributes[:'post_tvc_quorum_key_share_result']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -945,7 +1089,25 @@ module TurnkeyClient
           create_tvc_app_result == o.create_tvc_app_result &&
           create_tvc_deployment_result == o.create_tvc_deployment_result &&
           create_tvc_manifest_approvals_result == o.create_tvc_manifest_approvals_result &&
-          sol_send_transaction_result == o.sol_send_transaction_result
+          sol_send_transaction_result == o.sol_send_transaction_result &&
+          init_otp_result_v2 == o.init_otp_result_v2 &&
+          update_organization_name_result == o.update_organization_name_result &&
+          create_sub_organization_result_v8 == o.create_sub_organization_result_v8 &&
+          create_oauth_providers_result_v2 == o.create_oauth_providers_result_v2 &&
+          create_webhook_endpoint_result == o.create_webhook_endpoint_result &&
+          update_webhook_endpoint_result == o.update_webhook_endpoint_result &&
+          delete_webhook_endpoint_result == o.delete_webhook_endpoint_result &&
+          set_ip_allowlist_result == o.set_ip_allowlist_result &&
+          remove_ip_allowlist_result == o.remove_ip_allowlist_result &&
+          update_tvc_app_live_deployment_result == o.update_tvc_app_live_deployment_result &&
+          delete_tvc_deployment_result == o.delete_tvc_deployment_result &&
+          delete_tvc_app_and_deployments_result == o.delete_tvc_app_and_deployments_result &&
+          restore_tvc_deployment_result == o.restore_tvc_deployment_result &&
+          spark_sign_frost_result == o.spark_sign_frost_result &&
+          spark_prepare_transfer_result == o.spark_prepare_transfer_result &&
+          spark_claim_transfer_result == o.spark_claim_transfer_result &&
+          spark_prepare_lightning_receive_result == o.spark_prepare_lightning_receive_result &&
+          post_tvc_quorum_key_share_result == o.post_tvc_quorum_key_share_result
     end
 
     # @see the `==` method
@@ -957,7 +1119,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [create_organization_result, create_authenticators_result, create_users_result, create_private_keys_result, create_invitations_result, accept_invitation_result, sign_raw_payload_result, create_policy_result, disable_private_key_result, delete_users_result, delete_authenticators_result, delete_invitation_result, delete_organization_result, delete_policy_result, create_user_tag_result, delete_user_tags_result, sign_transaction_result, delete_api_keys_result, create_api_keys_result, create_private_key_tag_result, delete_private_key_tags_result, set_payment_method_result, activate_billing_tier_result, delete_payment_method_result, create_api_only_users_result, update_root_quorum_result, update_user_tag_result, update_private_key_tag_result, create_sub_organization_result, update_allowed_origins_result, create_private_keys_result_v2, update_user_result, update_policy_result, create_sub_organization_result_v3, create_wallet_result, create_wallet_accounts_result, init_user_email_recovery_result, recover_user_result, set_organization_feature_result, remove_organization_feature_result, export_private_key_result, export_wallet_result, create_sub_organization_result_v4, email_auth_result, export_wallet_account_result, init_import_wallet_result, import_wallet_result, init_import_private_key_result, import_private_key_result, create_policies_result, sign_raw_payloads_result, create_read_only_session_result, create_oauth_providers_result, delete_oauth_providers_result, create_sub_organization_result_v5, oauth_result, create_read_write_session_result, create_sub_organization_result_v6, delete_private_keys_result, delete_wallets_result, create_read_write_session_result_v2, delete_sub_organization_result, init_otp_auth_result, otp_auth_result, create_sub_organization_result_v7, update_wallet_result, update_policy_result_v2, init_otp_auth_result_v2, init_otp_result, verify_otp_result, otp_login_result, stamp_login_result, oauth_login_result, update_user_name_result, update_user_email_result, update_user_phone_number_result, init_fiat_on_ramp_result, create_smart_contract_interface_result, delete_smart_contract_interface_result, enable_auth_proxy_result, disable_auth_proxy_result, update_auth_proxy_config_result, create_oauth2_credential_result, update_oauth2_credential_result, delete_oauth2_credential_result, oauth2_authenticate_result, delete_wallet_accounts_result, delete_policies_result, eth_send_raw_transaction_result, create_fiat_on_ramp_credential_result, update_fiat_on_ramp_credential_result, delete_fiat_on_ramp_credential_result, eth_send_transaction_result, upsert_gas_usage_config_result, create_tvc_app_result, create_tvc_deployment_result, create_tvc_manifest_approvals_result, sol_send_transaction_result].hash
+      [create_organization_result, create_authenticators_result, create_users_result, create_private_keys_result, create_invitations_result, accept_invitation_result, sign_raw_payload_result, create_policy_result, disable_private_key_result, delete_users_result, delete_authenticators_result, delete_invitation_result, delete_organization_result, delete_policy_result, create_user_tag_result, delete_user_tags_result, sign_transaction_result, delete_api_keys_result, create_api_keys_result, create_private_key_tag_result, delete_private_key_tags_result, set_payment_method_result, activate_billing_tier_result, delete_payment_method_result, create_api_only_users_result, update_root_quorum_result, update_user_tag_result, update_private_key_tag_result, create_sub_organization_result, update_allowed_origins_result, create_private_keys_result_v2, update_user_result, update_policy_result, create_sub_organization_result_v3, create_wallet_result, create_wallet_accounts_result, init_user_email_recovery_result, recover_user_result, set_organization_feature_result, remove_organization_feature_result, export_private_key_result, export_wallet_result, create_sub_organization_result_v4, email_auth_result, export_wallet_account_result, init_import_wallet_result, import_wallet_result, init_import_private_key_result, import_private_key_result, create_policies_result, sign_raw_payloads_result, create_read_only_session_result, create_oauth_providers_result, delete_oauth_providers_result, create_sub_organization_result_v5, oauth_result, create_read_write_session_result, create_sub_organization_result_v6, delete_private_keys_result, delete_wallets_result, create_read_write_session_result_v2, delete_sub_organization_result, init_otp_auth_result, otp_auth_result, create_sub_organization_result_v7, update_wallet_result, update_policy_result_v2, init_otp_auth_result_v2, init_otp_result, verify_otp_result, otp_login_result, stamp_login_result, oauth_login_result, update_user_name_result, update_user_email_result, update_user_phone_number_result, init_fiat_on_ramp_result, create_smart_contract_interface_result, delete_smart_contract_interface_result, enable_auth_proxy_result, disable_auth_proxy_result, update_auth_proxy_config_result, create_oauth2_credential_result, update_oauth2_credential_result, delete_oauth2_credential_result, oauth2_authenticate_result, delete_wallet_accounts_result, delete_policies_result, eth_send_raw_transaction_result, create_fiat_on_ramp_credential_result, update_fiat_on_ramp_credential_result, delete_fiat_on_ramp_credential_result, eth_send_transaction_result, upsert_gas_usage_config_result, create_tvc_app_result, create_tvc_deployment_result, create_tvc_manifest_approvals_result, sol_send_transaction_result, init_otp_result_v2, update_organization_name_result, create_sub_organization_result_v8, create_oauth_providers_result_v2, create_webhook_endpoint_result, update_webhook_endpoint_result, delete_webhook_endpoint_result, set_ip_allowlist_result, remove_ip_allowlist_result, update_tvc_app_live_deployment_result, delete_tvc_deployment_result, delete_tvc_app_and_deployments_result, restore_tvc_deployment_result, spark_sign_frost_result, spark_prepare_transfer_result, spark_claim_transfer_result, spark_prepare_lightning_receive_result, post_tvc_quorum_key_share_result].hash
     end
 
     # Builds the object from hash

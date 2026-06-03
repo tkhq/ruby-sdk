@@ -15,23 +15,28 @@ module TurnkeyClient
     # The product that the customer wants to subscribe to.
     attr_accessor :product_id
 
+    attr_accessor :orb_plan_id
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'product_id' => :'productId'
+        :'product_id' => :'productId',
+        :'orb_plan_id' => :'orbPlanId'
       }
     end
 
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'product_id' => :'Object'
+        :'product_id' => :'Object',
+        :'orb_plan_id' => :'Object'
       }
     end
 
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'orb_plan_id'
       ])
     end
   
@@ -52,6 +57,10 @@ module TurnkeyClient
 
       if attributes.key?(:'product_id')
         self.product_id = attributes[:'product_id']
+      end
+
+      if attributes.key?(:'orb_plan_id')
+        self.orb_plan_id = attributes[:'orb_plan_id']
       end
     end
 
@@ -78,7 +87,8 @@ module TurnkeyClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          product_id == o.product_id
+          product_id == o.product_id &&
+          orb_plan_id == o.orb_plan_id
     end
 
     # @see the `==` method
@@ -90,7 +100,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [product_id].hash
+      [product_id, orb_plan_id].hash
     end
 
     # Builds the object from hash

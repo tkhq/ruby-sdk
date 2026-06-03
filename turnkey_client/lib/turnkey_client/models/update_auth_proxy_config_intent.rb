@@ -57,6 +57,9 @@ module TurnkeyClient
     # Verification token required for get account with PII (email/phone number). Default false.
     attr_accessor :verification_token_required_for_get_account_pii
 
+    # Whitelisted OAuth client IDs for social account linking. When a user authenticates via a social provider with an email matching an existing account, the accounts will be linked if the client ID is in this list and the issuer is considered a trusted provider.
+    attr_accessor :social_linking_client_ids
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -75,7 +78,8 @@ module TurnkeyClient
         :'otp_alphanumeric' => :'otpAlphanumeric',
         :'otp_length' => :'otpLength',
         :'send_from_email_sender_name' => :'sendFromEmailSenderName',
-        :'verification_token_required_for_get_account_pii' => :'verificationTokenRequiredForGetAccountPii'
+        :'verification_token_required_for_get_account_pii' => :'verificationTokenRequiredForGetAccountPii',
+        :'social_linking_client_ids' => :'socialLinkingClientIds'
       }
     end
 
@@ -97,7 +101,8 @@ module TurnkeyClient
         :'otp_alphanumeric' => :'Object',
         :'otp_length' => :'Object',
         :'send_from_email_sender_name' => :'Object',
-        :'verification_token_required_for_get_account_pii' => :'Object'
+        :'verification_token_required_for_get_account_pii' => :'Object',
+        :'social_linking_client_ids' => :'Object'
       }
     end
 
@@ -114,7 +119,7 @@ module TurnkeyClient
         :'otp_alphanumeric',
         :'otp_length',
         :'send_from_email_sender_name',
-        :'verification_token_required_for_get_account_pii'
+        :'verification_token_required_for_get_account_pii',
       ])
     end
   
@@ -200,6 +205,12 @@ module TurnkeyClient
       if attributes.key?(:'verification_token_required_for_get_account_pii')
         self.verification_token_required_for_get_account_pii = attributes[:'verification_token_required_for_get_account_pii']
       end
+
+      if attributes.key?(:'social_linking_client_ids')
+        if (value = attributes[:'social_linking_client_ids']).is_a?(Array)
+          self.social_linking_client_ids = value
+        end
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -235,7 +246,8 @@ module TurnkeyClient
           otp_alphanumeric == o.otp_alphanumeric &&
           otp_length == o.otp_length &&
           send_from_email_sender_name == o.send_from_email_sender_name &&
-          verification_token_required_for_get_account_pii == o.verification_token_required_for_get_account_pii
+          verification_token_required_for_get_account_pii == o.verification_token_required_for_get_account_pii &&
+          social_linking_client_ids == o.social_linking_client_ids
     end
 
     # @see the `==` method
@@ -247,7 +259,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [allowed_origins, allowed_auth_methods, send_from_email_address, reply_to_email_address, email_auth_template_id, otp_template_id, email_customization_params, sms_customization_params, wallet_kit_settings, otp_expiration_seconds, verification_token_expiration_seconds, session_expiration_seconds, otp_alphanumeric, otp_length, send_from_email_sender_name, verification_token_required_for_get_account_pii].hash
+      [allowed_origins, allowed_auth_methods, send_from_email_address, reply_to_email_address, email_auth_template_id, otp_template_id, email_customization_params, sms_customization_params, wallet_kit_settings, otp_expiration_seconds, verification_token_expiration_seconds, session_expiration_seconds, otp_alphanumeric, otp_length, send_from_email_sender_name, verification_token_required_for_get_account_pii, social_linking_client_ids].hash
     end
 
     # Builds the object from hash

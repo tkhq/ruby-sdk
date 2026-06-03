@@ -189,5 +189,237 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
+    # Claim Spark transfer
+    # Construct receiver-side encrypted operator packages to claim a Spark transfer. Does not perform FROST signing.
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [ActivityResponse]
+    def spark_claim_transfer(body, opts = {})
+      data, _status_code, _headers = spark_claim_transfer_with_http_info(body, opts)
+      data
+    end
+
+    # Claim Spark transfer
+    # Construct receiver-side encrypted operator packages to claim a Spark transfer. Does not perform FROST signing.
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
+    def spark_claim_transfer_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: SigningApi.spark_claim_transfer ...'
+      end
+      # verify the required parameter 'body' is set
+      if @api_client.config.client_side_validation && body.nil?
+        fail ArgumentError, "Missing the required parameter 'body' when calling SigningApi.spark_claim_transfer"
+      end
+      # resource path
+      local_var_path = '/public/v1/submit/spark_claim_transfer'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:body] || @api_client.object_to_http_body(body) 
+
+      return_type = opts[:return_type] || 'ActivityResponse' 
+
+      auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type)
+
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: SigningApi#spark_claim_transfer\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+    # Spark prepare Lightning receive
+    # Generate a Lightning preimage and distribute Feldman shares to operators for a Spark Lightning receive. Does not perform FROST signing.
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [ActivityResponse]
+    def spark_prepare_lightning_receive(body, opts = {})
+      data, _status_code, _headers = spark_prepare_lightning_receive_with_http_info(body, opts)
+      data
+    end
+
+    # Spark prepare Lightning receive
+    # Generate a Lightning preimage and distribute Feldman shares to operators for a Spark Lightning receive. Does not perform FROST signing.
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
+    def spark_prepare_lightning_receive_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: SigningApi.spark_prepare_lightning_receive ...'
+      end
+      # verify the required parameter 'body' is set
+      if @api_client.config.client_side_validation && body.nil?
+        fail ArgumentError, "Missing the required parameter 'body' when calling SigningApi.spark_prepare_lightning_receive"
+      end
+      # resource path
+      local_var_path = '/public/v1/submit/spark_prepare_lightning_receive'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:body] || @api_client.object_to_http_body(body) 
+
+      return_type = opts[:return_type] || 'ActivityResponse' 
+
+      auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type)
+
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: SigningApi#spark_prepare_lightning_receive\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+    # Prepare Spark transfer
+    # Construct sender-side encrypted operator packages for a Spark BTC transfer. Does not perform FROST signing.
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [ActivityResponse]
+    def spark_prepare_transfer(body, opts = {})
+      data, _status_code, _headers = spark_prepare_transfer_with_http_info(body, opts)
+      data
+    end
+
+    # Prepare Spark transfer
+    # Construct sender-side encrypted operator packages for a Spark BTC transfer. Does not perform FROST signing.
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
+    def spark_prepare_transfer_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: SigningApi.spark_prepare_transfer ...'
+      end
+      # verify the required parameter 'body' is set
+      if @api_client.config.client_side_validation && body.nil?
+        fail ArgumentError, "Missing the required parameter 'body' when calling SigningApi.spark_prepare_transfer"
+      end
+      # resource path
+      local_var_path = '/public/v1/submit/spark_prepare_transfer'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:body] || @api_client.object_to_http_body(body) 
+
+      return_type = opts[:return_type] || 'ActivityResponse' 
+
+      auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type)
+
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: SigningApi#spark_prepare_transfer\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+    # Sign Frost Spark
+    # Perform pure FROST partial signing for a Spark wallet. Produces partial signatures without constructing operator packages.
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [ActivityResponse]
+    def spark_sign_frost(body, opts = {})
+      data, _status_code, _headers = spark_sign_frost_with_http_info(body, opts)
+      data
+    end
+
+    # Sign Frost Spark
+    # Perform pure FROST partial signing for a Spark wallet. Produces partial signatures without constructing operator packages.
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
+    def spark_sign_frost_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: SigningApi.spark_sign_frost ...'
+      end
+      # verify the required parameter 'body' is set
+      if @api_client.config.client_side_validation && body.nil?
+        fail ArgumentError, "Missing the required parameter 'body' when calling SigningApi.spark_sign_frost"
+      end
+      # resource path
+      local_var_path = '/public/v1/submit/spark_sign_frost'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:body] || @api_client.object_to_http_body(body) 
+
+      return_type = opts[:return_type] || 'ActivityResponse' 
+
+      auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type)
+
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: SigningApi#spark_sign_frost\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
   end
 end

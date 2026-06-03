@@ -18,10 +18,10 @@ module TurnkeyClient
     # The DER encoded COSE Sign1 struct Attestation doc.
     attr_accessor :aws_attestation_doc_b64
 
-    # The borsch serialized base64 encoded Manifest.
+    # The base64 encoded QOS manifest. Encoding depends on qos_manifest_version.
     attr_accessor :qos_manifest_b64
 
-    # The borsch serialized base64 encoded Manifest Envelope.
+    # The base64 encoded QOS manifest envelope. Encoding depends on qos_manifest_version.
     attr_accessor :qos_manifest_envelope_b64
 
     # The label under which the enclave app was deployed.
@@ -35,6 +35,9 @@ module TurnkeyClient
 
     attr_accessor :created_at
 
+    # QOS manifest schema version.
+    attr_accessor :qos_manifest_version
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -45,7 +48,8 @@ module TurnkeyClient
         :'deployment_label' => :'deploymentLabel',
         :'enclave_app' => :'enclaveApp',
         :'owner' => :'owner',
-        :'created_at' => :'createdAt'
+        :'created_at' => :'createdAt',
+        :'qos_manifest_version' => :'qosManifestVersion'
       }
     end
 
@@ -59,13 +63,15 @@ module TurnkeyClient
         :'deployment_label' => :'Object',
         :'enclave_app' => :'Object',
         :'owner' => :'Object',
-        :'created_at' => :'Object'
+        :'created_at' => :'Object',
+        :'qos_manifest_version' => :'Object'
       }
     end
 
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'qos_manifest_version'
       ])
     end
   
@@ -114,6 +120,10 @@ module TurnkeyClient
 
       if attributes.key?(:'created_at')
         self.created_at = attributes[:'created_at']
+      end
+
+      if attributes.key?(:'qos_manifest_version')
+        self.qos_manifest_version = attributes[:'qos_manifest_version']
       end
     end
 
@@ -182,7 +192,8 @@ module TurnkeyClient
           deployment_label == o.deployment_label &&
           enclave_app == o.enclave_app &&
           owner == o.owner &&
-          created_at == o.created_at
+          created_at == o.created_at &&
+          qos_manifest_version == o.qos_manifest_version
     end
 
     # @see the `==` method
@@ -194,7 +205,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [ephemeral_public_key_hex, aws_attestation_doc_b64, qos_manifest_b64, qos_manifest_envelope_b64, deployment_label, enclave_app, owner, created_at].hash
+      [ephemeral_public_key_hex, aws_attestation_doc_b64, qos_manifest_b64, qos_manifest_envelope_b64, deployment_label, enclave_app, owner, created_at, qos_manifest_version].hash
     end
 
     # Builds the object from hash

@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.0.19 -- 2026-06-03
+
+### Patch Changes
+- API sync for Mono `v2026.6.0`
+
 ## 0.0.18 -- 2026-02-20
 
 ### Patch Changes

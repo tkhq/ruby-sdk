@@ -15,10 +15,10 @@ module TurnkeyClient
     # Unique identifier for a given organization.
     attr_accessor :organization_id
 
-    # Address corresponding to a wallet account.
+    # Address corresponding to a wallet account. Private key addresses are not supported.
     attr_accessor :address
 
-    # CAIP-2 chain ID (e.g., 'eip155:1' for Ethereum mainnet).
+    # CAIP-2 chain ID (e.g., 'eip155:1' for Ethereum mainnet or 'solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp' for Solana mainnet). Human-readable Solana aliases ('solana:mainnet', 'solana:devnet') are also accepted and normalized to canonical CAIP-2 values.
     attr_accessor :caip2
 
     class EnumAttributeValidator
@@ -120,7 +120,7 @@ module TurnkeyClient
       return false if @organization_id.nil?
       return false if @address.nil?
       return false if @caip2.nil?
-      caip2_validator = EnumAttributeValidator.new('Object', ['eip155:1', 'eip155:11155111', 'eip155:8453', 'eip155:84532', 'eip155:137', 'eip155:80002'])
+      caip2_validator = EnumAttributeValidator.new('Object', ['eip155:1', 'eip155:11155111', 'eip155:8453', 'eip155:84532', 'eip155:137', 'eip155:80002', 'eip155:42161', 'eip155:421614', 'solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp', 'solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1'])
       return false unless caip2_validator.valid?(@caip2)
       true
     end
@@ -128,7 +128,7 @@ module TurnkeyClient
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] caip2 Object to be assigned
     def caip2=(caip2)
-      validator = EnumAttributeValidator.new('Object', ['eip155:1', 'eip155:11155111', 'eip155:8453', 'eip155:84532', 'eip155:137', 'eip155:80002'])
+      validator = EnumAttributeValidator.new('Object', ['eip155:1', 'eip155:11155111', 'eip155:8453', 'eip155:84532', 'eip155:137', 'eip155:80002', 'eip155:42161', 'eip155:421614', 'solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp', 'solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1'])
       unless validator.valid?(caip2)
         fail ArgumentError, "invalid value for \"caip2\", must be one of #{validator.allowable_values}."
       end

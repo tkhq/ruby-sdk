@@ -73,6 +73,64 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
+    # Create webhook endpoint
+    # Create a webhook endpoint for an organization.
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [ActivityResponse]
+    def create_webhook_endpoint(body, opts = {})
+      data, _status_code, _headers = create_webhook_endpoint_with_http_info(body, opts)
+      data
+    end
+
+    # Create webhook endpoint
+    # Create a webhook endpoint for an organization.
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
+    def create_webhook_endpoint_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: OrganizationsApi.create_webhook_endpoint ...'
+      end
+      # verify the required parameter 'body' is set
+      if @api_client.config.client_side_validation && body.nil?
+        fail ArgumentError, "Missing the required parameter 'body' when calling OrganizationsApi.create_webhook_endpoint"
+      end
+      # resource path
+      local_var_path = '/public/v1/submit/create_webhook_endpoint'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:body] || @api_client.object_to_http_body(body) 
+
+      return_type = opts[:return_type] || 'ActivityResponse' 
+
+      auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type)
+
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OrganizationsApi#create_webhook_endpoint\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
     # Delete sub-organization
     # Delete a sub-organization.
     # @param body 
@@ -128,6 +186,64 @@ module TurnkeyClient
 
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: OrganizationsApi#delete_sub_organization\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+    # Delete webhook endpoint
+    # Delete a webhook endpoint for an organization.
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [ActivityResponse]
+    def delete_webhook_endpoint(body, opts = {})
+      data, _status_code, _headers = delete_webhook_endpoint_with_http_info(body, opts)
+      data
+    end
+
+    # Delete webhook endpoint
+    # Delete a webhook endpoint for an organization.
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
+    def delete_webhook_endpoint_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: OrganizationsApi.delete_webhook_endpoint ...'
+      end
+      # verify the required parameter 'body' is set
+      if @api_client.config.client_side_validation && body.nil?
+        fail ArgumentError, "Missing the required parameter 'body' when calling OrganizationsApi.delete_webhook_endpoint"
+      end
+      # resource path
+      local_var_path = '/public/v1/submit/delete_webhook_endpoint'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:body] || @api_client.object_to_http_body(body) 
+
+      return_type = opts[:return_type] || 'ActivityResponse' 
+
+      auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type)
+
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OrganizationsApi#delete_webhook_endpoint\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -305,6 +421,122 @@ module TurnkeyClient
       end
       return data, status_code, headers
     end
+    # List webhook endpoints
+    # List webhook endpoints within an organization.
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [ListWebhookEndpointsResponse]
+    def list_webhook_endpoints(body, opts = {})
+      data, _status_code, _headers = list_webhook_endpoints_with_http_info(body, opts)
+      data
+    end
+
+    # List webhook endpoints
+    # List webhook endpoints within an organization.
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ListWebhookEndpointsResponse, Integer, Hash)>] ListWebhookEndpointsResponse data, response status code and response headers
+    def list_webhook_endpoints_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: OrganizationsApi.list_webhook_endpoints ...'
+      end
+      # verify the required parameter 'body' is set
+      if @api_client.config.client_side_validation && body.nil?
+        fail ArgumentError, "Missing the required parameter 'body' when calling OrganizationsApi.list_webhook_endpoints"
+      end
+      # resource path
+      local_var_path = '/public/v1/query/list_webhook_endpoints'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:body] || @api_client.object_to_http_body(body) 
+
+      return_type = opts[:return_type] || 'ListWebhookEndpointsResponse' 
+
+      auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type)
+
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OrganizationsApi#list_webhook_endpoints\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+    # Update organization name
+    # Update the name of an organization.
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [ActivityResponse]
+    def update_organization_name(body, opts = {})
+      data, _status_code, _headers = update_organization_name_with_http_info(body, opts)
+      data
+    end
+
+    # Update organization name
+    # Update the name of an organization.
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
+    def update_organization_name_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: OrganizationsApi.update_organization_name ...'
+      end
+      # verify the required parameter 'body' is set
+      if @api_client.config.client_side_validation && body.nil?
+        fail ArgumentError, "Missing the required parameter 'body' when calling OrganizationsApi.update_organization_name"
+      end
+      # resource path
+      local_var_path = '/public/v1/submit/update_organization_name'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:body] || @api_client.object_to_http_body(body) 
+
+      return_type = opts[:return_type] || 'ActivityResponse' 
+
+      auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type)
+
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OrganizationsApi#update_organization_name\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
     # Update root quorum
     # Set the threshold and members of the root quorum. This activity must be approved by the current root quorum.
     # @param body 
@@ -360,6 +592,64 @@ module TurnkeyClient
 
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: OrganizationsApi#update_root_quorum\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+    # Update webhook endpoint
+    # Update a webhook endpoint for an organization.
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [ActivityResponse]
+    def update_webhook_endpoint(body, opts = {})
+      data, _status_code, _headers = update_webhook_endpoint_with_http_info(body, opts)
+      data
+    end
+
+    # Update webhook endpoint
+    # Update a webhook endpoint for an organization.
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ActivityResponse, Integer, Hash)>] ActivityResponse data, response status code and response headers
+    def update_webhook_endpoint_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: OrganizationsApi.update_webhook_endpoint ...'
+      end
+      # verify the required parameter 'body' is set
+      if @api_client.config.client_side_validation && body.nil?
+        fail ArgumentError, "Missing the required parameter 'body' when calling OrganizationsApi.update_webhook_endpoint"
+      end
+      # resource path
+      local_var_path = '/public/v1/submit/update_webhook_endpoint'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:body] || @api_client.object_to_http_body(body) 
+
+      return_type = opts[:return_type] || 'ActivityResponse' 
+
+      auth_names = opts[:auth_names] || ['ApiKeyAuth', 'AuthenticatorAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type)
+
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OrganizationsApi#update_webhook_endpoint\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

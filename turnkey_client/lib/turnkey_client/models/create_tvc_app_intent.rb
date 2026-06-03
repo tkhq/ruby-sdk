@@ -28,8 +28,8 @@ module TurnkeyClient
 
     attr_accessor :share_set_params
 
-    # Enables external connectivity for this TVC app. Default if not provided: false.
-    attr_accessor :external_connectivity
+    # Enables network egress for this TVC app. Default if not provided: false.
+    attr_accessor :enable_egress
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -40,7 +40,7 @@ module TurnkeyClient
         :'manifest_set_params' => :'manifestSetParams',
         :'share_set_id' => :'shareSetId',
         :'share_set_params' => :'shareSetParams',
-        :'external_connectivity' => :'externalConnectivity'
+        :'enable_egress' => :'enableEgress'
       }
     end
 
@@ -53,7 +53,7 @@ module TurnkeyClient
         :'manifest_set_params' => :'Object',
         :'share_set_id' => :'Object',
         :'share_set_params' => :'Object',
-        :'external_connectivity' => :'Object'
+        :'enable_egress' => :'Object'
       }
     end
 
@@ -62,7 +62,7 @@ module TurnkeyClient
       Set.new([
         :'manifest_set_id',
         :'share_set_id',
-        :'external_connectivity'
+        :'enable_egress'
       ])
     end
   
@@ -105,8 +105,8 @@ module TurnkeyClient
         self.share_set_params = attributes[:'share_set_params']
       end
 
-      if attributes.key?(:'external_connectivity')
-        self.external_connectivity = attributes[:'external_connectivity']
+      if attributes.key?(:'enable_egress')
+        self.enable_egress = attributes[:'enable_egress']
       end
     end
 
@@ -144,7 +144,7 @@ module TurnkeyClient
           manifest_set_params == o.manifest_set_params &&
           share_set_id == o.share_set_id &&
           share_set_params == o.share_set_params &&
-          external_connectivity == o.external_connectivity
+          enable_egress == o.enable_egress
     end
 
     # @see the `==` method
@@ -156,7 +156,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [name, quorum_public_key, manifest_set_id, manifest_set_params, share_set_id, share_set_params, external_connectivity].hash
+      [name, quorum_public_key, manifest_set_id, manifest_set_params, share_set_id, share_set_params, enable_egress].hash
     end
 
     # Builds the object from hash

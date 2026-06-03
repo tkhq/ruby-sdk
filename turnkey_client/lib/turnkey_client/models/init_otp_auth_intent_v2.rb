@@ -12,7 +12,7 @@ require 'date'
 
 module TurnkeyClient
   class InitOtpAuthIntentV2
-    # Enum to specifiy whether to send OTP via SMS or email
+    # Enum to specify whether to send OTP via SMS or email
     attr_accessor :otp_type
 
     # Email or phone number to send the OTP code to

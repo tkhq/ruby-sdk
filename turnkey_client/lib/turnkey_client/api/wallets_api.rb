@@ -538,7 +538,7 @@ module TurnkeyClient
       return data, status_code, headers
     end
     # Get balances
-    # Get balances of supported assets for an address on the specified network. Only non-zero balances are returned. This feature is in beta - please contact support for access.
+    # Get balances of supported assets for an address on the specified network. Only non-zero balances are returned.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [GetWalletAddressBalancesResponse]
@@ -548,7 +548,7 @@ module TurnkeyClient
     end
 
     # Get balances
-    # Get balances of supported assets for an address on the specified network. Only non-zero balances are returned. This feature is in beta - please contact support for access.
+    # Get balances of supported assets for an address on the specified network. Only non-zero balances are returned.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(GetWalletAddressBalancesResponse, Integer, Hash)>] GetWalletAddressBalancesResponse data, response status code and response headers
@@ -770,7 +770,7 @@ module TurnkeyClient
       return data, status_code, headers
     end
     # List supported assets
-    # List supported assets for the specified network. This feature is in beta - please contact support for access.
+    # List supported assets for the specified network.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [ListSupportedAssetsResponse]
@@ -780,7 +780,7 @@ module TurnkeyClient
     end
 
     # List supported assets
-    # List supported assets for the specified network. This feature is in beta - please contact support for access.
+    # List supported assets for the specified network.
     # @param body 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ListSupportedAssetsResponse, Integer, Hash)>] ListSupportedAssetsResponse data, response status code and response headers

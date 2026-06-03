@@ -18,11 +18,17 @@ module TurnkeyClient
     # Chain of revert errors from nested contract calls, ordered from outermost to innermost.
     attr_accessor :revert_chain
 
+    attr_accessor :solana
+
+    attr_accessor :eth
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'message' => :'message',
-        :'revert_chain' => :'revertChain'
+        :'revert_chain' => :'revertChain',
+        :'solana' => :'solana',
+        :'eth' => :'eth'
       }
     end
 
@@ -30,7 +36,9 @@ module TurnkeyClient
     def self.openapi_types
       {
         :'message' => :'Object',
-        :'revert_chain' => :'Object'
+        :'revert_chain' => :'Object',
+        :'solana' => :'Object',
+        :'eth' => :'Object'
       }
     end
 
@@ -64,6 +72,14 @@ module TurnkeyClient
           self.revert_chain = value
         end
       end
+
+      if attributes.key?(:'solana')
+        self.solana = attributes[:'solana']
+      end
+
+      if attributes.key?(:'eth')
+        self.eth = attributes[:'eth']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -85,7 +101,9 @@ module TurnkeyClient
       return true if self.equal?(o)
       self.class == o.class &&
           message == o.message &&
-          revert_chain == o.revert_chain
+          revert_chain == o.revert_chain &&
+          solana == o.solana &&
+          eth == o.eth
     end
 
     # @see the `==` method
@@ -97,7 +115,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [message, revert_chain].hash
+      [message, revert_chain, solana, eth].hash
     end
 
     # Builds the object from hash
