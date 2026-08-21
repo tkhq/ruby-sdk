@@ -180,7 +180,8 @@ module {{moduleName}}
         :return_type => return_type)
 
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: {{classname}}#{{operationId}}\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        # Response data and headers can contain credentials or key material; log only the operation and status.
+        @api_client.config.logger.debug "API called: {{classname}}#{{operationId}} status=#{status_code}"
       end
       return data, status_code, headers
     end

@@ -103,7 +103,8 @@ module TurnkeyClient
       response = request.run
 
       if @config.debugging
-        @config.logger.debug "HTTP response body ~BEGIN~\n#{response.body}\n~END~\n"
+        # Payloads may contain private keys, signatures, or credentials; log only transport metadata.
+        @config.logger.debug "HTTP response: #{http_method.to_s.upcase} #{path} status=#{response.code}"
       end
 
       unless response.success?
@@ -176,7 +177,8 @@ module TurnkeyClient
         req_opts[:headers] = header_params.merge(turnkey_auth_headers)
 
         if @config.debugging
-          @config.logger.debug "HTTP request body param ~BEGIN~\n#{req_body}\n~END~\n"
+          # Never log request bodies because signing and key-management calls can contain secrets.
+          @config.logger.debug "HTTP request prepared: #{http_method.to_s.upcase} #{path}"
         end
       end
 
