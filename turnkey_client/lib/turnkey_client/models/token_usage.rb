@@ -23,6 +23,10 @@ module TurnkeyClient
 
     attr_accessor :signup_v2
 
+    attr_accessor :login_v2
+
+    attr_accessor :signup_v3
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -30,7 +34,9 @@ module TurnkeyClient
         :'token_id' => :'tokenId',
         :'signup' => :'signup',
         :'login' => :'login',
-        :'signup_v2' => :'signupV2'
+        :'signup_v2' => :'signupV2',
+        :'login_v2' => :'loginV2',
+        :'signup_v3' => :'signupV3'
       }
     end
 
@@ -41,7 +47,9 @@ module TurnkeyClient
         :'token_id' => :'Object',
         :'signup' => :'Object',
         :'login' => :'Object',
-        :'signup_v2' => :'Object'
+        :'signup_v2' => :'Object',
+        :'login_v2' => :'Object',
+        :'signup_v3' => :'Object'
       }
     end
 
@@ -85,6 +93,14 @@ module TurnkeyClient
       if attributes.key?(:'signup_v2')
         self.signup_v2 = attributes[:'signup_v2']
       end
+
+      if attributes.key?(:'login_v2')
+        self.login_v2 = attributes[:'login_v2']
+      end
+
+      if attributes.key?(:'signup_v3')
+        self.signup_v3 = attributes[:'signup_v3']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -119,7 +135,9 @@ module TurnkeyClient
           token_id == o.token_id &&
           signup == o.signup &&
           login == o.login &&
-          signup_v2 == o.signup_v2
+          signup_v2 == o.signup_v2 &&
+          login_v2 == o.login_v2 &&
+          signup_v3 == o.signup_v3
     end
 
     # @see the `==` method
@@ -131,7 +149,7 @@ module TurnkeyClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [type, token_id, signup, login, signup_v2].hash
+      [type, token_id, signup, login, signup_v2, login_v2, signup_v3].hash
     end
 
     # Builds the object from hash

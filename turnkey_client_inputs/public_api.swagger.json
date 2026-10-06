@@ -5922,7 +5922,7 @@
         "clientSignature": {
           "$ref": "#/definitions/ClientSignature",
           "x-nullable": true,
-          "description": "Optional signature proving authorization for this sub-organization creation. The signature is over the verification token ID and the root user parameters for the root user associated with the verification token. Only required if a public key was provided during the verification step."
+          "description": "Optional signature proving authorization for this sub-organization creation. The signature is over the full intent. Only required if a public key was provided during the verification step."
         }
       },
       "required": ["subOrganizationName", "rootUsers", "rootQuorumThreshold"]
@@ -11211,6 +11211,30 @@
       },
       "required": ["publicKey"]
     },
+    "LoginUsageV2": {
+      "type": "object",
+      "properties": {
+        "organizationId": {
+          "type": "string"
+        },
+        "publicKey": {
+          "type": "string"
+        },
+        "invalidateExisting": {
+          "type": "boolean",
+          "x-nullable": true
+        },
+        "expirationSeconds": {
+          "type": "string",
+          "x-nullable": true
+        },
+        "sessionProfileId": {
+          "type": "string",
+          "x-nullable": true
+        }
+      },
+      "required": ["organizationId", "publicKey"]
+    },
     "MnemonicLanguage": {
       "type": "string",
       "enum": [
@@ -11729,7 +11753,7 @@
         },
         "clientSignature": {
           "$ref": "#/definitions/ClientSignature",
-          "description": "Required signature proving authorization for this login. The signature is over the verification token ID and the public key. Required for secure OTP login process."
+          "description": "Required signature proving authorization for this login. The signature is over the full login intent. Required for secure OTP login process."
         },
         "expirationSeconds": {
           "type": "string",
@@ -11740,6 +11764,11 @@
           "type": "boolean",
           "x-nullable": true,
           "description": "Invalidate all other previously generated Login sessions"
+        },
+        "sessionProfileId": {
+          "type": "string",
+          "x-nullable": true,
+          "description": "Optional session profile ID to apply to the created session."
         }
       },
       "required": ["verificationToken", "publicKey", "clientSignature"]
@@ -13351,6 +13380,54 @@
         }
       }
     },
+    "SignupUsageV3": {
+      "type": "object",
+      "properties": {
+        "parentOrganizationId": {
+          "type": "string"
+        },
+        "subOrganizationName": {
+          "type": "string"
+        },
+        "rootUsers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/RootUserParamsV5"
+          }
+        },
+        "rootQuorumThreshold": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "wallet": {
+          "$ref": "#/definitions/WalletParams",
+          "x-nullable": true
+        },
+        "disableEmailRecovery": {
+          "type": "boolean",
+          "x-nullable": true
+        },
+        "disableEmailAuth": {
+          "type": "boolean",
+          "x-nullable": true
+        },
+        "disableSmsAuth": {
+          "type": "boolean",
+          "x-nullable": true
+        },
+        "disableOtpEmailAuth": {
+          "type": "boolean",
+          "x-nullable": true
+        }
+      },
+      "required": [
+        "parentOrganizationId",
+        "subOrganizationName",
+        "rootUsers",
+        "rootQuorumThreshold"
+      ]
+    },
     "SimpleClientExtensionResults": {
       "type": "object",
       "properties": {
@@ -14165,6 +14242,12 @@
         },
         "signupV2": {
           "$ref": "#/definitions/SignupUsageV2"
+        },
+        "loginV2": {
+          "$ref": "#/definitions/LoginUsageV2"
+        },
+        "signupV3": {
+          "$ref": "#/definitions/SignupUsageV3"
         }
       },
       "required": ["type", "tokenId"]
