@@ -36,7 +36,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@80740b3b13bf9857e28854481ca95a84e78a2bdf # v1.284.0
         with:
-          ruby-version: '3.3'
+          ruby-version: '3.4.11'
           bundler-cache: true
           working-directory: turnkey_client
 
@@ -79,7 +79,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@80740b3b13bf9857e28854481ca95a84e78a2bdf # v1.284.0
         with:
-          ruby-version: '3.3'
+          ruby-version: '3.4.11'
           bundler-cache: true
           working-directory: turnkey_client
 
