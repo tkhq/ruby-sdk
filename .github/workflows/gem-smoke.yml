@@ -1,0 +1,38 @@
+name: Gem smoke test
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  load:
+    runs-on: ubuntu-latest
+
+    steps:
+      # https://github.com/actions/checkout
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      # https://github.com/ruby/setup-ruby
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@824c0e29fdfc7d689c191c27acc969d2d04b7dd8 # v1.331.0
+        with:
+          ruby-version: '3.4.11'
+
+      # Bundler-managed consumer: base64 is a bundled gem on Ruby 3.4, so the
+      # gem must declare it or `require` raises LoadError.
+      - name: Install gem into a clean bundle and load it
+        run: |
+          gem build turnkey_client.gemspec
+          mkdir /tmp/consumer && cd /tmp/consumer
+          cat > Gemfile <<GEMFILE
+          source 'https://rubygems.org'
+          gem 'turnkey_client', path: '${GITHUB_WORKSPACE}/turnkey_client'
+          GEMFILE
+          bundle install
+          bundle exec ruby -e 'require "turnkey_client"; puts "loaded #{TurnkeyClient::VERSION} on #{RUBY_VERSION}"'
+        working-directory: turnkey_client
