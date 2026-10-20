@@ -18,9 +18,9 @@ jobs:
 
       # https://github.com/ruby/setup-ruby
       - name: Set up Ruby
-        uses: ruby/setup-ruby@086ffb1a2090c870a3f881cc91ea83aa4243d408 # v1.195.0
+        uses: ruby/setup-ruby@824c0e29fdfc7d689c191c27acc969d2d04b7dd8 # v1.331.0
         with:
-          ruby-version: '3.3'
+          ruby-version: '3.4.11'
 
       - name: Install rubocop
         run: gem install rubocop
